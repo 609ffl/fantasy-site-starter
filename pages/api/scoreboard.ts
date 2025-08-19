@@ -13,9 +13,9 @@ const URLS: Array<(l: string, s: string, w?: string) => string> = [
   // matchup score (primary)
   (l: string, s: string) =>
     `https://fantasy.espn.com/apis/v3/games/ffl/seasons/${s}/segments/0/leagues/${l}?view=mMatchupScore`,
-  // specific week boxscore
-  (l: string, s: string, w: string) =>
-    `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${s}/segments/0/leagues/${l}?view=mBoxscore&scoringPeriodId=${w}`,
+  // specific week boxscore (make w optional to satisfy TS)
+  (l: string, s: string, w?: string) =>
+    `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${s}/segments/0/leagues/${l}?view=mBoxscore&scoringPeriodId=${w ?? ""}`,
 ];
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
