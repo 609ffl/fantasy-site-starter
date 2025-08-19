@@ -37,7 +37,7 @@ const CAREER_PF_CSV =
 /** ---------- Helpers ---------- */
 function readCsv(fp: string): Row[] {
   const txt = fs.readFileSync(fp, "utf8");
-  const parsed = Papa.parse<Row>(txt, { header: true, skipEmptyLines: true });
+  const parsed = Papa.parse(txt, { header: true, skipEmptyLines: true }) as { data: Row[] };
   return (parsed.data || []) as Row[];
 }
 
