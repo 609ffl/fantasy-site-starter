@@ -51,6 +51,7 @@ export default function NavBar() {
         <nav style={{ display: "flex", gap: 6 }}>
           <NavItem href="/" label="Scoreboard" />
           <NavItem href="/history" label="History" />
+          <NavItem href="/owners" label="Owners" />
           {/* Add more when ready: <NavItem href="/owners" label="Owners" /> */}
         </nav>
       </div>
