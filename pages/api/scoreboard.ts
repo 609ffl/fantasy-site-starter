@@ -76,7 +76,10 @@ function sendResponse(
         awayPoints: m.away?.totalPoints ?? 0,
         periodId: m.matchupPeriodId ?? null,
       }))
-      .filter((g) => g.homeTeamId !== null && g.awayTeamId !== null)
+      type GameLike = { homeTeamId: number | null; awayTeamId: number | null };
+      ...
+      .filter((g: GameLike) => g.homeTeamId !== null && g.awayTeamId !== null)
+
       .slice(0, 6);
 
     return res.status(200).json({ season, league: LEAGUE_ID, week, games });
