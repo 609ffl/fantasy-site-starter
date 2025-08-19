@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
+import { leagueUrl } from "../../lib/espn";
 
 const { LEAGUE_ID = "8379", SEASON = "2025", SWID, ESPN_S2 } = process.env;
 const UA =
@@ -26,7 +27,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     for (let i = 0; i < 2; i++) {
-      const url = URLS[i](season, LEAGUE_ID);
+      const view = i === 0 ? "mMatchupScore" : "mTeam";
+      const url = URLS[i](LEAGUE_ID, season, view);
       const r = await fetch(url, { headers, redirect: "follow" });
       const txt = await r.text();
       if (txt.trim().startsWith("{")) {
