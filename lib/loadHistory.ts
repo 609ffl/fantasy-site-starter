@@ -1,7 +1,7 @@
 // lib/loadHistory.ts
 import fs from "fs";
 import path from "path";
-import Papa from "papaparse";
+import * as Papa from "papaparse";
 
 export type PlayerYearOwner = {
   player: string;
