@@ -6,7 +6,7 @@ const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
 
 // Standardize helper signatures as (leagueId, season, [extra])
-const URLS = [
+const URLS: Array<(l: string, s: string, w?: string) => string> = [
   // matchup score (read replica)
   (l: string, s: string) =>
     `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${s}/segments/0/leagues/${l}?view=mMatchupScore`,
