@@ -1,16 +1,20 @@
+// pages/api/scoreboard.ts
 import type { NextApiRequest, NextApiResponse } from "next";
-import { leagueUrl } from "../../lib/espn";
 
 const { LEAGUE_ID = "8379", SEASON = "2025", SWID, ESPN_S2 } = process.env;
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
 
+// Standardize helper signatures as (leagueId, season, [extra])
 const URLS = [
-  (s: string, l: string) =>
+  // matchup score (read replica)
+  (l: string, s: string) =>
     `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${s}/segments/0/leagues/${l}?view=mMatchupScore`,
-  (s: string, l: string) =>
+  // matchup score (primary)
+  (l: string, s: string) =>
     `https://fantasy.espn.com/apis/v3/games/ffl/seasons/${s}/segments/0/leagues/${l}?view=mMatchupScore`,
-  (s: string, l: string, w: string) =>
+  // specific week boxscore
+  (l: string, s: string, w: string) =>
     `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${s}/segments/0/leagues/${l}?view=mBoxscore&scoringPeriodId=${w}`,
 ];
 
@@ -26,9 +30,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (SWID && ESPN_S2) headers.Cookie = `SWID=${SWID}; espn_s2=${ESPN_S2}`;
 
   try {
+    // Try two endpoints for the same view (some leagues require cookies / different hosts)
     for (let i = 0; i < 2; i++) {
-      const view = i === 0 ? "mMatchupScore" : "mTeam";
-      const url = URLS[i](LEAGUE_ID, season, view);
+      const url = URLS[i](LEAGUE_ID, season);
       const r = await fetch(url, { headers, redirect: "follow" });
       const txt = await r.text();
       if (txt.trim().startsWith("{")) {
@@ -36,7 +40,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
     }
 
-    const boxUrl = URLS[2](season, LEAGUE_ID, week);
+    // Fallback: pull specific week boxscore
+    const boxUrl = URLS[2](LEAGUE_ID, season, week);
     const rb = await fetch(boxUrl, { headers, redirect: "follow" });
     const tb = await rb.text();
     if (tb.trim().startsWith("{")) {
@@ -76,10 +81,7 @@ function sendResponse(
         awayPoints: m.away?.totalPoints ?? 0,
         periodId: m.matchupPeriodId ?? null,
       }))
-      type GameLike = { homeTeamId: number | null; awayTeamId: number | null };
-      ...
-      .filter((g: GameLike) => g.homeTeamId !== null && g.awayTeamId !== null)
-
+      .filter((g: any) => g.homeTeamId !== null && g.awayTeamId !== null)
       .slice(0, 6);
 
     return res.status(200).json({ season, league: LEAGUE_ID, week, games });
