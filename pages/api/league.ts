@@ -37,7 +37,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const sorted = [...rawTeams].sort((a, b) => a.id - b.id);
     const displayNo: Record<number, number> = {};
-    sorted.forEach((t, i) => (displayNo[t.id] = i + 1));
+    sorted.forEach((t: any, i: number) => (displayNo[t.id] = i + 1));
+    const teams = rawTeams.map((t: any) => ({ ...t, displayNo: displayNo[t.id] }));
 
     const teams = rawTeams.map(t => ({ ...t, displayNo: displayNo[t.id] }));
 
