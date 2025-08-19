@@ -1,0 +1,1946 @@
+year,owner,team_name,player,nfl_team,position,fantasy_points
+2012,S. Dickson,Team Dickson,Tom Brady ,ne,QB,378
+2012,S. Dickson,Team Dickson,Roddy White,atl,WR,265
+2012,S. Dickson,Team Dickson,Michael Crabtree,sf,WR,246
+2012,S. Dickson,Team Dickson,Randall Cobb,gb,WR,230
+2012,S. Dickson,Team Dickson,Mike Williams,tb,WR,223
+2012,S. Dickson,Team Dickson,Rob Gronkowski ,ne,TE,194
+2012,S. Dickson,Team Dickson,Darren McFadden,oak,RB,187
+2012,S. Dickson,Team Dickson,Darrius Heyward-Bey ,oak,WR,142
+2012,S. Dickson,Team Dickson,Martellus Bennett,nyg,TE,141
+2012,S. Dickson,Team Dickson,Danny Amendola ,stl,WR,141
+2012,S. Dickson,Team Dickson,Marcel Reece,oak,RB,135
+2012,S. Dickson,Team Dickson,Packers D/ST ,gb,DST,116
+2012,S. Dickson,Team Dickson,Ravens D/ST ,bal,DST,113
+2012,S. Dickson,Team Dickson,Jonathan Dwyer,pit,RB,111
+2012,S. Dickson,Team Dickson,Greg Jennings,gb,WR,93
+2012,A. Parra,The Angry Bananas,Robert Griffin III ,wsh,QB,362
+2012,A. Parra,The Angry Bananas,A.J. Green ,cin,WR,309
+2012,A. Parra,The Angry Bananas,Alfred Morris,wsh,RB,301
+2012,A. Parra,The Angry Bananas,Andy Dalton,cin,qb,276
+2012,A. Parra,The Angry Bananas,Reggie Wayne,ind,WR,267
+2012,A. Parra,The Angry Bananas,Matt Schaub,hou,qb,257
+2012,A. Parra,The Angry Bananas,Matt Forte ,chi,RB,255
+2012,A. Parra,The Angry Bananas,Mikel Leshoure,det,rb,211
+2012,A. Parra,The Angry Bananas,Steve Smith,car,wr,208
+2012,A. Parra,The Angry Bananas,Mike Wallace,pit,wr,201
+2012,A. Parra,The Angry Bananas,Broncos D/ST ,den,dst,186
+2012,A. Parra,The Angry Bananas,Jermaine Gresham,cin,TE,164
+2012,A. Parra,The Angry Bananas,49ers D/ST ,sf,DST,146
+2012,A. Parra,The Angry Bananas,Bryce Brown,phi,rb,102
+2012,A. Parra,The Angry Bananas,Rashard Mendenhall,pit,rb,41
+2012,D. Daniel,Team Domination,Arian Foster,hou,rb,351
+2012,D. Daniel,Team Domination,Brandon Marshall,chi,WR,328
+2012,D. Daniel,Team Domination,Trent Richardson ,cle,rb,284
+2012,D. Daniel,Team Domination,Josh Freeman,tb,qb,279
+2012,D. Daniel,Team Domination,Eric Decker,den,wr,267
+2012,D. Daniel,Team Domination,Eli Manning,nyg,QB,262
+2012,D. Daniel,Team Domination,Jason Witten,dal,TE,225
+2012,D. Daniel,Team Domination,Steve Johnson,buf,wr,212
+2012,D. Daniel,Team Domination,Cecil Shorts,jax,wr,207
+2012,D. Daniel,Team Domination,Colin Kaepernick,sf,qb,196
+2012,D. Daniel,Team Domination,DeAngelo Williams,car,RB,176
+2012,D. Daniel,Team Domination,Antonio Brown ,pit,wr,168
+2012,D. Daniel,Team Domination,Chargers D/ST,sd,DST,159
+2012,D. Daniel,Team Domination,Ryan Mathews,sd,rb,157
+2012,D. Daniel,Team Domination,Danario Alexander,sd,wr,147
+2012,G. Nulty,Marshall Ave Goon Squad,Cam Newton,car,QB,372
+2012,G. Nulty,Marshall Ave Goon Squad,Dez Bryant ,Dal,WR,314
+2012,G. Nulty,Marshall Ave Goon Squad,LeSean McCoy,phi,rb,225
+2012,G. Nulty,Marshall Ave Goon Squad,Darren Sproles,nor,RB,213
+2012,G. Nulty,Marshall Ave Goon Squad,Ahmad Bradshaw,nyg,rb,206
+2012,G. Nulty,Marshall Ave Goon Squad,Greg Olsen,car,TE,178
+2012,G. Nulty,Marshall Ave Goon Squad,Anquan Boldin,bal,WR,176
+2012,G. Nulty,Marshall Ave Goon Squad,Josh Gordon,cle,WR,164
+2012,G. Nulty,Marshall Ave Goon Squad,Bengals D/ST,cin,DST,160
+2012,G. Nulty,Marshall Ave Goon Squad,Matt Bryant,atl,K,156
+2012,G. Nulty,Marshall Ave Goon Squad,Joique Bell,det,RB,154
+2012,G. Nulty,Marshall Ave Goon Squad,Chris Givens,stl,wr,139
+2012,G. Nulty,Marshall Ave Goon Squad,Brandon LaFell,car,wr,134
+2012,G. Nulty,Marshall Ave Goon Squad,Sebastian Janikowski,oak,k,132
+2012,G. Nulty,Marshall Ave Goon Squad,Beanie Wells,ari,rb,64
+2012,G. Nulty,Marshall Ave Goon Squad,Montell Owens,Jax,rb,51
+2012,T. Flynn,N.J FiGhTeR,Aaron Rodgers,Gb,QB,378
+2012,T. Flynn,N.J FiGhTeR,Jamaal Charles,Kc,RB,295
+2012,T. Flynn,N.J FiGhTeR,Steven Jackson,Stl,RB,231
+2012,T. Flynn,N.J FiGhTeR,Shonn Greene,Nyj,rb,222
+2012,T. Flynn,N.J FiGhTeR,James Jones,Gb,wr,222
+2012,T. Flynn,N.J FiGhTeR,Bears D/ST,Chi,DST,212
+2012,T. Flynn,N.J FiGhTeR,Jay Cutler,Chi,qb,203
+2012,T. Flynn,N.J FiGhTeR,Torrey Smith,Bal,WR,178
+2012,T. Flynn,N.J FiGhTeR,Larry Fitzgerald ,Ari,wr,170
+2012,T. Flynn,N.J FiGhTeR,DeMarco Murray,Dal,RB,167
+2012,T. Flynn,N.J FiGhTeR,Owen Daniels,Hou,TE,162
+2012,T. Flynn,N.J FiGhTeR,Hakeem Nicks,Nyg,WR,135
+2012,T. Flynn,N.J FiGhTeR,Jermichael Finley,Gb,te,133
+2012,T. Flynn,N.J FiGhTeR,Jonathan Stewart ,Car,rb,87
+2012,T. Flynn,N.J FiGhTeR,Dustin Keller,Nyk,te,67
+2012,N. Segal,Team Segal,Matt Ryan,atl,QB,340
+2012,N. Segal,Team Segal,Philip Rivers,sd,qb,237
+2012,N. Segal,Team Segal,Adrian Peterson ,min,RB,425
+2012,N. Segal,Team Segal,Doug Martin,tb,RB,374
+2012,N. Segal,Team Segal,Chris Johnson ,ten,rb,265
+2012,N. Segal,Team Segal,Calvin Johnson,det,WR,344
+2012,N. Segal,Team Segal,Brian Hartline,mia,WR,188
+2012,N. Segal,Team Segal,Vernon Davis,sf,TE,120
+2012,N. Segal,Team Segal,Jeremy Maclin,phi,wr,196
+2012,N. Segal,Team Segal,Stevan Ridley,ne,rb,248
+2012,N. Segal,Team Segal,Kendall Wright,ten,wr,141
+2012,N. Segal,Team Segal,Brandon Myers,oak,te,176
+2012,N. Segal,Team Segal,Dolphins D/ST,mia,DST,102
+2012,N. Segal,Team Segal,Giants D/ST,nyg,dst,105
+2013,S. Dickson,Hairy Tate,Peyton Manning,den,QB,462
+2013,S. Dickson,Hairy Tate,Ben Roethlisberger,pit,QB,291
+2013,S. Dickson,Hairy Tate,Adrian Peterson,min,RB,287
+2013,S. Dickson,Hairy Tate,Eddie Lacy,gb,RB,284
+2013,S. Dickson,Hairy Tate,Tony Gonzalez,atl,TE,212
+2013,S. Dickson,Hairy Tate,Michael Floyd,ari,WR,199
+2013,S. Dickson,Hairy Tate,DeAngelo Williams,car,RB,197
+2013,S. Dickson,Hairy Tate,Golden Tate,det,WR,185
+2013,S. Dickson,Hairy Tate,Doug Baldwin,sea,WR,151
+2013,S. Dickson,Hairy Tate,Roddy White,atl,WR,145
+2013,S. Dickson,Hairy Tate,Tavon Austin,stl,WR,139
+2013,S. Dickson,Hairy Tate,Rueben Randle,nyg,WR,132
+2013,S. Dickson,Hairy Tate,Danny Amendola,ne,WR,124
+2013,S. Dickson,Hairy Tate,Bills D/ST,buf,DST,123
+2013,S. Dickson,Hairy Tate,Nate Burleson,cle,WR,87
+2013,A. Parra,Hatfields and McCoys,LeSean McCoy,phi,RB,382
+2013,A. Parra,Hatfields and McCoys,Marshawn Lynch,sea,RB,314
+2013,A. Parra,Hatfields and McCoys,Russell Wilson ,sea,QB,304
+2013,A. Parra,Hatfields and McCoys,Tom Brady,ne,qb,289
+2013,A. Parra,Hatfields and McCoys,Le'Veon Bell ,pit,rb,249
+2013,A. Parra,Hatfields and McCoys,Anquan Boldin,sf,WR,241
+2013,A. Parra,Hatfields and McCoys,Maurice Jones-Drew,oak,rb,214
+2013,A. Parra,Hatfields and McCoys,Victor Cruz,nyg,wr,200
+2013,A. Parra,Hatfields and McCoys,Harry Douglas,atl,wr,197
+2013,A. Parra,Hatfields and McCoys,Marques Colston,nor,WR,193
+2013,A. Parra,Hatfields and McCoys,Panthers D/ST,car,dst,185
+2013,A. Parra,Hatfields and McCoys,Greg Olsen,car,TE,183
+2013,A. Parra,Hatfields and McCoys,Cardinals D/ST,ari,dst,164
+2013,A. Parra,Hatfields and McCoys,Lions D/ST,det,DST,94
+2013,A. Parra,Hatfields and McCoys,Da'Rick Rogers,ind,wr,50
+2013,D. Daniel,Foles Will Lead Me to The Ship,Matt Forte,chi,RB,387
+2013,D. Daniel,Foles Will Lead Me to The Ship,Knowshon Moreno,mia,RB,322
+2013,D. Daniel,Foles Will Lead Me to The Ship,Dez Bryant ,dal,WR,293
+2013,D. Daniel,Foles Will Lead Me to The Ship,Nick Foles,phi,QB,285
+2013,D. Daniel,Foles Will Lead Me to The Ship,Eric Decker,nyj,WR,276
+2013,D. Daniel,Foles Will Lead Me to The Ship,Julian Edelman ,ne,wr,242
+2013,D. Daniel,Foles Will Lead Me to The Ship,Julius Thomas,den,TE,215
+2013,D. Daniel,Foles Will Lead Me to The Ship,Kendall Wright,ten,wr,207
+2013,D. Daniel,Foles Will Lead Me to The Ship,Seahawks D/ST,sea,DST,195
+2013,D. Daniel,Foles Will Lead Me to The Ship,Aaron Rodgers ,gb,qb,191
+2013,D. Daniel,Foles Will Lead Me to The Ship,Stevan Ridley,ne,rb,148
+2013,D. Daniel,Foles Will Lead Me to The Ship,Montee Ball,den,rb,118
+2013,D. Daniel,Foles Will Lead Me to The Ship,Jordan Reed,wsh,te,110
+2013,D. Daniel,Foles Will Lead Me to The Ship,Ravens D/ST,bal,dst,105
+2013,D. Daniel,Foles Will Lead Me to The Ship,Michael Crabtree,sf,wr,51
+2013,G. Nulty,In Cam We Trust,Cam Newton,CAR,QB,336
+2013,G. Nulty,In Cam We Trust,A.J. Green,Cin,WR,321
+2013,G. Nulty,In Cam We Trust,Calvin Johnson,Det,WR,317
+2013,G. Nulty,In Cam We Trust,Fred Jackson,buf,RB,258
+2013,G. Nulty,In Cam We Trust,Alfred Morris ,wsh,RB,220
+2013,G. Nulty,In Cam We Trust,Jordan Cameron,cle,te,207
+2013,G. Nulty,In Cam We Trust,49 D/ST,sf,DST,154
+2013,G. Nulty,In Cam We Trust,BenJarvus Green-Ellis,cin,rb,149
+2013,G. Nulty,In Cam We Trust,Garrett Graham,hou,TE,127
+2013,G. Nulty,In Cam We Trust,Chris Ivory,nyj,RB,126
+2013,G. Nulty,In Cam We Trust,Chris Ogbonnaya,cle,rb,107
+2013,G. Nulty,In Cam We Trust,Daniel Thomas,mia,rb,104
+2013,G. Nulty,In Cam We Trust,Toby Gerhart,jax,rb,58
+2013,T. Flynn,Flynns Bins,Tony Romo,Dal,QB,289
+2013,T. Flynn,Flynns Bins,Andre Johnson,Hou,WR,281
+2013,T. Flynn,Flynns Bins,Jordy Nelson,Gb,WR,270
+2013,T. Flynn,Flynns Bins,Robert Griffin III,Wsh,qb,245
+2013,T. Flynn,Flynns Bins,Vernon Davis,Sf,TE,226
+2013,T. Flynn,Flynns Bins,Wes Welker ,Den,wr,203
+2013,T. Flynn,Flynns Bins,Brian Hartline,Min,wr,193
+2013,T. Flynn,Flynns Bins,Bengals D/ST ,Cin,DST,176
+2013,T. Flynn,Flynns Bins,Rashard Mendenhall,Ari,rb,171
+2013,T. Flynn,Flynns Bins,Darren Sproles,Phi,rb,166
+2013,T. Flynn,Flynns Bins,Steven Jackson,Atl,RB,165
+2013,T. Flynn,Flynns Bins,Martellus Bennett,Chi,te,161
+2013,T. Flynn,Flynns Bins,Dwayne Bowe,Kc,WR,147
+2013,T. Flynn,Flynns Bins,Titans D/ST ,Ten,dst,100
+2013,T. Flynn,Flynns Bins,Dennis Johnson,hou,RB,31
+2013,N. Segal,The Brees Knees,Andy Dalton ,cin,QB,325
+2013,N. Segal,The Brees Knees,Drew Brees,nor,qb,401
+2013,N. Segal,The Brees Knees,Jamaal Charles,kc,RB,418
+2013,N. Segal,The Brees Knees,DeMarco Murray,dal,RB,279
+2013,N. Segal,The Brees Knees,Larry Fitzgerald ,ari,wr,236
+2013,N. Segal,The Brees Knees,Pierre Garcon ,wsh,WR,273
+2013,N. Segal,The Brees Knees,Greg Jennings,min,WR,177
+2013,N. Segal,The Brees Knees,Jimmy Graham,nor,TE,313
+2013,N. Segal,The Brees Knees,Steve Smith,bal,wr,158
+2013,N. Segal,The Brees Knees,Pierre Thomas,nor,rb,217
+2013,N. Segal,The Brees Knees,Charles Clay ,mia,te,182
+2013,N. Segal,The Brees Knees,Jacquizz Rodgers,atl,rb,140
+2013,N. Segal,The Brees Knees,Denarius Moore,oak,wr,147
+2013,N. Segal,The Brees Knees,Browns D/ST,cle,DST,107
+2013,N. Segal,The Brees Knees,Patriots D/ST,ne,dst,114
+2013,M. DiCerbo,Team Slapper,Josh Gordon,cle,WR,336
+2013,M. DiCerbo,Team Slapper,Philip Rivers,sd,QB,322
+2013,M. DiCerbo,Team Slapper,Matthew Stafford ,det,qb,316
+2013,M. DiCerbo,Team Slapper,Brandon Marshall,chi,WR,298
+2013,M. DiCerbo,Team Slapper,Chris Johnson ,nyj,rb,289
+2013,M. DiCerbo,Team Slapper,DeSean Jackson ,wsh,wr,278
+2013,M. DiCerbo,Team Slapper,Reggie Bush,det,RB,273
+2013,M. DiCerbo,Team Slapper,Zac Stacy St,stl,RB,222
+2013,M. DiCerbo,Team Slapper,Jay Cutler,chi,qb,186
+2013,M. DiCerbo,Team Slapper,C.J. Spiller,buf,rb,183
+2013,M. DiCerbo,Team Slapper,Chiefs D/ST ,kc,DST,179
+2013,M. DiCerbo,Team Slapper,Shane Vereen,ne,rb,133
+2013,M. DiCerbo,Team Slapper,Zach Ertz ,phi,te,100
+2013,M. DiCerbo,Team Slapper,Dennis Pitta,bal,TE,41
+2013,M. DiCerbo,Team Slapper,Kirk Cousins ,wsh,qb,39
+2013,R. Kelly,Slob On My Cobb,Antonio Brown ,pit,WR,313
+2013,R. Kelly,Slob On My Cobb,Colin Kaepernick,sf,QB,291
+2013,R. Kelly,Slob On My Cobb,Ryan Mathews,sd,rb,249
+2013,R. Kelly,Slob On My Cobb,Vincent Jackson,tb,WR,240
+2013,R. Kelly,Slob On My Cobb,Giovani Bernard ,cin,RB,232
+2013,R. Kelly,Slob On My Cobb,Frank Gore,sf,rb,231
+2013,R. Kelly,Slob On My Cobb,Danny Woodhead,sd,RB,223
+2013,R. Kelly,Slob On My Cobb,Jason Witten,dal,TE,200
+2013,R. Kelly,Slob On My Cobb,Terrelle Pryor,sea,qb,169
+2013,R. Kelly,Slob On My Cobb,Jeremy Kerley,nyj,wr,108
+2013,R. Kelly,Slob On My Cobb,Brent Celek,phi,te,107
+2013,R. Kelly,Slob On My Cobb,Randall Cobb ,gb,wr,104
+2013,R. Kelly,Slob On My Cobb,Raiders D/ST,oak,DST,84
+2013,R. Kelly,Slob On My Cobb,Drew Davis,atl,wr,43
+2014,C. Upperman,Green Eggs And Cam,DeMarco Murray,Phi,RB,409
+2014,C. Upperman,Green Eggs And Cam,Cam Newton ,Car,QB,282
+2014,C. Upperman,Green Eggs And Cam,Andy Dalton,Cin,QB,251
+2014,C. Upperman,Green Eggs And Cam,Kelvin Benjamin,Car,WR,219
+2014,C. Upperman,Green Eggs And Cam,A.J. Green ,Cin,WR,216
+2014,C. Upperman,Green Eggs And Cam,Roddy White,Atl,WR,207
+2014,C. Upperman,Green Eggs And Cam,Coby Fleener,Ind,TE,175
+2014,C. Upperman,Green Eggs And Cam,Mark Sanchez,Phi,QB,160
+2014,C. Upperman,Green Eggs And Cam,Reggie Wayne,Ind,WR,148
+2014,C. Upperman,Green Eggs And Cam,Terrance West,Cle,RB,135
+2014,C. Upperman,Green Eggs And Cam,Jared Cook ,Stl,TE,133
+2014,C. Upperman,Green Eggs And Cam,Dwayne Bowe,Cle,WR,129
+2014,C. Upperman,Green Eggs And Cam,Bishop Sankey,Ten,RB,106
+2014,C. Upperman,Green Eggs And Cam,Chiefs D/ST ,KC,DST,106
+2014,C. Upperman,Green Eggs And Cam,Giants D/ST ,Nyg,DST,80
+2014,S. Dickson,Big ol' Johnson,Aaron Rodgers  ,gb,QB,391
+2014,S. Dickson,Big ol' Johnson,Eli Manning,nyg,QB,306
+2014,S. Dickson,Big ol' Johnson,Jeremy Maclin,kc,WR,285
+2014,S. Dickson,Big ol' Johnson,LeSean McCoy,buf,RB,243
+2014,S. Dickson,Big ol' Johnson,Steve Smith Sr.,bal,WR,230
+2014,S. Dickson,Big ol' Johnson,Joique Bell,det,RB,226
+2014,S. Dickson,Big ol' Johnson,Michael Floyd,ari,WR,162
+2014,S. Dickson,Big ol' Johnson,Julius Thomas,jax,TE,159
+2014,S. Dickson,Big ol' Johnson,Darren Sproles,phi,RB,154
+2014,S. Dickson,Big ol' Johnson,Kenny Britt,stl,WR,140
+2014,S. Dickson,Big ol' Johnson,Chris Johnson,myj,RB,132
+2014,S. Dickson,Big ol' Johnson,Percy Harvin,buf,WR,128
+2014,S. Dickson,Big ol' Johnson,Rams D/ST ,stl,DST,123
+2014,S. Dickson,Big ol' Johnson,Brian Quick ,stl,WR,84
+2014,S. Dickson,Big ol' Johnson,Dion Sims,mia,TE,59
+2014,A. Parra,The Angry Bananas,Andrew Luck ,ind,QB,391
+2014,A. Parra,The Angry Bananas,Matt Forte,chi,RB,379
+2014,A. Parra,The Angry Bananas,Justin Forsett,bal,RB,273
+2014,A. Parra,The Angry Bananas,T.Y. Hilton ,ind,WR,265
+2014,A. Parra,The Angry Bananas,Lamar Miller ,mia,rb,251
+2014,A. Parra,The Angry Bananas,Mike Evans ,tb,WR,245
+2014,A. Parra,The Angry Bananas,DeSean Jackson ,wsh,wr,226
+2014,A. Parra,The Angry Bananas,Mark Ingram ,nor,rb,223
+2014,A. Parra,The Angry Bananas,Brandon LaFell ,ne,wr,212
+2014,A. Parra,The Angry Bananas,Denard Robinson ,jax,rb,128
+2014,A. Parra,The Angry Bananas,49ers D/ST  ,sf,DST,128
+2014,A. Parra,The Angry Bananas,Jordan Cameron,mia,TE,87
+2014,A. Parra,The Angry Bananas,Daniel Herron,indy,rb,82
+2014,A. Parra,The Angry Bananas,Josh Gordon ,cle,wr,52
+2014,A. Parra,The Angry Bananas,Johnny Manziel,cle,qb,13
+2014,D. Daniel,Team Jew-ru,Demaryius Thomas,den,wr,345
+2014,D. Daniel,Team Jew-ru,Arian Foster,hou,RB,315
+2014,D. Daniel,Team Jew-ru,Tom Brady ,ne,QB,310
+2014,D. Daniel,Team Jew-ru,Julio Jones ,atl,wr,292
+2014,D. Daniel,Team Jew-ru,Frank Gore ,ind,rb,202
+2014,D. Daniel,Team Jew-ru,Jordan Matthews ,phi,wr,196
+2014,D. Daniel,Team Jew-ru,Shane Vereen,nyg,rb,169
+2014,D. Daniel,Team Jew-ru,Keenan Allen ,sd,WR,168
+2014,D. Daniel,Team Jew-ru,Seahawks D/ST ,sea,DST,150
+2014,D. Daniel,Team Jew-ru,Zach Ertz ,phi,te,136
+2014,D. Daniel,Team Jew-ru,Vikings D/ST ,min,dst,114
+2014,D. Daniel,Team Jew-ru,LeGarrette Blount ,ne,rb,107
+2014,D. Daniel,Team Jew-ru,Latavius Murray ,oak,rb,96
+2014,D. Daniel,Team Jew-ru,Donte Moncrief ,ind,wr,96
+2014,D. Daniel,Team Jew-ru,Jordan Reed,wsh,TE,91
+2014,G. Nulty,Pass That Jay,Colin Kaepernick ,Sf,QB,289
+2014,G. Nulty,Pass That Jay,Jay Cutler,Chi,qb,286
+2014,G. Nulty,Pass That Jay,Alshon Jeffery ,chi,WR,252
+2014,G. Nulty,Pass That Jay,Jimmy Graham ,sea,TE,222
+2014,G. Nulty,Pass That Jay,Brandon Marshall,nyj,WR,178
+2014,G. Nulty,Pass That Jay,Rueben Randle,nyg,wr,174
+2014,G. Nulty,Pass That Jay,Jonathan Stewart,car,RB,171
+2014,G. Nulty,Pass That Jay,Tre Mason,stl,RB,163
+2014,G. Nulty,Pass That Jay,Doug Baldwin,sea,wr,160
+2014,G. Nulty,Pass That Jay,Eagles D/ST ,phi,DST,159
+2014,G. Nulty,Pass That Jay,Larry Donnell,myg,te,147
+2014,G. Nulty,Pass That Jay,Isaiah Crowell,cle,RB,136
+2014,G. Nulty,Pass That Jay,Patriots D/ST ,ne,dst,131
+2014,G. Nulty,Pass That Jay,Cordarrelle Patterson ,min,wr,90
+2014,G. Nulty,Pass That Jay,Boobie Dixon,buf,rb,76
+2014,T. Flynn,Two hands on my DECKER,Le'Veon Bell ,Pit,RB,408
+2014,T. Flynn,Two hands on my DECKER,Russell Wilson,Sea,QB,363
+2014,T. Flynn,Two hands on my DECKER,Marshawn Lynch,Sea,RB,347
+2014,T. Flynn,Two hands on my DECKER,C.J. Anderson,Den,RB,236
+2014,T. Flynn,Two hands on my DECKER,Antonio Gates,Sd,TE,217
+2014,T. Flynn,Two hands on my DECKER,Eric Decker,Nyj,WR,203
+2014,T. Flynn,Two hands on my DECKER,Andre Williams,Nyg,rb,177
+2014,T. Flynn,Two hands on my DECKER,Mohamed Sanu ,Cin,wr,175
+2014,T. Flynn,Two hands on my DECKER,Vincent Jackson ,Tb,WR,174
+2014,T. Flynn,Two hands on my DECKER,Steven Jackson,Atl,rb,162
+2014,T. Flynn,Two hands on my DECKER,Michael Crabtree,Oak,wr,157
+2014,T. Flynn,Two hands on my DECKER,Jason Witten ,Dal,te,157
+2014,T. Flynn,Two hands on my DECKER,Packers D/ST ,Gb,dst,123
+2014,T. Flynn,Two hands on my DECKER,Ronnie Hillman,Den,rb,113
+2014,T. Flynn,Two hands on my DECKER,Bengals D/ST  ,Cin,DST,79
+2014,N. Segal,Shmurda Team Nate,Peyton Manning,den,QB,353
+2014,N. Segal,Shmurda Team Nate,Joe Flacco ,bal,qb,292
+2014,N. Segal,Shmurda Team Nate,Teddy Bridgewater ,min,qb,201
+2014,N. Segal,Shmurda Team Nate,Eddie Lacy ,gb,RB,309
+2014,N. Segal,Shmurda Team Nate,Trent Richardson,oak,RB,133
+2014,N. Segal,Shmurda Team Nate,Golden Tate ,det,wr,262
+2014,N. Segal,Shmurda Team Nate,Andre Johnson ,indy,WR,183
+2014,N. Segal,Shmurda Team Nate,Pierre Garcon,wsh,WR,159
+2014,N. Segal,Shmurda Team Nate,Vernon Davis,sf,TE,56
+2014,N. Segal,Shmurda Team Nate,Pierre Thomas,nor,rb,118
+2014,N. Segal,Shmurda Team Nate,Sammy Watkins ,buf,wr,197
+2014,N. Segal,Shmurda Team Nate,Danny Woodhead,sd,rb,12
+2014,N. Segal,Shmurda Team Nate,Brent Celek,phi,te,64
+2014,N. Segal,Shmurda Team Nate,Greg Jennings ,mia,wr,162
+2014,N. Segal,Shmurda Team Nate,Cardinals D/ST ,ari,DST,114
+2014,M. DiCerbo,Team Slapper,Dez Bryant ,dal,wr,327
+2014,M. DiCerbo,Team Slapper,Matt Ryan ,atl,qb,316
+2014,M. DiCerbo,Team Slapper,Odell Beckham Jr. ,nyg,WR,302
+2014,M. DiCerbo,Team Slapper,Philip Rivers ,sd,qb,297
+2014,M. DiCerbo,Team Slapper,Tony Romo,dal,QB,295
+2014,M. DiCerbo,Team Slapper,Randall Cobb,gb,wr,288
+2014,M. DiCerbo,Team Slapper,Jeremy Hill,cin,RB,247
+2014,M. DiCerbo,Team Slapper,DeAndre Hopkins,hou,wr,237
+2014,M. DiCerbo,Team Slapper,Calvin Johnson,det,WR,228
+2014,M. DiCerbo,Team Slapper,Alfred Morris ,wsh,RB,221
+2014,M. DiCerbo,Team Slapper,Greg Olsen,car,TE,215
+2014,M. DiCerbo,Team Slapper,Martellus Bennett ,chi,te,213
+2014,M. DiCerbo,Team Slapper,Rashad Jennings,nyg,rb,159
+2014,M. DiCerbo,Team Slapper,Martavis Bryant ,pit,wr,138
+2014,M. DiCerbo,Team Slapper,Lions D/ST ,det,DST,136
+2014,R. Kelly,ROBERT KELLY'S TEAM,Jordy Nelson ,gb,WR,356
+2014,R. Kelly,ROBERT KELLY'S TEAM,Drew Brees,nor,QB,340
+2014,R. Kelly,ROBERT KELLY'S TEAM,Emmanuel Sanders ,den,wr,295
+2014,R. Kelly,ROBERT KELLY'S TEAM,Rob Gronkowski ,ne,TE,262
+2014,R. Kelly,ROBERT KELLY'S TEAM,Anquan Boldin,sf,WR,219
+2014,R. Kelly,ROBERT KELLY'S TEAM,Fred Jackson,buf,RB,200
+2014,R. Kelly,ROBERT KELLY'S TEAM,Torrey Smith,sf,wr,186
+2014,R. Kelly,ROBERT KELLY'S TEAM,Chris Ivory,nyj,rb,181
+2014,R. Kelly,ROBERT KELLY'S TEAM,Delanie Walker,ten,te,174
+2014,R. Kelly,ROBERT KELLY'S TEAM,Marques Colston,nor,wr,172
+2014,R. Kelly,ROBERT KELLY'S TEAM,Larry Fitzgerald ,ari,wr,153
+2014,R. Kelly,ROBERT KELLY'S TEAM,Darren McFadden,dal,rb,129
+2014,R. Kelly,ROBERT KELLY'S TEAM,Broncos D/ST ,den,DST,120
+2014,R. Kelly,ROBERT KELLY'S TEAM,Doug Martin,tb,RB,93
+2014,R. Kelly,ROBERT KELLY'S TEAM,Derek Hagan,ten,wr,45
+2015,C. Upperman,Roger That,Blake Bortles ,Jax,QB,351
+2015,C. Upperman,Roger That,Aaron Rodgers,Gb,QB,327
+2015,C. Upperman,Roger That,Doug Baldwin,Sea,WR,274
+2015,C. Upperman,Roger That,Danny Woodhead,Sd,RB,243
+2015,C. Upperman,Roger That,Greg Olsen,Car,TE,221
+2015,C. Upperman,Roger That,T.Y. Hilton ,Ind,WR,212
+2015,C. Upperman,Roger That,Charles Sims,Tb,RB,190
+2015,C. Upperman,Roger That,James Starks,Gb,RB,183
+2015,C. Upperman,Roger That,Martavis Bryant,Pit,WR,174
+2015,C. Upperman,Roger That,Theo Riddick,Det,RB,171
+2015,C. Upperman,Roger That,Donte Moncrief ,Ind,WR,168
+2015,C. Upperman,Roger That,Danny Amendola,Ne,WR,139
+2015,C. Upperman,Roger That,Alfred Blue,Hou,RB,132
+2015,C. Upperman,Roger That,Rams D/ST,Stl,DST,110
+2015,S. Dickson,Big ol' Johnson,Eli Manning,nyg,QB,323
+2015,S. Dickson,Big ol' Johnson,Derek Carr,oak,QB,301
+2015,S. Dickson,Big ol' Johnson,Larry Fitzgerald ,ari,WR,273
+2015,S. Dickson,Big ol' Johnson,Brandin Cooks ,nor,WR,264
+2015,S. Dickson,Big ol' Johnson,Allen Hurns ,jax,WR,231
+2015,S. Dickson,Big ol' Johnson,Darren McFadden ,dal,RB,227
+2015,S. Dickson,Big ol' Johnson,Tavon Austin ,stl,WR,195
+2015,S. Dickson,Big ol' Johnson,Eddie Lacy,gb,RB,160
+2015,S. Dickson,Big ol' Johnson,Ryan Mathews,phi,RB,136
+2015,S. Dickson,Big ol' Johnson,Karlos Williams,buf,RB,136
+2015,S. Dickson,Big ol' Johnson,Jacob Tamme,atl,TE,123
+2015,S. Dickson,Big ol' Johnson,Bengals D/ST ,cin,DST,122
+2015,S. Dickson,Big ol' Johnson,Julius Thomas,jax,TE,116
+2015,S. Dickson,Big ol' Johnson,Peyton Manning,den,QB,110
+2015,S. Dickson,Big ol' Johnson,Vincent Jackson,tb,WR,103
+2015,A. Parra,The Angry Bananas,Russell Wilson ,sea,QB,379
+2015,A. Parra,The Angry Bananas,Rob Gronkowski,ne,TE,256
+2015,A. Parra,The Angry Bananas,Todd Gurley ,stl,RB,243
+2015,A. Parra,The Angry Bananas,Emmanuel Sanders ,den,WR,234
+2015,A. Parra,The Angry Bananas,David Johnson ,ari,RB,226
+2015,A. Parra,The Angry Bananas,Travis Benjamin ,sd,wr,211
+2015,A. Parra,The Angry Bananas,T.J. Yeldon ,jax,rb,177
+2015,A. Parra,The Angry Bananas,Tyler Lockett ,sea,we,159
+2015,A. Parra,The Angry Bananas,Alshon Jeffery ,chi,WR,155
+2015,A. Parra,The Angry Bananas,Panthers D/ST ,ari,DST,155
+2015,A. Parra,The Angry Bananas,Javorius Allen,bal,rb,154
+2015,A. Parra,The Angry Bananas,Tim Hightower ,nor,rb,100
+2015,A. Parra,The Angry Bananas,Dez Bryant ,dal,wr,85
+2015,A. Parra,The Angry Bananas,Shaun Draughn ,sf,rb,84
+2015,A. Parra,The Angry Bananas,Denard Robinson ,jax,rb,68
+2015,D. Daniel,F Yourself,Julio Jones ,atl,WR,375
+2015,D. Daniel,F Yourself,Ryan Fitzpatrick,nyj,QB,317
+2015,D. Daniel,F Yourself,Delanie Walker,ten,TE,249
+2015,D. Daniel,F Yourself,Jordan Reed,wsh,te,237
+2015,D. Daniel,F Yourself,Jordan Matthews ,phi,wr,232
+2015,D. Daniel,F Yourself,Frank Gore ,ind,rb,225
+2015,D. Daniel,F Yourself,DeMarco Murray,ten,rb,211
+2015,D. Daniel,F Yourself,Randall Cobb,gb,WR,205
+2015,D. Daniel,F Yourself,Giovani Bernard ,cin,RB,193
+2015,D. Daniel,F Yourself,Julian Edelman,ne,wr,174
+2015,D. Daniel,F Yourself,Chiefs D/ST ,kc,DST,162
+2015,D. Daniel,F Yourself,Charcandrick West,kc,RB,155
+2015,D. Daniel,F Yourself,C.J. Anderson,den,rb,154
+2015,D. Daniel,F Yourself,Matt Jones,wsh,rb,133
+2015,D. Daniel,F Yourself,Spencer Ware,kc,rb,89
+2015,G. Nulty,"Your Wright, I Suck",DeAndre Hopkins ,Hour,WR,328
+2015,G. Nulty,"Your Wright, I Suck",Ryan Tannehill ,mia,QB,286
+2015,G. Nulty,"Your Wright, I Suck",Andy Dalton ,cin,qb,273
+2015,G. Nulty,"Your Wright, I Suck",Michael Crabtree,oak,WR,224
+2015,G. Nulty,"Your Wright, I Suck",Mike Evans,tb,WR,207
+2015,G. Nulty,"Your Wright, I Suck",Travis Kelce,kc,TE,183
+2015,G. Nulty,"Your Wright, I Suck",Shane Vereen,myg,RB,152
+2015,G. Nulty,"Your Wright, I Suck",Antonio Gates,sd,te,144
+2015,G. Nulty,"Your Wright, I Suck",Melvin Gordon ,sd,RB,128
+2015,G. Nulty,"Your Wright, I Suck",Stevie Johnson,sd,wr,109
+2015,G. Nulty,"Your Wright, I Suck",Marshawn Lynch ,sea,rb,99
+2015,G. Nulty,"Your Wright, I Suck",Kendall Wright ,ten,wr,96
+2015,G. Nulty,"Your Wright, I Suck",Bills D/ST ,buf,DST,79
+2015,G. Nulty,"Your Wright, I Suck",Fred Jackson,sea,rb,67
+2015,G. Nulty,"Your Wright, I Suck",Tevin Coleman ,Atl,rb,50
+2015,T. Flynn,FINS BINS,Drew Brees ,Nor,qb,346
+2015,T. Flynn,FINS BINS,Matthew Stafford ,Det,qb,329
+2015,T. Flynn,FINS BINS,Lamar Miller,Hou,RB,264
+2015,T. Flynn,FINS BINS,Ben Roethlisberger ,Pit,QB,263
+2015,T. Flynn,FINS BINS,Calvin Johnson,Det,WR,252
+2015,T. Flynn,FINS BINS,Gary Barnidge,Cle,TE,228
+2015,T. Flynn,FINS BINS,Jonathan Stewart,Car,rb,199
+2015,T. Flynn,FINS BINS,Ronnie Hillman,Den,RB,193
+2015,T. Flynn,FINS BINS,Willie Snead ,Nor,we,178
+2015,T. Flynn,FINS BINS,Michael Floyd,Ari,WR,175
+2015,T. Flynn,FINS BINS,Anquan Boldin,Sf,WR,164
+2015,T. Flynn,FINS BINS,LeGarrette Blount,Ne,rb,143
+2015,T. Flynn,FINS BINS,Seahawks D/ST ,Sea,DST,140
+2015,T. Flynn,FINS BINS,Rishard Matthews ,Ten,wr,137
+2015,T. Flynn,FINS BINS,Charles Clay ,Buf,te,118
+2015,N. Segal,Two time champ segal,Philip Rivers,sd,QB,327
+2015,N. Segal,Two time champ segal,Jameis Winston ,tb,qb,306
+2015,N. Segal,Two time champ segal,Tyrod Taylor ,buf,qb,303
+2015,N. Segal,Two time champ segal,Chris Ivory,jax,RB,233
+2015,N. Segal,Two time champ segal,DeAngelo Williams,pit,RB,253
+2015,N. Segal,Two time champ segal,Rueben Randle,phi,wr,190
+2015,N. Segal,Two time champ segal,Antonio Brown,pit,WR,388
+2015,N. Segal,Two time champ segal,DeSean Jackson ,wsh,WR,120
+2015,N. Segal,Two time champ segal,Jason Witten,dal,TE,157
+2015,N. Segal,Two time champ segal,James Jones,gb,wr,189
+2015,N. Segal,Two time champ segal,Ted Ginn Jr.,car,wr,187
+2015,N. Segal,Two time champ segal,Marvin Jones ,det,wr,168
+2015,N. Segal,Two time champ segal,Dolphins D/ST ,mia,DST,69
+2015,N. Segal,Two time champ segal,Packers D/ST ,gb,dst,99
+2015,N. Segal,Two time champ segal,Steelers D/ST ,pit,dst,125
+2015,M. DiCerbo,Team Slapper,Devonta Freeman ,atl,RB,351
+2015,M. DiCerbo,Team Slapper,Carson Palmer,ari,QB,347
+2015,M. DiCerbo,Team Slapper,Odell Beckham Jr. ,nyg,wr,342
+2015,M. DiCerbo,Team Slapper,Brandon Marshall,nyj,WR,340
+2015,M. DiCerbo,Team Slapper,Jarvis Landry ,mia,wr,271
+2015,M. DiCerbo,Team Slapper,Latavius Murray ,oak,RB,238
+2015,M. DiCerbo,Team Slapper,Golden Tate ,det,WR,201
+2015,M. DiCerbo,Team Slapper,Tyler Eifert ,cin,te,187
+2015,M. DiCerbo,Team Slapper,Jeremy Langford,chi,rb,168
+2015,M. DiCerbo,Team Slapper,Stefon Diggs ,min,wr,144
+2015,M. DiCerbo,Team Slapper,Texans D/ST ,hou,DST,138
+2015,M. DiCerbo,Team Slapper,Austin Seferian-Jenkins,tb,TE,80
+2015,M. DiCerbo,Team Slapper,Brandon Bolden,ne,rb,79
+2015,M. DiCerbo,Team Slapper,Fozzy Whittaker,car,rb,33
+2015,M. DiCerbo,Team Slapper,Bryce Brown,sea,rb,15
+2015,R. Kelly,The Dark Horse,Cam Newton,car,QB,433
+2015,R. Kelly,The Dark Horse,Adrian Peterson ,min,RB,315
+2015,R. Kelly,The Dark Horse,Allen Robinson ,jax,WR,305
+2015,R. Kelly,The Dark Horse,A.J. Green ,cin,wr,280
+2015,R. Kelly,The Dark Horse,Doug Martin,tb,RB,271
+2015,R. Kelly,The Dark Horse,Eric Decker,nyj,WR,246
+2015,R. Kelly,The Dark Horse,Matt Forte,nyj,rb,243
+2015,R. Kelly,The Dark Horse,Amari Cooper ,oak,wr,217
+2015,R. Kelly,The Dark Horse,Benjamin Watson,bal,TE,182
+2015,R. Kelly,The Dark Horse,Zach Ertz,phi,te,164
+2015,R. Kelly,The Dark Horse,Darren Sproles,phi,rb,161
+2015,R. Kelly,The Dark Horse,Cardinals D/ST  ,ari,DST,157
+2015,R. Kelly,The Dark Horse,Malcom Floyd,sd,wr,104
+2015,R. Kelly,The Dark Horse,Davante Adams,gb,wr,101
+2015,R. Kelly,The Dark Horse,C.J. Spiller,nor,rb,80
+2016,B. Newell,The Shady Bunch,Aaron Rodgers ,Gb,QB,416
+2016,B. Newell,The Shady Bunch,LeSean McCoy ,Buf,RB,334
+2016,B. Newell,The Shady Bunch,Philip Rivers ,Sd,QB,295
+2016,B. Newell,The Shady Bunch,Julio Jones ,Atl,WR,262
+2016,B. Newell,The Shady Bunch,Tyrell Williams,Sd,WR,221
+2016,B. Newell,The Shady Bunch,Greg Olsen,Car,TE,207
+2016,B. Newell,The Shady Bunch,Cameron Meredith,Chi,WR,179
+2016,B. Newell,The Shady Bunch,Theo Riddick,Det,RB,166
+2016,B. Newell,The Shady Bunch,Cameron Brate,Tb,TE,163
+2016,B. Newell,The Shady Bunch,DeVante Parker,Mia,WR,154
+2016,B. Newell,The Shady Bunch,James White,Ne,RB,153
+2016,B. Newell,The Shady Bunch,Duke Johnson Jr. ,Cle,RB,139
+2016,B. Newell,The Shady Bunch,Giants D/ST ,Nyg,DST,130
+2016,B. Newell,The Shady Bunch,Michael Floyd,Ne,WR,110
+2016,B. Newell,The Shady Bunch,Bengals D/ST ,Cin,DST,79
+2016,C. Upperman,Blue Hens,Andrew Luck,Ind,QB,344
+2016,C. Upperman,Blue Hens,Blake Bortles ,Jax,QB,303
+2016,C. Upperman,Blue Hens,Mike Evans,Tb,WR,298
+2016,C. Upperman,Blue Hens,Latavius Murray ,Min,RB,231
+2016,C. Upperman,Blue Hens,Lamar Miller,Hou,RB,226
+2016,C. Upperman,Blue Hens,Adam Thielen,Min,WR,198
+2016,C. Upperman,Blue Hens,Kelvin Benjamin,Car,WR,193
+2016,C. Upperman,Blue Hens,Quincy Enunwa,Nyj,WR,169
+2016,C. Upperman,Blue Hens,Darren Sproles,Phi,RB,168
+2016,C. Upperman,Blue Hens,Martellus Bennett ,Gb,TE,160
+2016,C. Upperman,Blue Hens,Taylor Gabriel,Atl,WR,147
+2016,C. Upperman,Blue Hens,Eric Ebron ,Det,TE,139
+2016,C. Upperman,Blue Hens,Chiefs D/ST ,Kc,DST,138
+2016,C. Upperman,Blue Hens,John Brown ,Ari,WR,99
+2016,S. Dickson,S. Dickson,Ezekiel Elliott ,dal,RB,390
+2016,S. Dickson,Benny and the jets,Marcus Mariota ,ten,QB,287
+2016,S. Dickson,Benny and the jets,Ben Roethlisberger,pit,QB,285
+2016,S. Dickson,Benny and the jets,Jarvis Landry ,mia,WR,230
+2016,S. Dickson,Benny and the jets,Julian Edelman,ne,WR,226
+2016,S. Dickson,Benny and the jets,Tyreek Hill ,kc,WR,218
+2016,S. Dickson,Benny and the jets,Matt Forte ,nyj,RB,209
+2016,S. Dickson,Benny and the jets,Mike Wallace,bal,WR,208
+2016,S. Dickson,Benny and the jets,Allen Robinson ,jax,WR,191
+2016,S. Dickson,Benny and the jets,Stefon Diggs ,min,WR,187
+2016,S. Dickson,Benny and the jets,Jason Witten,dal,TE,146
+2016,S. Dickson,Benny and the jets,Eagles D/ST ,phi,DST,127
+2016,S. Dickson,Benny and the jets,DeAngelo Williams,pit,RB,111
+2016,S. Dickson,Benny and the jets,Julius Thomas,mia,TE,79
+2016,S. Dickson,Benny and the jets,Dion Lewis,ne,RB,59
+2016,A. Parra,The Angry Bananas,Russell Wilson ,sea,QB,306
+2016,A. Parra,The Angry Bananas,Melvin Gordon,sd,rb,284
+2016,A. Parra,The Angry Bananas,Jordan Howard  ,chi,RB,262
+2016,A. Parra,The Angry Bananas,Michael Thomas,nor,WR,249
+2016,A. Parra,The Angry Bananas,Carson Wentz ,phi,qb,240
+2016,A. Parra,The Angry Bananas,Todd Gurley,lar,RB,232
+2016,A. Parra,The Angry Bananas,Amari Cooper ,oak,WR,228
+2016,A. Parra,The Angry Bananas,Delanie Walker,ten,TE,182
+2016,A. Parra,The Angry Bananas,Devontae Booker ,den,rb,158
+2016,A. Parra,The Angry Bananas,Alshon Jeffery ,phi,wr,141
+2016,A. Parra,The Angry Bananas,Patriots D/ST,ne,DST,117
+2016,A. Parra,The Angry Bananas,Jeremy Maclin,kc,wr,104
+2016,A. Parra,The Angry Bananas,Rams D/ST,stl,dst,72
+2016,A. Parra,The Angry Bananas,Kenneth Farrow ,sd,rb,38
+2016,A. Parra,The Angry Bananas,Adrian Peterson ,min,rb,13
+2016,D. Daniel,Playing With My Fleener,Le'Veon Bell ,pit,RB,353
+2016,D. Daniel,Playing With My Fleener,Antonio Brown ,pit,WR,299
+2016,D. Daniel,Playing With My Fleener,Jameis Winston ,tb,qb,289
+2016,D. Daniel,Playing With My Fleener,Tom Brady ,ne,QB,288
+2016,D. Daniel,Playing With My Fleener,Carlos Hyde ,sf,RB,218
+2016,D. Daniel,Playing With My Fleener,Emmanuel Sanders ,den,WR,206
+2016,D. Daniel,Playing With My Fleener,Bilal Powell ,nyj,rb,204
+2016,D. Daniel,Playing With My Fleener,Kyle Rudolph ,min,te,203
+2016,D. Daniel,Playing With My Fleener,Steve Smith Sr.,bal,wr,183
+2016,D. Daniel,Playing With My Fleener,Zach Ertz ,phi,TE,176
+2016,D. Daniel,Playing With My Fleener,Rashad Jennings,nyg,rb,158
+2016,D. Daniel,Playing With My Fleener,Broncos D/ST ,den,DST,144
+2016,D. Daniel,Playing With My Fleener,Texans D/ST ,hou,dst,102
+2016,D. Daniel,Playing With My Fleener,Thomas Rawls,sea,rb,89
+2016,D. Daniel,Playing With My Fleener,Sammy Watkins ,buf,wr,81
+2016,T. Flynn,FINS BINS,Cam Newton ,Car,QB,290
+2016,T. Flynn,FINS BINS,Mark Ingram,Nor,rb,268
+2016,T. Flynn,FINS BINS,Michael Crabtree,Oak,WR,233
+2016,T. Flynn,FINS BINS,Colin Kaepernick,Sf,qb,224
+2016,T. Flynn,FINS BINS,Spencer Ware,Kc,RB,219
+2016,T. Flynn,FINS BINS,Jeremy Hill,Cin,RB,213
+2016,T. Flynn,FINS BINS,Rishard Matthews,Ten,wr,206
+2016,T. Flynn,FINS BINS,Dez Bryant ,Dal,WR,182
+2016,T. Flynn,FINS BINS,Cole Beasley,Dal,wr,180
+2016,T. Flynn,FINS BINS,Sterling Shepard ,Nyg,wr,179
+2016,T. Flynn,FINS BINS,Tim Hightower,Sf,rb,140
+2016,T. Flynn,FINS BINS,Tyler Eifert ,Cin,TE,93
+2016,T. Flynn,FINS BINS,Charcandrick West,Kc,rb,93
+2016,T. Flynn,FINS BINS,Rex Burkhead,Ne,rb,78
+2016,T. Flynn,FINS BINS,Lions D/ST ,Det,DST,69
+2016,N. Segal,Two time champ segal,Tyrod Taylor ,buf,QB,299
+2016,N. Segal,Two time champ segal,Dak Prescott ,dal,qb,313
+2016,N. Segal,Two time champ segal,David Johnson ,ari,RB,451
+2016,N. Segal,Two time champ segal,LeGarrette Blount ,ne,RB,280
+2016,N. Segal,Two time champ segal,DeMarco Murray ,ten,rb,341
+2016,N. Segal,Two time champ segal,T.Y. Hilton ,ind,WR,273
+2016,N. Segal,Two time champ segal,Jordan Matthews ,phi,WR,164
+2016,N. Segal,Two time champ segal,Travis Kelce ,kc,TE,224
+2016,N. Segal,Two time champ segal,A.J. Green ,cin,wr,190
+2016,N. Segal,Two time champ segal,T.J. Yeldon ,jax,rb,144
+2016,N. Segal,Two time champ segal,Kenny Britt,cle,wr,189
+2016,N. Segal,Two time champ segal,Pierre Garcon,sf,wr,198
+2016,N. Segal,Two time champ segal,Seahawks D/ST  ,sea,DST,113
+2016,N. Segal,Two time champ segal,Ravens D/ST  ,bal,dst,116
+2016,N. Segal,Two time champ segal,Vikings D/ST ,min,dst,157
+2016,M. DiCerbo,Team Slapper,Matt Ryan ,atl,QB,385
+2016,M. DiCerbo,Team Slapper,Drew Brees,nor,qb,376
+2016,M. DiCerbo,Team Slapper,Devonta Freeman ,atl,RB,316
+2016,M. DiCerbo,Team Slapper,Odell Beckham Jr. ,ny,WR,310
+2016,M. DiCerbo,Team Slapper,Doug Baldwin ,sea,WR,248
+2016,M. DiCerbo,Team Slapper,Davante Adams ,gb,wr,247
+2016,M. DiCerbo,Team Slapper,Terrelle Pryor Sr.,wsh,wr,204
+2016,M. DiCerbo,Team Slapper,Tevin Coleman ,atl,RB,202
+2016,M. DiCerbo,Team Slapper,Jimmy Graham ,sea,TE,183
+2016,M. DiCerbo,Team Slapper,Brandon Marshall,nyg,wr,150
+2016,M. DiCerbo,Team Slapper,Robert Kelley,wsh,rb,148
+2016,M. DiCerbo,Team Slapper,Kenneth Dixon,bal,rb,108
+2016,M. DiCerbo,Team Slapper,Donte Moncrief ,ind,wr,99
+2016,M. DiCerbo,Team Slapper,Bills D/ST ,buf,DST,81
+2016,M. DiCerbo,Team Slapper,C.J. Prosise ,sea,rb,65
+2016,R. Kelly,Riverboat Rob,Derek Carr ,oak,QB,298
+2016,R. Kelly,Riverboat Rob,Jordy Nelson ,gb,wr,297
+2016,R. Kelly,Riverboat Rob,Brandin Cooks ,ne,WR,257
+2016,R. Kelly,Riverboat Rob,Jay Ajayi,mia,RB,256
+2016,R. Kelly,Riverboat Rob,Golden Tate ,det,wr,221
+2016,R. Kelly,Riverboat Rob,Jamison Crowder ,wsh,wr,197
+2016,R. Kelly,Riverboat Rob,DeAndre Hopkins ,hou,WR,192
+2016,R. Kelly,Riverboat Rob,Terrance West,Bal,rb,192
+2016,R. Kelly,Riverboat Rob,Jonathan Stewart,Car,RB,177
+2016,R. Kelly,Riverboat Rob,Jordan Reed,Wsh,te,164
+2016,R. Kelly,Riverboat Rob,Ryan Mathews,Phi,rb,163
+2016,R. Kelly,Riverboat Rob,Dennis Pitta ,bal ,TE,162
+2016,R. Kelly,Riverboat Rob,Chris Ivory ,jax,rb,103
+2016,R. Kelly,Riverboat Rob,Dolphins D/ST  ,Mia,DST,91
+2016,R. Kelly,Riverboat Rob,Paul Perkins  ,Nyg,rb,83
+2017,B. Newell,Dak And The Gang,Dak Prescott ,Dal,QB,279
+2017,B. Newell,Dak And The Gang,Mark Ingram  ,Nor,RB,271
+2017,B. Newell,Dak And The Gang,Julio Jones ,Atl,WR,252
+2017,B. Newell,Dak And The Gang,Derek Carr ,Oak,QB,233
+2017,B. Newell,Dak And The Gang,Lamar Miller ,Hou,RB,181
+2017,B. Newell,Dak And The Gang,Delanie Walker,Ten,TE,169
+2017,B. Newell,Dak And The Gang,Michael Crabtree,Bal,WR,169
+2017,B. Newell,Dak And The Gang,Sterling Shepard ,Nyg,WR,148
+2017,B. Newell,Dak And The Gang,DeSean Jackson ,Tb,WR,132
+2017,B. Newell,Dak And The Gang,Brandon LaFellI,Cin,WR,117
+2017,B. Newell,Dak And The Gang,Vernon Davis,Wsh,TE,115
+2017,B. Newell,Dak And The Gang,Matt Forte,Nyj,RB,110
+2017,B. Newell,Dak And The Gang,Cardinals D/ST  ,Ari,DST,106
+2017,B. Newell,Dak And The Gang,Torrey Smith,Car,WR,89
+2017,B. Newell,Dak And The Gang,Willie Snead,Nor,WR,13
+2017,C. Upperman,Upper Mania,Tom Brady ,Ne,QB,331
+2017,C. Upperman,Upper Mania,Jared Goff ,Lar,QB,284
+2017,C. Upperman,Upper Mania,Adam Thielen ,Min,WR,242
+2017,C. Upperman,Upper Mania,Rob Gronkowski ,Ne,TE,227
+2017,C. Upperman,Upper Mania,Golden Tate ,Det,WR,222
+2017,C. Upperman,Upper Mania,Devonta Freeman ,Atl,RB,191
+2017,C. Upperman,Upper Mania,Evan Engram ,Nyg,TE,167
+2017,C. Upperman,Upper Mania,Ted Ginn Jr. ,Nor,WR,156
+2017,C. Upperman,Upper Mania,Randall Cobb ,Gb,WR,151
+2017,C. Upperman,Upper Mania,Latavius Murray ,Min,RB,147
+2017,C. Upperman,Upper Mania,Bears D/ST  ,Chi,DST,136
+2017,C. Upperman,Upper Mania,Martavis Bryant ,Pit,WR,127
+2017,C. Upperman,Upper Mania,Broncos D/ST ,Den,DST,117
+2017,C. Upperman,Upper Mania,LeGarrette Blount ,Det,RB,99
+2017,C. Upperman,Upper Mania,Ty Montgomery ,Gb,RB,83
+2017,S. Dickson,Benny and the jets,Cam Newton ,car,QB,318
+2017,S. Dickson,Benny and the jets,Philip Rivers,lac,QB,307
+2017,S. Dickson,Benny and the jets,Larry Fitzgerald ,ari,WR,259
+2017,S. Dickson,Benny and the jets,Davante Adams,gb,WR,221
+2017,S. Dickson,Benny and the jets,Robby Anderson ,nyj,WR,200
+2017,S. Dickson,Benny and the jets,Jordan Howard ,chi,RB,192
+2017,S. Dickson,Benny and the jets,Marquise Goodwin ,sf,WR,165
+2017,S. Dickson,Benny and the jets,Tevin Coleman  ,atl,RB,157
+2017,S. Dickson,Benny and the jets,Derrick Henry ,ten,RB,136
+2017,S. Dickson,Benny and the jets,Saints D/ST  ,nor,DST,130
+2017,S. Dickson,Benny and the jets,Jay Ajayi,phi,RB,127
+2017,S. Dickson,Benny and the jets,Eric Ebron ,ind,TE,122
+2017,S. Dickson,Benny and the jets,Tyler Kroft ,cin,TE,118
+2017,S. Dickson,Benny and the jets,Redskins D/ST,wsh,DST,94
+2017,S. Dickson,Benny and the jets,Kenny Golladay ,det,WR,92
+2017,A. Parra,The Angry Bananas,Keenan Allen ,lac,WR,285
+2017,A. Parra,The Angry Bananas,Case Keenum ,den,QB,265
+2017,A. Parra,The Angry Bananas,Tyrod Taylor  ,cle,qb,239
+2017,A. Parra,The Angry Bananas,Jaguars D/ST  ,jax,DST,206
+2017,A. Parra,The Angry Bananas,Ezekiel Elliott ,dal,RB,203
+2017,A. Parra,The Angry Bananas,Zach Ertz ,phi,TE,197
+2017,A. Parra,The Angry Bananas,JuJu Smith-Schuster ,pit,wr,196
+2017,A. Parra,The Angry Bananas,Dion Lewis ,ten,RB,194
+2017,A. Parra,The Angry Bananas,Alshon Jeffery  ,phi,WR,192
+2017,A. Parra,The Angry Bananas,T.Y. Hilton  ,ind,wr,181
+2017,A. Parra,The Angry Bananas,Jerick McKinnon ,sf,rb,170
+2017,A. Parra,The Angry Bananas,Jamaal Williams ,gb,rb,136
+2017,A. Parra,The Angry Bananas,Josh Gordon  ,cle,wr,55
+2017,A. Parra,The Angry Bananas,Danny Woodhead ,bal,rb,52
+2017,A. Parra,The Angry Bananas,Greg Olsen,car,te,41
+2017,D. Daniel,Team Domination ,Todd Gurley II ,lar,RB,382
+2017,D. Daniel,Team Domination ,Antonio Brown ,pit,WR,318
+2017,D. Daniel,Team Domination ,Alvin Kamara ,nor,RB,312
+2017,D. Daniel,Team Domination ,Travis Kelce  ,kc,TE,230
+2017,D. Daniel,Team Domination ,Marcus Mariota  ,ten,qb,229
+2017,D. Daniel,Team Domination ,A.J. Green  ,cin,WR,229
+2017,D. Daniel,Team Domination ,Rishard Matthews ,ten,wr,157
+2017,D. Daniel,Team Domination ,Aaron Rodgers ,gb,QB,141
+2017,D. Daniel,Team Domination ,Danny Amendola  ,mia,wr,133
+2017,D. Daniel,Team Domination ,Panthers D/ST ,car,dst,126
+2017,D. Daniel,Team Domination ,Rex Burkhead  ,ne,rb,121
+2017,D. Daniel,Team Domination ,Patriots D/ST  ,ne,dst,95
+2017,D. Daniel,Team Domination ,Aaron Jones ,gb,rb,78
+2017,D. Daniel,Team Domination ,Doug Martin ,oak,rb,69
+2017,D. Daniel,Team Domination ,Nick Foles ,phi,qb,36
+2017,G. Nulty,Team Nulty,Russell Wilson  ,Sea,qb,370
+2017,G. Nulty,Team Nulty,Carson Wentz  ,Phi,QB,303
+2017,G. Nulty,Team Nulty,LeSean McCoy ,buf,RB,257
+2017,G. Nulty,Team Nulty,Nelson Agholor  ,phi,wr,193
+2017,G. Nulty,Team Nulty,Dez Bryant  ,dal,WR,182
+2017,G. Nulty,Team Nulty,Jack Doyle  ,ind,te,163
+2017,G. Nulty,Team Nulty,Rams D/ST  ,lar,dst,153
+2017,G. Nulty,Team Nulty,Lions D/ST  ,det,DST,143
+2017,G. Nulty,Team Nulty,Jason Witten ,dal,TE,138
+2017,G. Nulty,Team Nulty,Isaiah Crowell ,nyj,RB,136
+2017,G. Nulty,Team Nulty,DeVante Parker  ,mia,WR,123
+2017,G. Nulty,Team Nulty,Ameer Abdullah  ,det,rb,113
+2017,G. Nulty,Team Nulty,Emmanuel Sanders  ,den,WR,110
+2017,G. Nulty,Team Nulty,Chris Hogan,ne,wr,106
+2017,G. Nulty,Team Nulty,Samaje Perine  ,wsh,rb,99
+2017,T. Flynn,FINS BINS,Kareem Hunt  ,Kc,RB,297
+2017,T. Flynn,FINS BINS,Ben Roethlisberger  ,Pit,QB,295
+2017,T. Flynn,FINS BINS,Jarvis Landry  ,Cle,WR,255
+2017,T. Flynn,FINS BINS,Cooper Kupp  ,Lar,WR,172
+2017,T. Flynn,FINS BINS,Robert Woods  ,Lar,wr,165
+2017,T. Flynn,FINS BINS,Frank Gore  ,Mia,rb,163
+2017,T. Flynn,FINS BINS,DeMarco Murray ,Ten,RB,162
+2017,T. Flynn,FINS BINS,Jordy Nelson ,Oak,wr,132
+2017,T. Flynn,FINS BINS,Orleans Darkwa ,Nyg,rb,131
+2017,T. Flynn,FINS BINS,Tyler Lockett  ,Sea,wr,119
+2017,T. Flynn,FINS BINS,Austin Hooper  ,Atl,te,115
+2017,T. Flynn,FINS BINS,Austin Seferian-Jenkins ,Jax,TE,96
+2017,T. Flynn,FINS BINS,Bengals D/ST  ,Cin,DST,88
+2017,T. Flynn,FINS BINS,Adrian Peterson  ,Ari,rb,73
+2017,T. Flynn,FINS BINS,Damien Williams ,Kc,rb,51
+2017,N. Segal,Two time champ segal,Drew Brees,nor,QB,298
+2017,N. Segal,Two time champ segal,Carson Palmer ,ari,qb,118
+2017,N. Segal,Two time champ segal,Leonard Fournette  ,jax,RB,230
+2017,N. Segal,Two time champ segal,Theo Riddick ,det,RB,142
+2017,N. Segal,Two time champ segal,Jeremy Maclin ,bal,WR,98
+2017,N. Segal,Two time champ segal,Cole Beasley  ,dal,WR,84
+2017,N. Segal,Two time champ segal,Jimmy Graham ,gb,TE,164
+2017,N. Segal,Two time champ segal,Alfred Morris  ,dal,rb,68
+2017,N. Segal,Two time champ segal,Odell Beckham Jr.  ,nyg,wr,72
+2017,N. Segal,Two time champ segal,Terrelle Pryor Sr. ,nyj,wr,48
+2017,N. Segal,Two time champ segal,Thomas Rawls ,nyj,rb,27
+2017,N. Segal,Two time champ segal,Hunter Henry ,lac,te,123
+2017,N. Segal,Two time champ segal,Devin Funchess ,car,wr,189
+2017,N. Segal,Two time champ segal,J.J. Nelson  ,ari,wr,88
+2017,N. Segal,Two time champ segal,Chiefs D/ST  ,kc,DST,101
+2017,M. DiCerbo,Team Slapper,Kirk Cousins  ,min,QB,305
+2017,M. DiCerbo,Team Slapper,Christian McCaffrey  ,car,rb,214
+2017,M. DiCerbo,Team Slapper,Mike Evans  ,tb,WR,197
+2017,M. DiCerbo,Team Slapper,Ravens D/ST  ,bal,DST,172
+2017,M. DiCerbo,Team Slapper,Alex Collins  ,bal,RB,165
+2017,M. DiCerbo,Team Slapper,Amari Cooper ,oak,wr,160
+2017,M. DiCerbo,Team Slapper,Jamison Crowder ,wsh,wr,155
+2017,M. DiCerbo,Team Slapper,Sammy Watkins ,kc,WR,145
+2017,M. DiCerbo,Team Slapper,Benjamin Watson,nor,TE,132
+2017,M. DiCerbo,Team Slapper,Joe Mixon  ,cin,RB,130
+2017,M. DiCerbo,Team Slapper,Marlon Mack  ,ind,rb,93
+2017,M. DiCerbo,Team Slapper,Ed Dickson ,sea,te,75
+2017,M. DiCerbo,Team Slapper,Corey Coleman ,cle,wr,62
+2017,M. DiCerbo,Team Slapper,Darren McFadden ,dal,rb,0
+2017,R. Kelly,Riverboat Rob,Le'Veon Bell  ,Pit,RB,330
+2017,R. Kelly,Riverboat Rob,Alex Smith ,Wsh,qb,323
+2017,R. Kelly,Riverboat Rob,DeAndre Hopkins  ,Hou,WR,312
+2017,R. Kelly,Riverboat Rob,Matt Ryan  ,Atl,QB,255
+2017,R. Kelly,Riverboat Rob,Tyreek Hill ,Kc,wr,254
+2017,R. Kelly,Riverboat Rob,Marvin Jones Jr.  ,Det,wr,222
+2017,R. Kelly,Riverboat Rob,Carlos Hyde  ,Cle,RB,220
+2017,R. Kelly,Riverboat Rob,Brandin Cooks  ,Lar,WR,215
+2017,R. Kelly,Riverboat Rob,Duke Johnson Jr.  ,Cle,rb,209
+2017,R. Kelly,Riverboat Rob,Eagles D/ST  ,Phi,DST,159
+2017,R. Kelly,Riverboat Rob,Kyle Rudolph  ,Min,TE,150
+2017,R. Kelly,Riverboat Rob,Marqise Lee ,Jax,wr,141
+2017,R. Kelly,Riverboat Rob,Cameron Brate ,Tb,te,136
+2017,R. Kelly,Riverboat Rob,Jonathan Stewart ,Nyg,rb,114
+2018,B. Newell,The Freak Tyreek,Ben Roethlisberger  ,Pit,QB,381
+2018,B. Newell,The Freak Tyreek,Tyreek Hill  ,Kc,WR,341
+2018,B. Newell,The Freak Tyreek,Drew Brees,Nor,QB,338
+2018,B. Newell,The Freak Tyreek,Julio Jones  ,Atl,WR,327
+2018,B. Newell,The Freak Tyreek,James White ,Ne,RB,264
+2018,B. Newell,The Freak Tyreek,Tyler Lockett  ,Sea,WR,222
+2018,B. Newell,The Freak Tyreek,DeSean Jackson ,Tb,WR,153
+2018,B. Newell,The Freak Tyreek,Jordy Nelson ,Oak,WR,151
+2018,B. Newell,The Freak Tyreek,LeSean McCoy ,Buf,RB,118
+2018,B. Newell,The Freak Tyreek,Steelers D/ST  ,pit,DST,110
+2018,B. Newell,The Freak Tyreek,Wendell Smallwood  ,Phi,RB,108
+2018,B. Newell,The Freak Tyreek,Chargers D/ST  ,Lac,DST,103
+2018,B. Newell,The Freak Tyreek,C.J. Uzomah ,Cin,TE,97
+2018,B. Newell,The Freak Tyreek,Cameron Brate  ,Tb,TE,85
+2018,C. Upperman,Hakuna Kamara,Deshaun Watson ,Hou,QB,357
+2018,C. Upperman,Hakuna Kamara,Alvin Kamara ,Nor,RB,344
+2018,C. Upperman,Hakuna Kamara,Cam Newton  ,Car,QB,303
+2018,C. Upperman,Hakuna Kamara,Mike Evans ,Tb,WR,297
+2018,C. Upperman,Hakuna Kamara,Stefon Diggs  ,Min,WR,262
+2018,C. Upperman,Hakuna Kamara,Calvin Ridley  ,Atl,WR,207
+2018,C. Upperman,Hakuna Kamara,Lamar Miller  ,Hou,RB,170
+2018,C. Upperman,Hakuna Kamara,Austin Ekeler  ,Lac,RB,158
+2018,C. Upperman,Hakuna Kamara,David Njoku  ,Cle,TE,138
+2018,C. Upperman,Hakuna Kamara,Donte Moncrief  ,jax,WR,131
+2018,C. Upperman,Hakuna Kamara,Rams D/ST ,Lar,DST,131
+2018,C. Upperman,Hakuna Kamara,Jimmy Graham  ,Gb,TE,126
+2018,C. Upperman,Hakuna Kamara,Latavius Murray  ,Min,RB,122
+2018,C. Upperman,Hakuna Kamara,Saints D/ST  ,Nor,DST,98
+2018,S. Dickson,Team Eiferted,Christian McCaffrey ,car,RB,377
+2018,S. Dickson,Team Eiferted,DeAndre Hopkins ,hou,WR,337
+2018,S. Dickson,Team Eiferted,Tom Brady ,ne,QB,313
+2018,S. Dickson,Team Eiferted,Jarvis Landry  ,cle,WR,217
+2018,S. Dickson,Team Eiferted,Derrick Henry  ,ten,RB,198
+2018,S. Dickson,Team Eiferted,Jared Cook  ,oak,TE,194
+2018,S. Dickson,Team Eiferted,Tevin Coleman  ,atl,RB,181
+2018,S. Dickson,Team Eiferted,Corey Davis  ,ten,WR,179
+2018,S. Dickson,Team Eiferted,Mohamed Sanu  ,atl,WR,177
+2018,S. Dickson,Team Eiferted,Mike Williams  ,lac,WR,177
+2018,S. Dickson,Team Eiferted,T.J. Yeldon  ,jax,RB,159
+2018,S. Dickson,Team Eiferted,Sony Michel  ,ne,WRB,136
+2018,S. Dickson,Team Eiferted,Panthers D/ST  ,car,DST,74
+2018,S. Dickson,Team Eiferted,Brandon Marshall ,nor,WR,29
+2018,A. Parra,The Angry Bananas,Davante Adams  ,gb,WR,329
+2018,A. Parra,The Angry Bananas,Ezekiel Elliott  ,dal,RB,323
+2018,A. Parra,The Angry Bananas,Dak Prescott  ,dal,qb,313
+2018,A. Parra,The Angry Bananas,Joe Mixon  ,cin,rb,237
+2018,A. Parra,The Angry Bananas,Carson Wentz  ,phi,qb,215
+2018,A. Parra,The Angry Bananas,Kenny Golladay  ,det,wr,202
+2018,A. Parra,The Angry Bananas,Julian Edelman ,ne,WR,201
+2018,A. Parra,The Angry Bananas,Chris Carson  ,sea,rb,196
+2018,A. Parra,The Angry Bananas,Bears D/ST ,chi,DST,188
+2018,A. Parra,The Angry Bananas,Adam Humphries  ,tb,wr,181
+2018,A. Parra,The Angry Bananas,Lamar Jackson ,bal,QB,158
+2018,A. Parra,The Angry Bananas,Demaryius Thomas ,hou,wr,152
+2018,A. Parra,The Angry Bananas,Dalvin Cook  ,min,rb,144
+2018,A. Parra,The Angry Bananas,Trey Burton  ,chi,te,141
+2018,A. Parra,The Angry Bananas,Nick Foles  ,phi,qb,86
+2018,A. Parra,The Angry Bananas,Ian Thomas  ,car,TE,77
+2018,D. Daniel,F Yourself,Kirk Cousins  ,min,QB,314
+2018,D. Daniel,F Yourself,Melvin Gordon  ,lac,rb,273
+2018,D. Daniel,F Yourself,Keenan Allen  ,lac,WR,254
+2018,D. Daniel,F Yourself,Kenyan Drake ,mia,rb,197
+2018,D. Daniel,F Yourself,Blake Bortles  ,jax,qb,188
+2018,D. Daniel,F Yourself,Chris Godwin ,tb,wr,183
+2018,D. Daniel,F Yourself,Marlon Mack  ,ind,RB,171
+2018,D. Daniel,F Yourself,Josh Gordon ,ne,WR,140
+2018,D. Daniel,F Yourself,Mark Ingram II ,nor,RB,136
+2018,D. Daniel,F Yourself,Ravens D/ST  ,bal,dst,131
+2018,D. Daniel,F Yourself,Jordan Reed ,wsh,TE,115
+2018,D. Daniel,F Yourself,Bills D/ST  ,buf,DST,111
+2018,D. Daniel,F Yourself,Royce Freeman ,den,rb,93
+2018,D. Daniel,F Yourself,Ito Smith  ,atl,rb,90
+2018,D. Daniel,F Yourself,Eagles D/ST  ,phi,dst,66
+2018,G. Nulty,Marshall Ave Goon Squad,Saquon Barkley ,nyg,RB,396
+2018,G. Nulty,Marshall Ave Goon Squad,Mitchell Trubisky ,chi,qb,283
+2018,G. Nulty,Marshall Ave Goon Squad,Matthew Stafford ,det,qb,237
+2018,G. Nulty,Marshall Ave Goon Squad,Eric Ebron  ,ind,TE,221
+2018,G. Nulty,Marshall Ave Goon Squad,Tyler Boyd  ,cin,WR,218
+2018,G. Nulty,Marshall Ave Goon Squad,Marcus Mariota  ,ten,QB,191
+2018,G. Nulty,Marshall Ave Goon Squad,Larry Fitzgerald ,ari,WR,179
+2018,G. Nulty,Marshall Ave Goon Squad,DJ Moore ,car,WR,149
+2018,G. Nulty,Marshall Ave Goon Squad,John Brown ,bal,wr,137
+2018,G. Nulty,Marshall Ave Goon Squad,Kerryon Johnson  ,det,rb,133
+2018,G. Nulty,Marshall Ave Goon Squad,Vikings D/ST ,min,dst,125
+2018,G. Nulty,Marshall Ave Goon Squad,Leonard Fournette  ,jax,RB,113
+2018,G. Nulty,Marshall Ave Goon Squad,LeGarrette Blount ,det,rb,78
+2018,G. Nulty,Marshall Ave Goon Squad,Greg Olsen ,car,te,76
+2018,G. Nulty,Marshall Ave Goon Squad,Packers D/ST ,gb,DST,74
+2018,T. Flynn,FINS BINS,Andrew Luck ,Ind,qb,360
+2018,T. Flynn,FINS BINS,Jared Goff  ,Lac,QB,343
+2018,T. Flynn,FINS BINS,Michael Thomas ,Nor,WR,315
+2018,T. Flynn,FINS BINS,James Conner ,Pit,rb,273
+2018,T. Flynn,FINS BINS,George Kittle  ,Sf,TE,264
+2018,T. Flynn,FINS BINS,Robert Woods  ,Lar,WR,257
+2018,T. Flynn,FINS BINS,Dede Westbrook  ,Jax,wr,176
+2018,T. Flynn,FINS BINS,Sterling Shepard ,Nyg,wr,174
+2018,T. Flynn,FINS BINS,Jordan Howard  ,Chi,rb,171
+2018,T. Flynn,FINS BINS,Nyheim Hines  ,Ind,rb,148
+2018,T. Flynn,FINS BINS,Peyton Barber ,Tb,rb,140
+2018,T. Flynn,FINS BINS,Jaguars D/ST ,Jax,DST,109
+2018,T. Flynn,FINS BINS,Damien Williams ,Kc,RB,93
+2018,T. Flynn,FINS BINS,Jaylen Samuels  ,Pit,RB,86
+2018,T. Flynn,FINS BINS,Spencer Ware,Kc,rb,69
+2018,N. Segal,Three time champ segal,Philip Rivers ,lac,QB,320
+2018,N. Segal,Three time champ segal,Baker Mayfield  ,cle,qb,266
+2018,N. Segal,Three time champ segal,Todd Gurley II  ,lar,RB,367
+2018,N. Segal,Three time champ segal,Jalen Richard  ,oak,RB,145
+2018,N. Segal,Three time champ segal,Adam Thielen  ,min,WR,309
+2018,N. Segal,Three time champ segal,JuJu Smith-Schuster  ,pit,WR,304
+2018,N. Segal,Three time champ segal,Austin Hooper  ,atl,TE,155
+2018,N. Segal,Three time champ segal,Michael Crabtree ,bal,wr,127
+2018,N. Segal,Three time champ segal,Duke Johnson Jr.  ,cle,rb,120
+2018,N. Segal,Three time champ segal,Cole Beasley  ,dal,wr,144
+2018,N. Segal,Three time champ segal,Frank Gore  ,mia,rb,95
+2018,N. Segal,Three time champ segal,Benjamin Watson ,nor,te,82
+2018,N. Segal,Three time champ segal,Christian Kirk  ,ari,wr,122
+2018,N. Segal,Three time champ segal,Redskins D/ST,wsh,DST,97
+2018,M. DiCerbo,Team Slapper,Patrick Mahomes ,kc,QB,453
+2018,M. DiCerbo,Team Slapper,Zach Ertz  ,phi,TE,279
+2018,M. DiCerbo,Team Slapper,Brandin Cooks  ,lar,WR,239
+2018,M. DiCerbo,Team Slapper,Odell Beckham Jr. ,nyg,WR,231
+2018,M. DiCerbo,Team Slapper,Jameis Winston ,tb,qb,213
+2018,M. DiCerbo,Team Slapper,Adrian Peterson ,wsh,RB,185
+2018,M. DiCerbo,Team Slapper,Aaron Jones ,gb,RB,163
+2018,M. DiCerbo,Team Slapper,Nelson Agholor  ,phi,wr,161
+2018,M. DiCerbo,Team Slapper,Matt Breida ,sf,rb,159
+2018,M. DiCerbo,Team Slapper,Taylor Gabriel ,chi,wr,145
+2018,M. DiCerbo,Team Slapper,Anthony Miller  ,chi,wr,114
+2018,M. DiCerbo,Team Slapper,Patriots D/ST  ,ne,DST,113
+2018,M. DiCerbo,Team Slapper,Josh Reynolds  ,lar,wr,96
+2018,M. DiCerbo,Team Slapper,Gus Edwards  ,bal,rb,88
+2018,M. DiCerbo,Team Slapper,Marshawn Lynch ,oak,rb,76
+2018,M. DiCerbo,Team Slapper,Justin Jackson  ,lac,rb,55
+2018,R. Kelly,Riverboat Rob,Matt Ryan  ,Atl,QB,388
+2018,R. Kelly,Riverboat Rob,Antonio Brown  ,Pit,WR,330
+2018,R. Kelly,Riverboat Rob,Travis Kelce ,Kc,TE,291
+2018,R. Kelly,Riverboat Rob,Phillip Lindsay ,Den,rb,220
+2018,R. Kelly,Riverboat Rob,Alshon Jeffery ,Phi,WR,181
+2018,R. Kelly,Riverboat Rob,Golden Tate ,Phi,wr,178
+2018,R. Kelly,Riverboat Rob,Curtis Samuel  ,Car,wr,130
+2018,R. Kelly,Riverboat Rob,Mike Davis  ,Sea,rb,129
+2018,R. Kelly,Riverboat Rob,Evan Engram  ,Nyg,te,119
+2018,R. Kelly,Riverboat Rob,Titans D/ST  ,Ten,DST,108
+2018,R. Kelly,Riverboat Rob,Jamaal Williams  ,Gb,rb,102
+2018,R. Kelly,Riverboat Rob,Chiefs D/ST ,Kc,dst,91
+2018,R. Kelly,Riverboat Rob,Elijah McGuire  ,nyj,RB,80
+2018,R. Kelly,Riverboat Rob,Josh Adams  ,phi,rb,76
+2018,R. Kelly,Riverboat Rob,Jeff Wilson Jr. ,Sf,RB,40
+2019,B. Newell,Breesy Does It,Michael Thomas  ,Nor,WR,378
+2019,B. Newell,Breesy Does It,Philip Rivers ,Lac,QB,272
+2019,B. Newell,Breesy Does It,Leonard Fournette  ,Jax,RB,252
+2019,B. Newell,Breesy Does It,Drew Brees,Nor,QB,249
+2019,B. Newell,Breesy Does It,Zach Ertz  ,Phi,TE,211
+2019,B. Newell,Breesy Does It,Emmanuel Sanders ,Sf,WR,189
+2019,B. Newell,Breesy Does It,James White ,Ne,RB,186
+2019,B. Newell,Breesy Does It,DK Metcalf  ,Sea,WR,184
+2019,B. Newell,Breesy Does It,Mohamed Sanu ,Ne,WR,117
+2019,B. Newell,Breesy Does It,Kyle Rudolph  ,Min,TE,107
+2019,B. Newell,Breesy Does It,Kareem Hunt  ,Cle,RB,94
+2019,B. Newell,Breesy Does It,Jaylen Samuels  ,Pit,RB,93
+2019,B. Newell,Breesy Does It,Seahawks D/ST,Sea,DST,89
+2019,B. Newell,Breesy Does It,Ted Ginn Jr.,Nor,WR,81
+2019,B. Newell,Breesy Does It,Washington   D/ST,Wsh,DST,65
+2019,C. Upperman,The Frog Kid,Christian McCaffrey ,Car,RB,474
+2019,C. Upperman,The Frog Kid,Patrick Mahomes ,Kc,QB,316
+2019,C. Upperman,The Frog Kid,Derrick Henry  ,Ten,RB,300
+2019,C. Upperman,The Frog Kid,Derek Carr ,Oak,QB,273
+2019,C. Upperman,The Frog Kid,Keenan Allen ,Lac,WR,256
+2019,C. Upperman,The Frog Kid,John Brown ,Buf,WR,217
+2019,C. Upperman,The Frog Kid,Austin Hooper ,Atl,TE,188
+2019,C. Upperman,The Frog Kid,Randall Cobb ,Dal,WR,151
+2019,C. Upperman,The Frog Kid,Dallas Goedert ,Phi,TE,138
+2019,C. Upperman,The Frog Kid,Zach Pascal  ,Ind,WR,130
+2019,C. Upperman,The Frog Kid,Chiefs D/ST  ,Kc,DST,120
+2019,C. Upperman,The Frog Kid,Alshon Jeffery  ,Phi,WR,118
+2019,C. Upperman,The Frog Kid,Colts D/ST ,Ind,DST,112
+2019,C. Upperman,The Frog Kid,Jordan Howard ,Phi,RB,104
+2019,C. Upperman,The Frog Kid,Dion Lewis,Ten,RB,55
+2019,S. Dickson,Two Horses One Team,Aaron Rodgers  ,gb,QB,307
+2019,S. Dickson,Two Horses One Team,Jacoby Brissett  ,ind,QB,232
+2019,S. Dickson,Two Horses One Team,Chris Carson ,sea,RB,227
+2019,S. Dickson,Two Horses One Team,Courtland Sutton  ,den,WR,220
+2019,S. Dickson,Two Horses One Team,Stefon Diggs  ,min,WR,217
+2019,S. Dickson,Two Horses One Team,Miles Sanders  ,phi,RB,210
+2019,S. Dickson,Two Horses One Team,Josh Jacobs ,oak,RB,188
+2019,S. Dickson,Two Horses One Team,Robby Anderson  ,nyj,WR,162
+2019,S. Dickson,Two Horses One Team,Duke Johnson   ,hou,RB,142
+2019,S. Dickson,Two Horses One Team,Tyrell Williams  ,oak,WR,139
+2019,S. Dickson,Two Horses One Team,Jason Witten,dal,TE,132
+2019,S. Dickson,Two Horses One Team,LeSean McCoy  ,kc,RB,110
+2019,S. Dickson,Two Horses One Team,Panthers D/ST ,car,DST,72
+2019,S. Dickson,Two Horses One Team,Josh Gordon ,sea,WR,68
+2019,S. Dickson,Two Horses One Team,Raiders D/ST,oak,DST,55
+2019,M. Spiers,Team Birds over Boys,Russell Wilson  ,sea,QB,358
+2019,M. Spiers,Team Birds over Boys,Josh Allen  ,buf,QB,304
+2019,M. Spiers,Team Birds over Boys,DeAndre Hopkins ,hou,WR,267
+2019,M. Spiers,Team Birds over Boys,Nick Chubb  ,cle,RB,252
+2019,M. Spiers,Team Birds over Boys,Mark Ingram  II,bal,RB,234
+2019,M. Spiers,Team Birds over Boys,Tyler Boyd  ,cin,WR,220
+2019,M. Spiers,Team Birds over Boys,Mark Andrews ,bal,TE,203
+2019,M. Spiers,Team Birds over Boys,Larry Fitzgerald  ,Ari,WR,171
+2019,M. Spiers,Team Birds over Boys,Darius Slayton  ,nyg,WR,171
+2019,M. Spiers,Team Birds over Boys,49ers D/ST,sf,DST,164
+2019,M. Spiers,Team Birds over Boys,Breshad Perriman ,tb,WR,137
+2019,M. Spiers,Team Birds over Boys,Kenny Stills ,hou,WR,114
+2019,M. Spiers,Team Birds over Boys,Eagles   D/ST,phi,DST,107
+2019,M. Spiers,Team Birds over Boys,Broncos D/ST,den,DST,81
+2019,A. Parra,The Angry Bananas,Kyler Murray ,ari,QB,309
+2019,A. Parra,The Angry Bananas,Jimmy Garoppolo,sf,qb,276
+2019,A. Parra,The Angry Bananas,George Kittle ,sf,TE,219
+2019,A. Parra,The Angry Bananas,Le'Veon Bell ,nyj,RB,203
+2019,A. Parra,The Angry Bananas,Odell Beckham Jr.  ,cle,WR,200
+2019,A. Parra,The Angry Bananas,Tyreek Hill  ,kc,WR,190
+2019,A. Parra,The Angry Bananas,Ronald Jones II ,tb,rb,155
+2019,A. Parra,The Angry Bananas,Chris Conley  ,jax,wr,153
+2019,A. Parra,The Angry Bananas,Dede Westbrook  ,jax,wr,151
+2019,A. Parra,The Angry Bananas,James Conner ,pit,RB,140
+2019,A. Parra,The Angry Bananas,Sterling Shepard ,nyg,wr,138
+2019,A. Parra,The Angry Bananas,Browns D/ST  ,cle,DST,69
+2019,D. Daniel,You're Fuller Shit,Jameis Winston ,tb,QB,343
+2019,D. Daniel,You're Fuller Shit,Ezekiel Elliott  ,dal,RB,305
+2019,D. Daniel,You're Fuller Shit,Tom Brady  ,ne,qb,297
+2019,D. Daniel,You're Fuller Shit,Julian Edelman,ne,WR,251
+2019,D. Daniel,You're Fuller Shit,A.J. Brown  ,ten,WR,228
+2019,D. Daniel,You're Fuller Shit,Jamison Crowder ,nyj,wr,190
+2019,D. Daniel,You're Fuller Shit,Raheem Mostert  ,sf,RB,158
+2019,D. Daniel,You're Fuller Shit,Ravens D/ST,bal,DST,152
+2019,D. Daniel,You're Fuller Shit,Hunter Henry  ,lac,TE,146
+2019,D. Daniel,You're Fuller Shit,Sony Michel  ,ne,rb,144
+2019,D. Daniel,You're Fuller Shit,Damien Williams  ,kc,rb,139
+2019,D. Daniel,You're Fuller Shit,Will Fuller  ,hou,wr,134
+2019,D. Daniel,You're Fuller Shit,Kerryon Johnson  ,det,rb,80
+2019,D. Daniel,You're Fuller Shit,Eli Manning,nyg,qb,63
+2019,D. Daniel,You're Fuller Shit,Alexander Mattison  ,min,rb,60
+2019,G. Nulty,Marshall Ave Goon Squad,Dak Prescott  ,Dal,QB,372
+2019,G. Nulty,Marshall Ave Goon Squad,Kenny Golladay  ,det,WR,254
+2019,G. Nulty,Marshall Ave Goon Squad,Travis Kelce  ,kc,TE,249
+2019,G. Nulty,Marshall Ave Goon Squad,Gardner Minshew  ,jax,qb,248
+2019,G. Nulty,Marshall Ave Goon Squad,Alvin Kamara ,nor,RB,237
+2019,G. Nulty,Marshall Ave Goon Squad,Daniel Jones  ,nyg,qb,235
+2019,G. Nulty,Marshall Ave Goon Squad,Patriots D/ST,ne,DST,225
+2019,G. Nulty,Marshall Ave Goon Squad,Terry McLaurin ,wsh,wr,195
+2019,G. Nulty,Marshall Ave Goon Squad,Marlon Mack ,ind,rb,176
+2019,G. Nulty,Marshall Ave Goon Squad,Melvin Gordon ,lac,RB,171
+2019,G. Nulty,Marshall Ave Goon Squad,Christian Kirk ,ari,WR,162
+2019,G. Nulty,Marshall Ave Goon Squad,Tarik Cohen ,chi,rb,146
+2019,G. Nulty,Marshall Ave Goon Squad,Marquise Brown ,bal,wr,146
+2019,G. Nulty,Marshall Ave Goon Squad,Devin Singletary ,buf,rb,137
+2019,G. Nulty,Marshall Ave Goon Squad,James Washington ,pit,WR,133
+2019,G. Nulty,Marshall Ave Goon Squad,Greg Ward   Jr.,phi,wr,58
+2019,T. Flynn,WhAt ShE SAyQUON?,Carson Wentz ,Phi,QB,300
+2019,T. Flynn,WhAt ShE SAyQUON?,Chris Godwin ,Tb,WR,281
+2019,T. Flynn,WhAt ShE SAyQUON?,Saquon Barkley ,Nyg,RB,243
+2019,T. Flynn,WhAt ShE SAyQUON?,DJ Moore ,Car,WR,234
+2019,T. Flynn,WhAt ShE SAyQUON?,Robert Woods ,Lar,wr,223
+2019,T. Flynn,WhAt ShE SAyQUON?,Joe Mixon ,Cin,RB,218
+2019,T. Flynn,WhAt ShE SAyQUON?,Calvin Ridley ,Atl,wr,192
+2019,T. Flynn,WhAt ShE SAyQUON?,Steelers D/ST ,Pit,DST,181
+2019,T. Flynn,WhAt ShE SAyQUON?,David Montgomery ,Chi,rb,160
+2019,T. Flynn,WhAt ShE SAyQUON?,Mike Williams ,Lac,wr,157
+2019,T. Flynn,WhAt ShE SAyQUON?,Evan Engram ,Nyg,TE,110
+2019,T. Flynn,WhAt ShE SAyQUON?,T.J. Hockenson ,Det,te,77
+2019,T. Flynn,WhAt ShE SAyQUON?,Wayne Gallman ,Nyg,rb,45
+2019,T. Flynn,WhAt ShE SAyQUON?,Nick Foles ,Jax,qb,42
+2019,T. Flynn,WhAt ShE SAyQUON?,A.J. Green  ,cin,wr,0
+2019,N. Segal,Three time champ segal,Kirk Cousins  ,min,QB,270
+2019,N. Segal,Three time champ segal,Baker Mayfield   ,cle,qb,255
+2019,N. Segal,Three time champ segal,Matt Ryan   ,atl,qb,298
+2019,N. Segal,Three time champ segal,Phillip Lindsay ,den,RB,187
+2019,N. Segal,Three time champ segal,Carlos Hyde ,hou,RB,148
+2019,N. Segal,Three time champ segal,Julio Jones ,atl,WR,276
+2019,N. Segal,Three time champ segal,Tyler Lockett  ,sea,WR,236
+2019,N. Segal,Three time champ segal,Darren Waller ,oak,TE,220
+2019,N. Segal,Three time champ segal,Jarvis Landry ,cle,wr,235
+2019,N. Segal,Three time champ segal,David Johnson  ,ari,rb,131
+2019,N. Segal,Three time champ segal,Michael Gallup  ,dal,wr,210
+2019,N. Segal,Three time champ segal,Jack Doyle  ,ind,te,106
+2019,N. Segal,Three time champ segal,Nyheim Hines  ,ind,rb,107
+2019,N. Segal,Three time champ segal,Bills D/ST,buf,DST,131
+2019,M. DiCerbo,Team Slapper,Lamar Jackson   ,bal,QB,442
+2019,M. DiCerbo,Team Slapper,Aaron Jones ,gb,RB,314
+2019,M. DiCerbo,Team Slapper,Austin Ekeler  ,lac,rb,304
+2019,M. DiCerbo,Team Slapper,Cooper Kupp  ,lar,WR,274
+2019,M. DiCerbo,Team Slapper,DeVante Parker  ,mia,wr,243
+2019,M. DiCerbo,Team Slapper,DJ Chark   Jr.,jax,wr,221
+2019,M. DiCerbo,Team Slapper,Todd Gurley   II,lar,RB,209
+2019,M. DiCerbo,Team Slapper,Deebo Samuel  ,sf,WR,183
+2019,M. DiCerbo,Team Slapper,Latavius Murray ,nor,rb,146
+2019,M. DiCerbo,Team Slapper,Jets D/ST ,nyj,DST,129
+2019,M. DiCerbo,Team Slapper,JuJu Smith-Schuster ,pit,wr,112
+2019,M. DiCerbo,Team Slapper,Ryan Griffin  ,nyj,te,95
+2019,M. DiCerbo,Team Slapper,Jacob Hollister   ,sea,te,90
+2019,M. DiCerbo,Team Slapper,O.J. Howard ,tb,TE,80
+2019,M. DiCerbo,Team Slapper,Jonathan Williams  ,ind,rb,40
+2019,R. Kelly,Riverboat Rob,Dalvin Cook  ,Min,RB,288
+2019,R. Kelly,Riverboat Rob,Davante Adams ,Gb,WR,213
+2019,R. Kelly,Riverboat Rob,Kenyan Drake ,Ari,rb,208
+2019,R. Kelly,Riverboat Rob,Kyle Allen ,Car,QB,200
+2019,R. Kelly,Riverboat Rob,Matthew Stafford  ,Det,qb,187
+2019,R. Kelly,Riverboat Rob,Jared Cook  ,Nor,TE,164
+2019,R. Kelly,Riverboat Rob,Curtis Samuel  ,Car,WR,162
+2019,R. Kelly,Riverboat Rob,Danny Amendola  ,Det,wr,137
+2019,R. Kelly,Riverboat Rob,Tevin Coleman ,Sf,RB,128
+2019,R. Kelly,Riverboat Rob,T.Y. Hilton ,Ind,wr,120
+2019,R. Kelly,Riverboat Rob,Adam Thielen  ,Min,wr,111
+2019,R. Kelly,Riverboat Rob,Brandin Cooks  ,Lar,wr,110
+2019,R. Kelly,Riverboat Rob,Jimmy Graham ,Gb,te,94
+2019,R. Kelly,Riverboat Rob,Chargers D/ST,Lac,DST,80
+2019,R. Kelly,Riverboat Rob,Brian Hill  ,Atl,rb,62
+2020,B. Newell,Lenny and the Jets,Russell Wilson ,Sea,QB,401.9
+2020,B. Newell,Lenny and the Jets,Derek Carr ,Lv,QB,313.15
+2020,B. Newell,Lenny and the Jets,DK Metcalf ,AWR,WR,280.3
+2020,B. Newell,Lenny and the Jets,Brandin Cooks ,Hou,WR,238
+2020,B. Newell,Lenny and the Jets,Cole Beasley ,Buf,WR,212.7
+2020,B. Newell,Lenny and the Jets,James Conner ,Pit,RB,167.6
+2020,B. Newell,Lenny and the Jets,Myles Gaskin ,Mia,RB,167.2
+2020,B. Newell,Lenny and the Jets,Tim Patrick  ,Den,WR,164.2
+2020,B. Newell,Lenny and the Jets,Leonard Fournette ,Tb,RB,134
+2020,B. Newell,Lenny and the Jets,Michael Thomas ,Nor,WR,85.9
+2020,B. Newell,Lenny and the Jets,Devontae Booker ,lv,RB,85.7
+2020,B. Newell,Lenny and the Jets,Eagles D/ST  ,Phi,DST,84
+2020,B. Newell,Lenny and the Jets,Zach Ertz  ,Phi,TE,77.5
+2020,B. Newell,Lenny and the Jets,Benny Snell Jr.  ,Pit,RB,75.9
+2020,B. Newell,Lenny and the Jets,Jordan Reed ,Sf,TE,73.1
+2020,C. Upperman,Parra Can Suck My Balls,Tom Brady  ,Tb,QB,384.25
+2020,C. Upperman,Parra Can Suck My Balls,Davante Adams  ,Gb,WR,369.4
+2020,C. Upperman,Parra Can Suck My Balls,Kirk Cousins  ,Min,QB,348.85
+2020,C. Upperman,Parra Can Suck My Balls,Cam Newton  ,Ne,QB,287.55
+2020,C. Upperman,Parra Can Suck My Balls,Cooper Kupp  ,Lar,WR,214.7
+2020,C. Upperman,Parra Can Suck My Balls,Melvin Gordon  III,Den,RB,201.4
+2020,C. Upperman,Parra Can Suck My Balls,Tee Higgins ,Cin,WR,196.6
+2020,C. Upperman,Parra Can Suck My Balls,J.D. McKissic   ,Wsh,RB,191.4
+2020,C. Upperman,Parra Can Suck My Balls,Chris Carson  ,Sea,RB,187.8
+2020,C. Upperman,Parra Can Suck My Balls,DeVante Parker  ,Mia,WR,169.3
+2020,C. Upperman,Parra Can Suck My Balls,Mike Williams  ,Lac,WR,159.7
+2020,C. Upperman,Parra Can Suck My Balls,Noah Fant  ,Den,TE,149.3
+2020,C. Upperman,Parra Can Suck My Balls,Steelers D/ST,Pit,DST,147
+2020,C. Upperman,Parra Can Suck My Balls,Hunter Henry  ,Lac,TE,145.3
+2020,C. Upperman,Parra Can Suck My Balls,Eric Ebron ,Pit,TE,141.8
+2020,C. Upperman,Parra Can Suck My Balls,Raheem Mostert ,Sf,RB,105.7
+2020,S. Dickson,2 Many Cooks In the Kitchen,Patrick Mahomes  ,kc,QB,421.8
+2020,S. Dickson,2 Many Cooks In the Kitchen,Dalvin Cook  ,min,RB,352.8
+2020,S. Dickson,2 Many Cooks In the Kitchen,Matthew Stafford  ,lar,QB,301.4
+2020,S. Dickson,2 Many Cooks In the Kitchen,David Montgomery  ,chi,RB,270.8
+2020,S. Dickson,2 Many Cooks In the Kitchen,Aaron Jones ,gb,RB,267.9
+2020,S. Dickson,2 Many Cooks In the Kitchen,A.J. Brown ,ten,WR,258.5
+2020,S. Dickson,2 Many Cooks In the Kitchen,Robert Woods ,lar,WR,250.1
+2020,S. Dickson,2 Many Cooks In the Kitchen,CeeDee Lamb  ,dal,WR,223.7
+2020,S. Dickson,2 Many Cooks In the Kitchen,Corey Davis  ,ten,WR,199.4
+2020,S. Dickson,2 Many Cooks In the Kitchen,Jarvis Landry  ,cle,WR,189.7
+2020,S. Dickson,2 Many Cooks In the Kitchen,Russell Gage  ,atl,WR,182.45
+2020,S. Dickson,2 Many Cooks In the Kitchen,Keelan Cole  ,jax,WR,156.4
+2020,S. Dickson,2 Many Cooks In the Kitchen,Jimmy Graham  ,chi,TE,143.6
+2020,S. Dickson,2 Many Cooks In the Kitchen,Jared Cook ,nor,TE,128.4
+2020,S. Dickson,2 Many Cooks In the Kitchen,Jerick McKinnon ,sf,RB,126.2
+2020,S. Dickson,2 Many Cooks In the Kitchen,John Brown ,buf,WR,97.8
+2020,S. Dickson,2 Many Cooks In the Kitchen,Bills D/ST,buf,DST,96
+2020,M. Spiers,RIP Rome,Justin Herbert  ,lac,QB,376.2
+2020,M. Spiers,RIP Rome,Lamar Jackson  ,bal,QB,365.35
+2020,M. Spiers,RIP Rome,Tyreek Hill  ,kc,WR,341.9
+2020,M. Spiers,RIP Rome,Marvin Jones  Jr.,det,WR,231.8
+2020,M. Spiers,RIP Rome,Antonio Gibson  ,wsh,RB,204.2
+2020,M. Spiers,RIP Rome,Ronald Jones  ,tb,RB,193.3
+2020,M. Spiers,RIP Rome,Miles Sanders ,phi,RB,178.4
+2020,M. Spiers,RIP Rome,Mark Andrews ,bal,TE,170.1
+2020,M. Spiers,RIP Rome,Emmanuel Sanders  ,nor,WR,165.8
+2020,M. Spiers,RIP Rome,Josh Reynolds  ,lar,WR,125.3
+2020,M. Spiers,RIP Rome,Travis Fulgham  ,Phi,WR,117.9
+2020,M. Spiers,RIP Rome,Dallas Goedert ,Phi,TE,117.4
+2020,M. Spiers,RIP Rome,Dolphins D/ST ,mia,DST,105
+2020,M. Spiers,RIP Rome,Boston Scott  ,phi,RB,98.6
+2020,A. Parra,The Angry Bananas,Aaron Rodgers ,gb,QB,426.25
+2020,A. Parra,The Angry Bananas,Derrick Henry  ,ten,RB,352.1
+2020,A. Parra,The Angry Bananas,Allen Robinson  ,chi,WR,266.9
+2020,A. Parra,The Angry Bananas,Jonathan Taylor  ,ind,RB,260.8
+2020,A. Parra,The Angry Bananas,Keenan Allen ,lac,WR,249.1
+2020,A. Parra,The Angry Bananas,Robert Tonyan ,gb,te,176.6
+2020,A. Parra,The Angry Bananas,J.K. Dobbins  ,bal,rb,173.5
+2020,A. Parra,The Angry Bananas,Giovani Bernard  ,cin,rb,158.1
+2020,A. Parra,The Angry Bananas,Jeff Wilson   Jr.,sf,rb,144.3
+2020,A. Parra,The Angry Bananas,Colts D/ST ,ind,DST,141
+2020,A. Parra,The Angry Bananas,George Kittle ,sf,TE,128.1
+2020,A. Parra,The Angry Bananas,Washington   D/ST ,wsh,dst,127
+2020,A. Parra,The Angry Bananas,Zack Moss ,buf,rb,101.6
+2020,A. Parra,The Angry Bananas,Michael Pittman Jr.,ind,wr,100.9
+2020,A. Parra,The Angry Bananas,Joe Mixon ,cin,rb,100.6
+2020,A. Parra,The Angry Bananas,Christian McCaffrey ,car,rb,90.4
+2020,D. Daniel,Fresh Prince of Helaire,Travis Kelce ,kc,TE,318.8
+2020,D. Daniel,Fresh Prince of Helaire,Carson Wentz  ,ind,qb,224.6
+2020,D. Daniel,Fresh Prince of Helaire,DJ Moore ,car,WR,221.5
+2020,D. Daniel,Fresh Prince of Helaire,Tyler Boyd  ,cin,WR,197.8
+2020,D. Daniel,Fresh Prince of Helaire,Kenyan Drake  ,ari,RB,197.2
+2020,D. Daniel,Fresh Prince of Helaire,Clyde Edwards-Helaire  ,kc,RB,178
+2020,D. Daniel,Fresh Prince of Helaire,Taysom Hill ,nor,QB,165.9
+2020,D. Daniel,Fresh Prince of Helaire,Tua Tagovailoa  ,mia,qb,153.6
+2020,D. Daniel,Fresh Prince of Helaire,Darnell Mooney  ,chi,wr,152.1
+2020,D. Daniel,Fresh Prince of Helaire,Latavius Murray ,nor,rb,137.2
+2020,D. Daniel,Fresh Prince of Helaire,Ravens D/ST ,bal,DST,125
+2020,D. Daniel,Fresh Prince of Helaire,Buccaneers D/ST,tb,dst,111
+2020,D. Daniel,Fresh Prince of Helaire,KJ Hamler  ,den,wr,91.1
+2020,D. Daniel,Fresh Prince of Helaire,Jalen Reagor  ,phi,wr,87.2
+2020,D. Daniel,Fresh Prince of Helaire,Jordan Akins  ,hou,te,83.7
+2020,D. Daniel,Fresh Prince of Helaire,Bengals D/ST ,cin,dst,18
+2020,G. Nulty,Marshall Ave Goon Squad,Kyler Murray  ,ari,QB,419.45
+2020,G. Nulty,Marshall Ave Goon Squad,Alvin Kamara  ,nor,RB,383.8
+2020,G. Nulty,Marshall Ave Goon Squad,Calvin Ridley  ,Atl,WR,289.5
+2020,G. Nulty,Marshall Ave Goon Squad,Darren Waller ,lv,TE,284.6
+2020,G. Nulty,Marshall Ave Goon Squad,Nyheim Hines  ,ind,rb,193.2
+2020,G. Nulty,Marshall Ave Goon Squad,Chris Godwin  ,tb,WR,192
+2020,G. Nulty,Marshall Ave Goon Squad,Brandon Aiyuk ,sf,wr,186.5
+2020,G. Nulty,Marshall Ave Goon Squad,T.Y. Hilton ,ind,wr,166.2
+2020,G. Nulty,Marshall Ave Goon Squad,Mike Gesicki ,mia,te,160.3
+2020,G. Nulty,Marshall Ave Goon Squad,Jakobi Meyers ,ne,wr,144.95
+2020,G. Nulty,Marshall Ave Goon Squad,Tony Pollard ,dal,rb,122.7
+2020,G. Nulty,Marshall Ave Goon Squad,Jalen Hurts  ,phi,qb,121.05
+2020,G. Nulty,Marshall Ave Goon Squad,Cam Akers  ,lar,rb,102.8
+2020,G. Nulty,Marshall Ave Goon Squad,Browns D/ST ,cle,dst,82
+2020,G. Nulty,Marshall Ave Goon Squad,Panthers D/ST ,car,DST,80
+2020,G. Nulty,Marshall Ave Goon Squad,Ito Smith  ,Atl,rb,57.3
+2020,G. Nulty,Marshall Ave Goon Squad,Lynn Bowden Jr. ,Mia,RB,53.9
+2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Matt Ryan  ,Atl,QB,328.25
+2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Terry McLaurin  ,Wsh,WR,232.8
+2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Robby Anderson  ,Car,wr,231.1
+2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Nelson Agholor ,Lv,wr,195.6
+2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Todd Gurley  ,Atl,rb,164.2
+2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Rob Gronkowski  ,Tb,TE,150.3
+2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Wayne Gallman  ,Nyg,RB,137.6
+2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Adrian Peterson  ,Det,rb,124.5
+2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Antonio Brown  ,Tb,WR,119.1
+2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Kalen Ballage  ,Lac,RB,93.9
+2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Keke Coutee  ,Hou,wr,88
+2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Golden Tate  ,FA,wr,86.7
+2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Trey Burton  ,Ind,te,83.3
+2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Bears D/ST ,Chi,DST,82
+2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Le'Veon Bell  ,Kc,rb,74.6
+2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Chargers D/ST ,Lac,dst,72
+2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Devonta Freeman  ,buf,rb,36
+2020,N. Segal,Three time champ segal,Deshaun Watson ,hou,QB,417.55
+2020,N. Segal,Three time champ segal,Philip Rivers ,ind,qb,281.65
+2020,N. Segal,Three time champ segal,Nick Chubb  ,cle,RB,214.7
+2020,N. Segal,Three time champ segal,Chase Edmonds  ,ari,RB,168
+2020,N. Segal,Three time champ segal,Julio Jones ,atl,WR,150.1
+2020,N. Segal,Three time champ segal,Stefon Diggs  ,buf,WR,338.6
+2020,N. Segal,Three time champ segal,Austin Hooper ,cle,TE,113.5
+2020,N. Segal,Three time champ segal,JuJu Smith-Schuster ,pit,wr,234.1
+2020,N. Segal,Three time champ segal,Darius Slayton ,nyg,wr,144
+2020,N. Segal,Three time champ segal,Devin Singletary ,buf,rb,146.6
+2020,N. Segal,Three time champ segal,Phillip Lindsay ,den,rb,70
+2020,N. Segal,Three time champ segal,Tyler Higbee ,lar,te,128.2
+2020,N. Segal,Three time champ segal,Breshad Perriman ,nyj,wr,104.1
+2020,N. Segal,Three time champ segal,Michael Gallup ,dal,wr,176.3
+2020,M. DiCerbo,Team Slapper,Ryan Tannehill   ,ten,QB,383.55
+2020,M. DiCerbo,Team Slapper,Justin Jefferson   ,min,WR,285.2
+2020,M. DiCerbo,Team Slapper,James Robinson  ,jax,RB,254.4
+2020,M. DiCerbo,Team Slapper,Amari Cooper  ,dal,WR,243.8
+2020,M. DiCerbo,Team Slapper,Chase Claypool  ,pit,wr,219.9
+2020,M. DiCerbo,Team Slapper,Mike Davis ,car,rb,206.5
+2020,M. DiCerbo,Team Slapper,Austin Ekeler  ,lac,RB,165.3
+2020,M. DiCerbo,Team Slapper,Rams D/ST ,lar,dst,159
+2020,M. DiCerbo,Team Slapper,DJ Chark   Jr.,kax,wr,157.6
+2020,M. DiCerbo,Team Slapper,Hayden Hurst  ,atl,TE,150.1
+2020,M. DiCerbo,Team Slapper,Jonnu Smith  ,ten,te,140.2
+2020,M. DiCerbo,Team Slapper,Darrell Henderson  ,lar,rb,131.3
+2020,M. DiCerbo,Team Slapper,Saints D/ST,nor,DST,122
+2020,M. DiCerbo,Team Slapper,Allen Lazard  ,gb,wr,98.8
+2020,M. DiCerbo,Team Slapper,Anthony Firkser  ,ten,te,84.7
+2020,M. DiCerbo,Team Slapper,Deebo Samuel ,sf,wr,81.7
+2020,M. DiCerbo,Team Slapper,Salvon Ahmed  ,mia,rb,70
+2020,R. Kelly,Riverboat Rob,Ben Roethlisberger  ,Pit,QB,305.25
+2020,R. Kelly,Riverboat Rob,DeAndre Hopkins  ,Ari,WR,295.8
+2020,R. Kelly,Riverboat Rob,Tyler Lockett  ,Sea,WR,270.4
+2020,R. Kelly,Riverboat Rob,Drew Brees,Nor,qb,238.9
+2020,R. Kelly,Riverboat Rob,Josh Jacobs  ,Lv,RB,233.3
+2020,R. Kelly,Riverboat Rob,Diontae Johnson  ,Pit,wr,223.8
+2020,R. Kelly,Riverboat Rob,Kareem Hunt   ,Cle,RB,219.5
+2020,R. Kelly,Riverboat Rob,Curtis Samuel  ,Car,wr,215.1
+2020,R. Kelly,Riverboat Rob,Marquise Brown ,Bal,wr,188
+2020,R. Kelly,Riverboat Rob,Logan Thomas   ,Wsh,TE,177.9
+2020,R. Kelly,Riverboat Rob,Laviska Shenault  ,Jax,wr,157.1
+2020,R. Kelly,Riverboat Rob,Evan Engram  ,Nyg,te,142
+2020,R. Kelly,Riverboat Rob,Rex Burkhead ,Ne,rb,107.6
+2020,R. Kelly,Riverboat Rob,Frank Gore  ,Nyj,rb,100.2
+2020,R. Kelly,Riverboat Rob,Alexander Mattison  ,Min,rb,87.9
+2020,R. Kelly,Riverboat Rob,Seahawks D/ST ,Sea,DST,75
+2020,R. Kelly,Riverboat Rob,JaMycal Hasty  ,Sf,rb,31.1
+2020,Kramer Fader,El Nino Polla,Josh Allen ,Buf,QB,441.5
+2020,Kramer Fader,El Nino Polla,Ezekiel Elliott ,Dal,RB,225.7
+2020,Kramer Fader,El Nino Polla,D'Andre Swift ,Det,RB,190.8
+2020,Kramer Fader,El Nino Polla,Adam Thielen ,Min,WR,257
+2020,Kramer Fader,El Nino Polla,Sterling Shepard ,Nyg,WR,163.5
+2020,Kramer Fader,El Nino Polla,T.J. Hockenson ,Det,TE,175.3
+2020,Kramer Fader,El Nino Polla,Jamison Crowder ,Nyj,wr,178.45
+2020,Kramer Fader,El Nino Polla,Mike Evans ,Tb,wr,252.6
+2020,Kramer Fader,El Nino Polla,Christian Kirk  ,Ari,wr,153.4
+2020,Kramer Fader,El Nino Polla,Jerry Jeudy ,Den,wr,163.6
+2020,Kramer Fader,El Nino Polla,Malcolm Brown ,Lar,rb,109.1
+2020,Kramer Fader,El Nino Polla,Carlos Hyde ,Sea,rb,87.9
+2020,Kramer Fader,El Nino Polla,Kerryon Johnson ,Det,rb,71.8
+2020,Kramer Fader,El Nino Polla,James White ,Ne,rb,116.6
+2020,Kramer Fader,El Nino Polla,David Johnson ,Hou,rb,181.5
+2020,Kramer Fader,El Nino Polla,Raiders D/ST  ,Lv,DST,9
+2021,C. Baylo,Cig Rob,Aaron Rodgers,Gb,QB,374.45
+2021,C. Baylo,Cig Rob,Taylor Heinicke ,Wsh,QB,257.05
+2021,C. Baylo,Cig Rob,Nick Chubb ,Cle,RB,226.3
+2021,C. Baylo,Cig Rob,Devin Singletary ,Buf,RB,199.8
+2021,C. Baylo,Cig Rob,Tyreek Hill ,Kc,WR,303.5
+2021,C. Baylo,Cig Rob,DeAndre Hopkins,Ari,WR,147.2
+2021,C. Baylo,Cig Rob,Jared Cook ,Lac,TE,132.4
+2021,C. Baylo,Cig Rob,Tyler Boyd,Cin,WR,191.3
+2021,C. Baylo,Cig Rob,Rondale Moore,Ar,WR,113.1
+2021,C. Baylo,Cig Rob,Dallas Goedert  ,Phi,TE,167
+2021,C. Baylo,Cig Rob,Nyheim Hines  ,Ind,RB,112.6
+2021,C. Baylo,Cig Rob,Jakobi Meyers  ,Ne,WR,186.75
+2021,C. Baylo,Cig Rob,Damien Harris  ,Ne,RB,218.1
+2021,C. Baylo,Cig Rob,Cedrick Wilson  ,Dal,WR,153.7
+2021,C. Baylo,Cig Rob,Nico Collins  ,Hou,WR,83.6
+2021,C. Baylo,Cig Rob,Steelers D/ST ,Pit,DST,90
+2021,B. Newell,Ruggs Muncher,Derek Carr  ,Lv,QB,305
+2021,B. Newell,Ruggs Muncher,Russell Wilson  ,Sea,QB,273.95
+2021,B. Newell,Ruggs Muncher,Mike Evans  ,Tb,WR,266.5
+2021,B. Newell,Ruggs Muncher,Leonard Fournette  ,Tb,RB,258.6
+2021,B. Newell,Ruggs Muncher,Brandin Cooks  ,Hou,WR,238.8
+2021,B. Newell,Ruggs Muncher,Alvin Kamara  ,Nor,RB,238.7
+2021,B. Newell,Ruggs Muncher,Zach Ertz  ,Ari,TE,181.7
+2021,B. Newell,Ruggs Muncher,Noah Fant  ,Den,TE,159
+2021,B. Newell,Ruggs Muncher,Marquez Callaway  ,Nor,WR,153.8
+2021,B. Newell,Ruggs Muncher,Devonta Freeman  ,Bal,RB,146.6
+2021,B. Newell,Ruggs Muncher,Kalif Raymond  ,Det,WR,137.4
+2021,B. Newell,Ruggs Muncher,Emmanuel Sanders  ,Buf,WR,131.7
+2021,B. Newell,Ruggs Muncher,Miles Sanders  ,Phi,RB,119.2
+2021,B. Newell,Ruggs Muncher,D'Onta Foreman  ,Ten,RB,96.9
+2021,B. Newell,Ruggs Muncher,Julio Jones  ,Ten,WR,81.4
+2021,B. Newell,Ruggs Muncher,Ravens D/ST ,Bal,DST,58
+2021,B. Newell,Ruggs Muncher,Quintez Cephus ,Det,WR,49.4
+2021,B. Newell,Ruggs Muncher,Tommy Sweeney ,Buf,TE,19.4
+2021,C. Upperman,Suck My Balls,Kyler Murray  ,Ari,QB,338.35
+2021,C. Upperman,Suck My Balls,Ja'Marr Chase  ,Cin,WR,327.6
+2021,C. Upperman,Suck My Balls,Ryan Tannehill  ,Ten,QB,305.7
+2021,C. Upperman,Suck My Balls,Hunter Renfrow ,Lv,WR,262.1
+2021,C. Upperman,Suck My Balls,CeeDee Lamb  ,Dal,WR,236.8
+2021,C. Upperman,Suck My Balls,Antonio Gibson  ,Wsh,RB,234.1
+2021,C. Upperman,Suck My Balls,Christian Kirk  ,Ari,WR,208.95
+2021,C. Upperman,Suck My Balls,Elijah Mitchell  ,Sf,RB,170
+2021,C. Upperman,Suck My Balls,Cowboys D/ST ,Dal,DST,163
+2021,C. Upperman,Suck My Balls,Tyler Higbee  ,Lar,TE,147
+2021,C. Upperman,Suck My Balls,Odell Beckham  Jr.,Lar,WR,132.1
+2021,C. Upperman,Suck My Balls,Eagles   D/ST ,Phi,DST,99
+2021,C. Upperman,Suck My Balls,Austin Hooper  ,Cle,TE,92.5
+2021,C. Upperman,Suck My Balls,Ameer Abdullah  ,Car,RB,89.5
+2021,C. Upperman,Suck My Balls,Allen Robinson ,Chi,WR,87
+2021,C. Upperman,Suck My Balls,Kendall Blanton  ,Lar,TE,7.7
+2021,C. Upperman,Suck My Balls,Raheem Mostert  ,Sf,RB,2
+2021,S. Dickson,2 Many Cooks In the Kitchen,Dak Prescott   ,dal,QB,365.05
+2021,S. Dickson,2 Many Cooks In the Kitchen,Deebo Samuel  ,sf,WR,352.2
+2021,S. Dickson,2 Many Cooks In the Kitchen,Chris Godwin  ,tb,WR,247.4
+2021,S. Dickson,2 Many Cooks In the Kitchen,Dalvin Cook ,min,RB,211.3
+2021,S. Dickson,2 Many Cooks In the Kitchen,David Montgomery  ,chi,RB,197
+2021,S. Dickson,2 Many Cooks In the Kitchen,Daniel Jones  ,nyg,QB,191.8
+2021,S. Dickson,2 Many Cooks In the Kitchen,Bills D/ST,buf,DST,154
+2021,S. Dickson,2 Many Cooks In the Kitchen,Mecole Hardman ,kc,WR,141.9
+2021,S. Dickson,2 Many Cooks In the Kitchen,Robby Anderson  ,car,WR,141.5
+2021,S. Dickson,2 Many Cooks In the Kitchen,Tyler Conklin  ,min,TE,138.3
+2021,S. Dickson,2 Many Cooks In the Kitchen,Darren Waller  ,lv,TE,135.5
+2021,S. Dickson,2 Many Cooks In the Kitchen,Brandon Bolden  ,ne,RB,124.1
+2021,S. Dickson,2 Many Cooks In the Kitchen,Broncos D/ST ,den,DST,110
+2021,S. Dickson,2 Many Cooks In the Kitchen,Mark Ingram  ,nor,RB,108.6
+2021,S. Dickson,2 Many Cooks In the Kitchen,Latavius Murray ,bal,RB,105.6
+2021,S. Dickson,2 Many Cooks In the Kitchen,T.Y. Hilton  ,ind,WR,75.1
+2021,S. Dickson,2 Many Cooks In the Kitchen,William Fuller ,mia,WR,8.6
+2021,M. Spiers,RIP Rome,Tom Brady  ,tb,QB,427.9
+2021,M. Spiers,RIP Rome,Travis Kelce ,kc,TE,267.8
+2021,M. Spiers,RIP Rome,Mike Williams  ,lac,WR,258.6
+2021,M. Spiers,RIP Rome,DK Metcalf  ,sea,WR,249.3
+2021,M. Spiers,RIP Rome,Cordarrelle Patterson  ,atl,RB,237.6
+2021,M. Spiers,RIP Rome,Josh Jacobs ,lv,RB,228
+2021,M. Spiers,RIP Rome,Darrel Williams ,kc,RB,197
+2021,M. Spiers,RIP Rome,DeVonta Smith ,phi,WR,187.6
+2021,M. Spiers,RIP Rome,Van Jefferson ,lar,WR,177.2
+2021,M. Spiers,RIP Rome,Rob Gronkowski ,tb,TE,174.2
+2021,M. Spiers,RIP Rome,Buccaneers D/ST,tb,DST,125
+2021,M. Spiers,RIP Rome,Clyde Edwards-Helaire ,kc,RB,119.6
+2021,M. Spiers,RIP Rome,Cardinals D/ST ,ari,DST,114
+2021,M. Spiers,RIP Rome,Zack Moss  ,buf,RB,105.2
+2021,M. Spiers,RIP Rome,Jerry Jeudy  ,den,WR,85
+2021,M. Spiers,RIP Rome,Seahawks D/ST ,sea,DST,60
+2021,A. Parra,The Angry Bananas,Cooper Kupp   ,lar,WR,453.5
+2021,A. Parra,The Angry Bananas,Matthew Stafford  ,lar,QB,378.6
+2021,A. Parra,The Angry Bananas,Justin Jefferson  ,min,WR,341.75
+2021,A. Parra,The Angry Bananas,Jaylen Waddle  ,mia,wr,246.8
+2021,A. Parra,The Angry Bananas,Javonte Williams  ,den,RB,206.9
+2021,A. Parra,The Angry Bananas,George Kittle  ,sf,TE,202
+2021,A. Parra,The Angry Bananas,AJ Dillon  ,gb,rb,185.6
+2021,A. Parra,The Angry Bananas,James Robinson  ,jax,rb,174.9
+2021,A. Parra,The Angry Bananas,Saquon Barkley  ,nyg,RB,152.6
+2021,A. Parra,The Angry Bananas,Alexander Mattison ,min,rb,127.9
+2021,A. Parra,The Angry Bananas,Laviska Shenault   Jr.,jax,wr,127
+2021,A. Parra,The Angry Bananas,49ers D/ST ,sf,DST,120
+2021,A. Parra,The Angry Bananas,Rams D/ST ,lar,dst,105
+2021,A. Parra,The Angry Bananas,Cam Newton  ,car,qb,93.2
+2021,A. Parra,The Angry Bananas,Kadarius Toney  ,nyg,wr,83.55
+2021,A. Parra,The Angry Bananas,Josh Reynolds  ,det,wr,80.6
+2021,D. Daniel,Team Domination ,Patrick Mahomes  ,kc,QB,410.05
+2021,D. Daniel,Team Domination ,Davante Adams ,gb,wr,353.3
+2021,D. Daniel,Team Domination ,Aaron Jones  ,gb,RB,230
+2021,D. Daniel,Team Domination ,Tee Higgins  ,cin,WR,223.1
+2021,D. Daniel,Team Domination ,Amari Cooper  ,dal,wr,204.5
+2021,D. Daniel,Team Domination ,Melvin Gordon   III ,den,rb,202.1
+2021,D. Daniel,Team Domination ,Dawson Knox  ,buf,TE,168.1
+2021,D. Daniel,Team Domination ,Patriots D/ST ,ne,DST,148
+2021,D. Daniel,Team Domination ,Devontae Booker ,nyg,rb,144.1
+2021,D. Daniel,Team Domination ,Taysom Hill  ,nor,qb,133.5
+2021,D. Daniel,Team Domination ,Jamaal Williams ,det,rb,119.8
+2021,D. Daniel,Team Domination ,Ronald Jones  ,tb,RB,79.2
+2021,D. Daniel,Team Domination ,Derrick Gore ,kc,rb,59.1
+2021,D. Daniel,Team Domination ,Jeff Wilson   Jr,sf,rb,52.5
+2021,D. Daniel,Team Domination ,Ke'Shawn Vaughn ,tb,rb,39.6
+2021,D. Daniel,Team Domination ,Antonio Brown  ,tb,WR,0
+2021,G. Nulty,Marshall Ave Goon Squad,Josh Allen  ,buf,QB,447.65
+2021,G. Nulty,Marshall Ave Goon Squad,Austin Ekeler   ,LAc,RB,344.8
+2021,G. Nulty,Marshall Ave Goon Squad,Mark Andrews  ,Bal,TE,306.1
+2021,G. Nulty,Marshall Ave Goon Squad,Stefon Diggs  ,Buf,WR,287.5
+2021,G. Nulty,Marshall Ave Goon Squad,James Conner  ,ari,rb,258.7
+2021,G. Nulty,Marshall Ave Goon Squad,D'Andre Swift  ,det,RB,217.9
+2021,G. Nulty,Marshall Ave Goon Squad,Marvin Jones   Jr. ,jax,wr,181.2
+2021,G. Nulty,Marshall Ave Goon Squad,Chase Claypool   ,pit,WR,167.6
+2021,G. Nulty,Marshall Ave Goon Squad,Tony Pollard  ,dal,rb,166.6
+2021,G. Nulty,Marshall Ave Goon Squad,Courtland Sutton  ,den,wr,152.4
+2021,G. Nulty,Marshall Ave Goon Squad,Allen Lazard  ,gb,wr,142.5
+2021,G. Nulty,Marshall Ave Goon Squad,Dolphins D/ST ,mia,dst,141
+2021,G. Nulty,Marshall Ave Goon Squad,Braxton Berrios ,nyj,wr,121.1
+2021,G. Nulty,Marshall Ave Goon Squad,Rashod Bateman  ,bal,wr,104.5
+2021,G. Nulty,Marshall Ave Goon Squad,Chiefs D/ST,kc,dst,102
+2021,G. Nulty,Marshall Ave Goon Squad,Jordan Howard  ,phi,rb,62.5
+2021,T. Flynn,The Irish Brigade,Jalen Hurts  ,Phi,QB,343.6
+2021,T. Flynn,The Irish Brigade,Joe Mixon  ,Cin,RB,291.9
+2021,T. Flynn,The Irish Brigade,Keenan Allen  ,Lac,WR,261.8
+2021,T. Flynn,The Irish Brigade,DJ Moore ,Car,WR,240.5
+2021,T. Flynn,The Irish Brigade,Amon-Ra St. Brown  ,Det,wr,229.3
+2021,T. Flynn,The Irish Brigade,Adam Thielen  ,Min,wr,200.8
+2021,T. Flynn,The Irish Brigade,Russell Gage  ,Atl,wr,166
+2021,T. Flynn,The Irish Brigade,Cole Beasley  ,Buf,wr,160.3
+2021,T. Flynn,The Irish Brigade,Chase Edmonds  ,Ari,RB,144.3
+2021,T. Flynn,The Irish Brigade,Chuba Hubbard  ,Car,rb,138.6
+2021,T. Flynn,The Irish Brigade,Gerald Everett  ,Sea,TE,117.8
+2021,T. Flynn,The Irish Brigade,Rex Burkhead  ,Hou,rb,105.3
+2021,T. Flynn,The Irish Brigade,DeVante Parker  ,Min,wr,103.5
+2021,T. Flynn,The Irish Brigade,Jaret Patterson  ,Wsh,rb,55.9
+2021,T. Flynn,The Irish Brigade,Isaiah McKenzie  ,Buf,wr,53.5
+2021,T. Flynn,The Irish Brigade,Dare Ogunbowale  ,Jax,rb,50.1
+2021,M. DiCerbo,Team Slapper,Justin Herbert  ,lac,QB,430.9
+2021,M. DiCerbo,Team Slapper,Jonathan Taylor  ,ind,RB,393.1
+2021,M. DiCerbo,Team Slapper,Najee Harris  ,pit,RB,304.7
+2021,M. DiCerbo,Team Slapper,Diontae Johnson  ,pit,WR,281.4
+2021,M. DiCerbo,Team Slapper,Michael Pittman  Jr.,ind,WR,241.6
+2021,M. DiCerbo,Team Slapper,Marquise Brown ,bal,wr,232.3
+2021,M. DiCerbo,Team Slapper,Darnell Mooney ,chi,wr,226.7
+2021,M. DiCerbo,Team Slapper,Dalton Schultz  ,dal,te,208.8
+2021,M. DiCerbo,Team Slapper,Kyle Pitts ,atl,TE,179.6
+2021,M. DiCerbo,Team Slapper,K.J. Osborn  ,min,wr,164.5
+2021,M. DiCerbo,Team Slapper,Sony Michel  ,lar,rb,148.3
+2021,M. DiCerbo,Team Slapper,Rashaad Penny  ,sea,rb,129.7
+2021,M. DiCerbo,Team Slapper,Titans D/ST ,ten,DST,108
+2021,M. DiCerbo,Team Slapper,Jalen Guyton  ,lac,wr,101.2
+2021,M. DiCerbo,Team Slapper,Boston Scott  ,phi,rb,98.6
+2021,M. DiCerbo,Team Slapper,Marquez Valdes-Scantling ,gb,wr,91
+2021,M. DiCerbo,Team Slapper,Chris Carson  ,sea,rb,48.1
+2021,R. Kelly,Riverboat Rob,Joe Burrow ,Cin,QB,360.35
+2021,R. Kelly,Riverboat Rob,Carson Wentz  ,Indy,qb,293.65
+2021,R. Kelly,Riverboat Rob,Tyler Lockett  ,Sea,wr,256.4
+2021,R. Kelly,Riverboat Rob,Derrick Henry  ,Ten,rb,204.35
+2021,R. Kelly,Riverboat Rob,A.J. Brown  ,Ten,wr,186.9
+2021,R. Kelly,Riverboat Rob,Hunter Henry  ,Ne,te,164.3
+2021,R. Kelly,Riverboat Rob,Darrell Henderson   Jr.,Lar,rb,163.4
+2021,R. Kelly,Riverboat Rob,Saints D/ST,Nor,DST,133
+2021,R. Kelly,Riverboat Rob,Ty Johnson ,Nyj,RB,117
+2021,R. Kelly,Riverboat Rob,Kareem Hunt  ,Cle,RB,110
+2021,R. Kelly,Riverboat Rob,Jamison Crowder ,Nyj,wr,109.7
+2021,R. Kelly,Riverboat Rob,Kenyan Drake  ,Lv,rb,102.5
+2021,R. Kelly,Riverboat Rob,Michael Gallup ,Dal,WR,92.5
+2021,R. Kelly,Riverboat Rob,Kenny Golladay ,Nyg,WR,90.1
+2021,R. Kelly,Riverboat Rob,Dontrell Hilliard  ,Ten,rb,76.7
+2021,R. Kelly,Riverboat Rob,Jeremy McNichols  ,Ten,rb,73.6
+2021,R. Kelly,Riverboat Rob,Ricky Seals-Jones  ,Wsh,TE,69.1
+2021,Kramer Fader,El Nino Polla,Lamar Jackson  ,Bal,QB,270.8
+2021,Kramer Fader,El Nino Polla,Ezekiel Elliott  ,Dal,RB,254.1
+2021,Kramer Fader,El Nino Polla,Michael Carter  ,Nyj,RB,155.4
+2021,Kramer Fader,El Nino Polla,Terry McLaurin  ,Wsh,WR,218.5
+2021,Kramer Fader,El Nino Polla,Brandon Aiyuk  ,Sf,WR,171.3
+2021,Kramer Fader,El Nino Polla,Mike Gesicki  ,Mia,TE,166
+2021,Kramer Fader,El Nino Polla,Myles Gaskin  ,Mia,rb,173.6
+2021,Kramer Fader,El Nino Polla,A.J. Green  ,Ari,wr,159.8
+2021,Kramer Fader,El Nino Polla,Kendrick Bourne ,Ne,wr,184.75
+2021,Kramer Fader,El Nino Polla,Tim Patrick  ,Den,wr,157.4
+2021,Kramer Fader,El Nino Polla,Tevin Coleman  ,Nyj,rb,51.5
+2021,Kramer Fader,El Nino Polla,Cole Kmet  ,Chi,te,121.2
+2021,Kramer Fader,El Nino Polla,David Johnson  ,Hou,rb,81.3
+2021,Kramer Fader,El Nino Polla,Jermar Jefferson  ,Det,rb,25.7
+2021,Kramer Fader,El Nino Polla,Godwin Igwebuike  ,Det,rb,27.8
+2021,Kramer Fader,El Nino Polla,Calvin Ridley  ,Atl,wr,71.1
+2021,Kramer Fader,El Nino Polla,Jarvis Landry  ,Cle,wr,134
+2021,Kramer Fader,El Nino Polla,Chargers D/ST,Lac,DST,61
+2022,C. Baylo,Cig Rob,Jared Goff ,Det,QB,328.7
+2022,C. Baylo,Cig Rob,David Montgomery ,Det,RB,178.7
+2022,C. Baylo,Cig Rob,Saquon Barkley  ,Nyg,RB,288
+2022,C. Baylo,Cig Rob,CeeDee Lamb  ,Dal,WR,306.6
+2022,C. Baylo,Cig Rob,Diontae Johnson ,Pit,WR,180.7
+2022,C. Baylo,Cig Rob,Dalton Schultz  ,Hou,TE,142.7
+2022,C. Baylo,Cig Rob,Elijah Moore ,Nyj,WR,88.1
+2022,C. Baylo,Cig Rob,Brandon Aiyuk ,Sf,WR,228.8
+2022,C. Baylo,Cig Rob,Jameson Williams  ,Det,WR,16.1
+2022,C. Baylo,Cig Rob,Taysom Hill ,Nor,WR,152.2
+2022,C. Baylo,Cig Rob,Tyler Conklin ,Nyj,TE,131.5
+2022,C. Baylo,Cig Rob,Terrace Marshall Jr. ,Car,WR,83
+2022,C. Baylo,Cig Rob,Michael Bandy  ,Lac,WR,18.9
+2022,C. Baylo,Cig Rob,Joshua Kelley  ,Lac,RB,64.8
+2022,C. Baylo,Cig Rob,Eagles D/ST  ,Phi,DST,158
+2022,B. Newell,Alvin and the Chip-Cucks,Joe Burrow  ,Cin,QB,395.45
+2022,B. Newell,Alvin and the Chip-Cucks,Trevor Lawrence  ,Jax,QB,336.75
+2022,B. Newell,Alvin and the Chip-Cucks,Alvin Kamara ,Nor,RB,213.7
+2022,B. Newell,Alvin and the Chip-Cucks,Cordarrelle Patterson  ,Atl,RB,156.7
+2022,B. Newell,Alvin and the Chip-Cucks,Courtland Sutton  ,Den,WR,160.4
+2022,B. Newell,Alvin and the Chip-Cucks,Garrett Wilson  ,Nyj,WR,221.7
+2022,B. Newell,Alvin and the Chip-Cucks,George Kittle  ,Sf,TE,204.5
+2022,B. Newell,Alvin and the Chip-Cucks,Ja'Marr Chase  ,Cin,WR,250.4
+2022,B. Newell,Alvin and the Chip-Cucks,Joshua Palmer  ,Lac,WR,174.3
+2022,B. Newell,Alvin and the Chip-Cucks,James Robinson ,Ne,RB,92.6
+2022,B. Newell,Alvin and the Chip-Cucks,Julio Jones  ,Tb,WR,70.4
+2022,B. Newell,Alvin and the Chip-Cucks,David Njoku  ,Cle,TE,142
+2022,B. Newell,Alvin and the Chip-Cucks,Isaiah McKenzie ,FA,WR,119.8
+2022,B. Newell,Alvin and the Chip-Cucks,Boston Scott  ,Phi,RB,46.2
+2022,B. Newell,Alvin and the Chip-Cucks,Jordan Mason  ,Sf,RB,31.8
+2022,B. Newell,Alvin and the Chip-Cucks,Raiders D/ST,Lv,DST,55
+2022,C. Upperman,Suck My Balls,Brock Purdy ,Sf,QB,120
+2022,C. Upperman,Suck My Balls,Lamar Jackson  ,Bal,QB,263.5
+2022,C. Upperman,Suck My Balls,Derek Carr  ,Nor,QB,254.3
+2022,C. Upperman,Suck My Balls,Joe Mixon  ,Cin,RB,240.5
+2022,C. Upperman,Suck My Balls,Latavius Murray  ,Den,RB,156.2
+2022,C. Upperman,Suck My Balls,Stefon Diggs  ,Buf,WR,328.6
+2022,C. Upperman,Suck My Balls,Mike Evans ,Tb,WR,235.4
+2022,C. Upperman,Suck My Balls,Dallas Goedert  ,Phi,TE,142.2
+2022,C. Upperman,Suck My Balls,Michael Pittman Jr.  ,Ind,WR,218.5
+2022,C. Upperman,Suck My Balls,AJ Dillon ,gb,RB,167.6
+2022,C. Upperman,Suck My Balls,Damien Harris  ,buf,RB,90.9
+2022,C. Upperman,Suck My Balls,Jakobi Meyers ,lv,WR,182.3
+2022,C. Upperman,Suck My Balls,Noah Fant  ,sea,TE,122.6
+2022,C. Upperman,Suck My Balls,Michael Gallup   ,dal,WR,105.4
+2022,C. Upperman,Suck My Balls,Samaje Perine  ,den,RB,143.1
+2022,C. Upperman,Suck My Balls,Bills D/ST ,buf,DST,138
+2022,S. Dickson,2 Many Cooks In the Kitchen,Josh Allen ,buf,QB,438.35
+2022,S. Dickson,2 Many Cooks In the Kitchen,Dalvin Cook  ,min,RB,248.8
+2022,S. Dickson,2 Many Cooks In the Kitchen,Zonovan Knight  ,nyj,RB,59
+2022,S. Dickson,2 Many Cooks In the Kitchen,A.J. Brown  ,phi,WR,308.6
+2022,S. Dickson,2 Many Cooks In the Kitchen,Gabe Davis  ,buf,WR,178.6
+2022,S. Dickson,2 Many Cooks In the Kitchen,Cade Otton  ,tb,TE,93.1
+2022,S. Dickson,2 Many Cooks In the Kitchen,Mack Hollins  ,lv,WR,155.2
+2022,S. Dickson,2 Many Cooks In the Kitchen,Donovan Peoples-Jones  ,cle,WR,168.1
+2022,S. Dickson,2 Many Cooks In the Kitchen,Aaron Jones ,gb,RB,253.6
+2022,S. Dickson,2 Many Cooks In the Kitchen,Chase Claypool  ,chi,WR,105.05
+2022,S. Dickson,2 Many Cooks In the Kitchen,Alexander Mattison  ,min,RB,88.4
+2022,S. Dickson,2 Many Cooks In the Kitchen,Tyler Allgeier  ,atl,RB,161.4
+2022,S. Dickson,2 Many Cooks In the Kitchen,Jahan Dotson  ,wsh,WR,131.6
+2022,S. Dickson,2 Many Cooks In the Kitchen,Mike Gesicki  ,ne,TE,98.2
+2022,S. Dickson,2 Many Cooks In the Kitchen,Tyler Higbee  ,lar,TE,152
+2022,S. Dickson,2 Many Cooks In the Kitchen,Rashod Bateman  ,bal,WR,60.5
+2022,S. Dickson,2 Many Cooks In the Kitchen,J.K. Dobbins  ,bal,RB,83.2
+2022,S. Dickson,2 Many Cooks In the Kitchen,Seahawks D/ST ,sea,DST,98
+2022,M. Spiers,RIP Rome,Kirk Cousins ,min,QB,337.05
+2022,M. Spiers,RIP Rome,Tom Brady  ,tb,QB,318.6
+2022,M. Spiers,RIP Rome,Nick Chubb  ,cle,RB,289.4
+2022,M. Spiers,RIP Rome,Hassan Haskins  ,ten,RB,26
+2022,M. Spiers,RIP Rome,Keenan Allen  ,lac,WR,166
+2022,M. Spiers,RIP Rome,Chris Godwin  ,tb,WR,224.8
+2022,M. Spiers,RIP Rome,Evan Engram  ,jax,TE,178.9
+2022,M. Spiers,RIP Rome,Amon-Ra St. Brown  ,det,WR,271.6
+2022,M. Spiers,RIP Rome,DeVonta Smith  ,phi,WR,260.6
+2022,M. Spiers,RIP Rome,Darren Waller  ,nyg,TE,84.8
+2022,M. Spiers,RIP Rome,Tony Pollard  ,dal,RB,261.8
+2022,M. Spiers,RIP Rome,Marquez Valdes-Scantling ,kc,WR,123.4
+2022,M. Spiers,RIP Rome,Austin Hooper  ,ten,TE,97.4
+2022,M. Spiers,RIP Rome,Jonathan Taylor  ,ind,RB,151.4
+2022,M. Spiers,RIP Rome,Jaguars D/ST ,jax,DST,111
+2022,M. Spiers,RIP Rome,Falcons D/ST ,atl,DST,69
+2022,M. Spiers,RIP Rome,Browns D/ST ,cle,DST,102
+2022,A. Parra,The Angry Bananas,Tua Tagovailoa ,mia,QB,266.4
+2022,A. Parra,The Angry Bananas,Tyler Huntley ,bal,qb,56.6
+2022,A. Parra,The Angry Bananas,Teddy Bridgewater ,mia,qb,44.85
+2022,A. Parra,The Angry Bananas,Dameon Pierce ,hou,RB,171.4
+2022,A. Parra,The Angry Bananas,Najee Harris ,pit,RB,224.5
+2022,A. Parra,The Angry Bananas,Justin Jefferson ,min,WR,380
+2022,A. Parra,The Angry Bananas,Chris Olave ,nor,WR,204.2
+2022,A. Parra,The Angry Bananas,Pat Freiermuth ,pit,TE,148.2
+2022,A. Parra,The Angry Bananas,Deebo Samuel ,sf,wr,172.4
+2022,A. Parra,The Angry Bananas,Mike Williams  ,lac,wr,180.5
+2022,A. Parra,The Angry Bananas,Allen Lazard  ,nyj,wr,175.8
+2022,A. Parra,The Angry Bananas,Antonio Gibson  ,wsh,rb,165.9
+2022,A. Parra,The Angry Bananas,Gus Edwards  ,bal,rb,59.3
+2022,A. Parra,The Angry Bananas,Cole Kmet  ,chi,te,150.3
+2022,A. Parra,The Angry Bananas,K.J. Osborn  ,min,wr,157.6
+2022,A. Parra,The Angry Bananas,Clyde Edwards-Helaire  ,kc,rb,98.3
+2022,A. Parra,The Angry Bananas,Kyle Pitts  ,atl,te,75.6
+2022,A. Parra,The Angry Bananas,Chiefs D/ST ,kc,dst,115
+2022,D. Daniel,The Jew-ru,Dak Prescott  ,dal,QB,227.2
+2022,D. Daniel,The Jew-ru,Geno Smith  ,sea,qb,346.7
+2022,D. Daniel,The Jew-ru,Kenneth Walker III  ,sea,RB,213.5
+2022,D. Daniel,The Jew-ru,Jerick McKinnon  ,kc,RB,200.3
+2022,D. Daniel,The Jew-ru,Jaylen Waddle  ,mia,WR,272.2
+2022,D. Daniel,The Jew-ru,Adam Thielen  ,min,WR,180
+2022,D. Daniel,The Jew-ru,Greg Dulcich  ,den,TE,86.1
+2022,D. Daniel,The Jew-ru,Derrick Henry  ,ten,rb,313.8
+2022,D. Daniel,The Jew-ru,Davante Adams ,lv,wr,352.5
+2022,D. Daniel,The Jew-ru,Treylon Burks  ,ten,wr,95.1
+2022,D. Daniel,The Jew-ru,Jaylen Warren  ,pit,rb,93.3
+2022,D. Daniel,The Jew-ru,Kenneth Gainwell  ,phi,rb,87.9
+2022,D. Daniel,The Jew-ru,Jelani Woods  ,ind,te,74.2
+2022,D. Daniel,The Jew-ru,Nico Collins  ,hou,wr,97.1
+2022,D. Daniel,The Jew-ru,Cowboys D/ST  ,dal,DST,153
+2022,D. Daniel,The Jew-ru,Patriots D/ST  ,ne,dst,173
+2022,G. Nulty,Marshall Ave Goon Squad,Justin Fields  ,Chi,QB,330.4
+2022,G. Nulty,Marshall Ave Goon Squad,Mike White  ,Mia,qb,68.5
+2022,G. Nulty,Marshall Ave Goon Squad,Ezekiel Elliott  ,Dal,RB,185.8
+2022,G. Nulty,Marshall Ave Goon Squad,Michael Carter  ,Nyj,RB,126
+2022,G. Nulty,Marshall Ave Goon Squad,Zay Jones  ,Jax,WR,203.1
+2022,G. Nulty,Marshall Ave Goon Squad,Chris Moore  ,Hou,WR,116.1
+2022,G. Nulty,Marshall Ave Goon Squad,T.J. Hockenson  ,Min,TE,217.4
+2022,G. Nulty,Marshall Ave Goon Squad,Terry McLaurin  ,Wsh,wr,234
+2022,G. Nulty,Marshall Ave Goon Squad,Marquise Brown   ,Ari,wr,157
+2022,G. Nulty,Marshall Ave Goon Squad,Khalil Herbert  ,Chi,rb,118.8
+2022,G. Nulty,Marshall Ave Goon Squad,Gerald Everett  ,Lac,te,139.5
+2022,G. Nulty,Marshall Ave Goon Squad,Olamide Zaccheaus  ,Atl,wr,110
+2022,G. Nulty,Marshall Ave Goon Squad,Brian Robinson   Jr.,Wsh,rb,113.7
+2022,G. Nulty,Marshall Ave Goon Squad,Travis Homer  ,Chi,rb,43.1
+2022,G. Nulty,Marshall Ave Goon Squad,Cooper Kupp  ,Lar,wr,212.4
+2022,G. Nulty,Marshall Ave Goon Squad,Hunter Renfrow ,Lv,wr,79
+2022,G. Nulty,Marshall Ave Goon Squad,49ers D/ST,Sf,DST,156
+2022,T. Flynn,The Irish Brigade,Jalen Hurts   ,phi,QB,416.05
+2022,T. Flynn,The Irish Brigade,Gardner Minshew,jax,qb,43.05
+2022,T. Flynn,The Irish Brigade,Christian McCaffrey  ,sf,RB,361.7
+2022,T. Flynn,The Irish Brigade,James Conner  ,ari,RB,201.2
+2022,T. Flynn,The Irish Brigade,Brandin Cooks  ,dal,WR,146.6
+2022,T. Flynn,The Irish Brigade,Amari Cooper  ,cle,WR,252
+2022,T. Flynn,The Irish Brigade,Mark Andrews   ,bal,TE,193.5
+2022,T. Flynn,The Irish Brigade,Cam Akers   ,lar,rb,144.3
+2022,T. Flynn,The Irish Brigade,DJ Chark   ,det,wr,100.2
+2022,T. Flynn,The Irish Brigade,Tyler Boyd  ,cin,wr,175.35
+2022,T. Flynn,The Irish Brigade,Jeff Wilson  ,mia,rb,160.5
+2022,T. Flynn,The Irish Brigade,Chuba Hubbard  ,car,rb,88.7
+2022,T. Flynn,The Irish Brigade,Darius Slayton  ,nyg,wr,131.4
+2022,T. Flynn,The Irish Brigade,Deon Jackson  ,indy,rb,84.5
+2022,T. Flynn,The Irish Brigade,Marquise Goodwin  ,sea,wr,90.2
+2022,T. Flynn,The Irish Brigade,Ravens D/ST ,bal,DST,129
+2022,M. DiCerbo,Team Slapper,Justin Herbert  ,lac,QB,328.65
+2022,M. DiCerbo,Team Slapper,Deshaun Watson  ,cle,qb,96.6
+2022,M. DiCerbo,Team Slapper,Josh Jacobs  ,lv,RB,338.3
+2022,M. DiCerbo,Team Slapper,Rhamondre Stevenson  ,ne,RB,251.1
+2022,M. DiCerbo,Team Slapper,Christian Kirk  ,jax,WR,244.9
+2022,M. DiCerbo,Team Slapper,Christian Watson  ,gb,WR,174.1
+2022,M. DiCerbo,Team Slapper,Travis Kelce  ,kc,TE,322.3
+2022,M. DiCerbo,Team Slapper,Jerry Jeudy  ,den,wr,210.2
+2022,M. DiCerbo,Team Slapper,Isiah Pacheco  ,kc,rb,136
+2022,M. DiCerbo,Team Slapper,Drake London  ,atl,wr,179.6
+2022,M. DiCerbo,Team Slapper,George Pickens  ,pit,wr,167.5
+2022,M. DiCerbo,Team Slapper,Isaiah Likely  ,bal,te,92.3
+2022,M. DiCerbo,Team Slapper,Alec Pierce  ,ind,wr,112.3
+2022,M. DiCerbo,Team Slapper,Demarcus Robinson  ,bal,wr,104.8
+2022,M. DiCerbo,Team Slapper,Zack Moss  ,ind,rb,65.5
+2022,M. DiCerbo,Team Slapper,Buccaneers D/ST ,tb,DST,97
+2022,R. Kelly,Riverboat Rob,Daniel Jones  ,Nyg,QB,322.05
+2022,R. Kelly,Riverboat Rob,Aaron Rodgers  ,Gb,qb,276.15
+2022,R. Kelly,Riverboat Rob,Austin Ekeler  ,Lac,RB,377.7
+2022,R. Kelly,Riverboat Rob,Miles Sanders  ,Car,RB,220.7
+2022,R. Kelly,Riverboat Rob,Tyreek Hill  ,Min,WR,362.2
+2022,R. Kelly,Riverboat Rob,Tee Higgins  ,Cin,WR,228.9
+2022,R. Kelly,Riverboat Rob,Juwan Johnson ,Nor,TE,135.8
+2022,R. Kelly,Riverboat Rob,DK Metcalf   ,Sea,wr,231.8
+2022,R. Kelly,Riverboat Rob,Tyler Lockett  ,Sea,wr,241.3
+2022,R. Kelly,Riverboat Rob,Devin Singletary  ,Hou,rb,178.9
+2022,R. Kelly,Riverboat Rob,Kareem Hunt  ,Cle,rb,126.8
+2022,R. Kelly,Riverboat Rob,Raheem Mostert  ,Mia,rb,170.3
+2022,R. Kelly,Riverboat Rob,Curtis Samuel  ,Wsh,wr,177.3
+2022,R. Kelly,Riverboat Rob,Logan Thomas  ,Wsh,te,77.3
+2022,R. Kelly,Riverboat Rob,James Cook  ,Buf,rb,105.7
+2022,R. Kelly,Riverboat Rob,Giants D/ST ,Nyg,DST,84
+2022,Kramer Fader,El Nino Polla,Patrick Mahomes,Kc,QB,469.9
+2022,Kramer Fader,El Nino Polla,Jimmy Garoppolo,Lv,qb,189.15
+2022,Kramer Fader,El Nino Polla,D'Andre Swift  ,Det,RB,192.1
+2022,Kramer Fader,El Nino Polla,Travis Etienne Jr. ,Jax,RB,213.1
+2022,Kramer Fader,El Nino Polla,DJ Moore  ,Chi,WR,205.1
+2022,Kramer Fader,El Nino Polla,DeAndre Hopkins,Ari,WR,153.7
+2022,Kramer Fader,El Nino Polla,Dawson Knox ,Buf,TE,135.7
+2022,Kramer Fader,El Nino Polla,Rachaad White ,Tb,rb,140.1
+2022,Kramer Fader,El Nino Polla,JuJu Smith-Schuster  ,Ne,wr,189.3
+2022,Kramer Fader,El Nino Polla,Jamaal Williams  ,Nor,rb,230.9
+2022,Kramer Fader,El Nino Polla,Hayden Hurst  ,Car,te,105.4
+2022,Kramer Fader,El Nino Polla,Leonard Fournette ,tb,rb,227.1
+2022,Kramer Fader,El Nino Polla,D'Onta Foreman  ,Chi,rb,136
+2022,Kramer Fader,El Nino Polla,Parris Campbell  ,Nyg,wr,149.1
+2022,Kramer Fader,El Nino Polla,JaMycal Hasty  ,Jax,rb,73
+2022,Kramer Fader,El Nino Polla,Corey Davis ,Nyj,wr,100.6
+2022,Kramer Fader,El Nino Polla,Romeo Doubs ,GB,wr,101.6
+2022,Kramer Fader,El Nino Polla,Jets D/ST  ,Nyj,DST,122
+2023,C. Baylo,Cig Rob,Dak Prescott ,Dal,QB,388
+2023,C. Baylo,Cig Rob,Rachaad White ,Tb,RB,270.9
+2023,C. Baylo,Cig Rob,Kyren Williams ,Lar,RB,261
+2023,C. Baylo,Cig Rob,Brandon Aiyuk ,Sf,WR,259.2
+2023,C. Baylo,Cig Rob,Odell Beckham Jr. ,bal,WR,110.5
+2023,C. Baylo,Cig Rob,Travis Kelce ,Kc,TE,267.9
+2023,C. Baylo,Cig Rob,Aaron Jones ,Min,RB,137.9
+2023,C. Baylo,Cig Rob,Alexander Mattison ,Lv,RB,133.2
+2023,C. Baylo,Cig Rob,Terry McLaurin ,Wsh,WR,210.2
+2023,C. Baylo,Cig Rob,Kareem Hunt ,Cle,RB,118.5
+2023,C. Baylo,Cig Rob,Curtis Samuel ,Buf,WR,158.2
+2023,C. Baylo,Cig Rob,Gabe Davis ,Jax,WR,167.4
+2023,B. Newell,Beady Juice Incorporated,Tua Tagovailoa ,Mia,QB,316.6
+2023,B. Newell,Beady Juice Incorporated,Christian McCaffrey ,Sf,RB,402.3
+2023,B. Newell,Beady Juice Incorporated,Najee Harris ,Pit,RB,197.5
+2023,B. Newell,Beady Juice Incorporated,DJ Moore,Chi,WR,295.5
+2023,B. Newell,Beady Juice Incorporated,Tyler Lockett ,Sea,WR,202.4
+2023,B. Newell,Beady Juice Incorporated,George Pickens ,Pit,WR,223.8
+2023,B. Newell,Beady Juice Incorporated,Jakobi Meyers ,Lv,WR,218.7
+2023,B. Newell,Beady Juice Incorporated,Jaylen Waddle ,Mia,WR,204.6
+2023,B. Newell,Beady Juice Incorporated,Tyler Higbee ,Lar,TE,132
+2023,B. Newell,Beady Juice Incorporated,Jared Goff ,Det,QB,334.85
+2023,B. Newell,Beady Juice Incorporated,Christian Watson,Gb,WR,101.3
+2023,B. Newell,Beady Juice Incorporated,Khalil Herbert ,Chi,RB,115.5
+2023,C. Upperman,Suck My Balls,Lamar Jackson ,bal,QB,369
+2023,C. Upperman,Suck My Balls,Jaylen Warren ,pit,RB,201.4
+2023,C. Upperman,Suck My Balls,James Cook ,buf,RB,235.7
+2023,C. Upperman,Suck My Balls,CeeDee Lamb ,dal,WR,416.2
+2023,C. Upperman,Suck My Balls,Chris Godwin ,tb,WR,212.2
+2023,C. Upperman,Suck My Balls,Justice Hill ,bal,RB,109.3
+2023,C. Upperman,Suck My Balls,Ezekiel Elliott,ne,RB,174.5
+2023,C. Upperman,Suck My Balls,Christian Kirk ,jax,WR,153.25
+2023,C. Upperman,Suck My Balls,Zach Ertz ,wsh,TE,65.2
+2023,C. Upperman,Suck My Balls,Josh Downs ,ind,WR,161.1
+2023,C. Upperman,Suck My Balls,Raheem Mostert ,mia,RB,270.7
+2023,C. Upperman,Suck My Balls,Kenny Pickett ,phi,QB,130.9
+2023,S. Dickson,Dixons Doghouse,Jalen Hurts ,phi,QB,395.4
+2023,S. Dickson,Dixons Doghouse,Joe Mixon ,hou,RB,268
+2023,S. Dickson,Dixons Doghouse,Jonathan Taylor ,ind,RB,158.4
+2023,S. Dickson,Dixons Doghouse,Ja'Marr Chase ,cin,WR,276.65
+2023,S. Dickson,Dixons Doghouse,Adam Thielen ,car,WR,234
+2023,S. Dickson,Dixons Doghouse,Rashid Shaheed,nor,WR,160.6
+2023,S. Dickson,Dixons Doghouse,Dalton Schultz ,hou,TE,181
+2023,S. Dickson,Dixons Doghouse,Jerry Jeudy ,cle,WR,141.8
+2023,S. Dickson,Dixons Doghouse,Zack Moss ,cin,RB,174.6
+2023,S. Dickson,Dixons Doghouse,Taysom Hill,nor,TE,160.85
+2023,S. Dickson,Dixons Doghouse,Romeo Doubs,gb,WR,174.4
+2023,S. Dickson,Dixons Doghouse,Hunter Henry,ne,TE,140.9
+2023,M. Spiers,RIP Rome,Patrick Mahomes,kc,QB,322.05
+2023,M. Spiers,RIP Rome,Kenneth Walker III ,sea,RB,203.4
+2023,M. Spiers,RIP Rome,Alvin Kamara,nor,RB,233
+2023,M. Spiers,RIP Rome,Tyreek Hill,mia,WR,399.4
+2023,M. Spiers,RIP Rome,Davante Adams,lv,WR,269.4
+2023,M. Spiers,RIP Rome,George Kittle,sf,TE,242.7
+2023,M. Spiers,RIP Rome,David Njoku,cle,TE,243.7
+2023,M. Spiers,RIP Rome,Tyler Boyd ,cin,WR,145.8
+2023,M. Spiers,RIP Rome,Gus Edwards ,lac,RB,187
+2023,M. Spiers,RIP Rome,Joshua Palmer ,lac,WR,111.7
+2023,M. Spiers,RIP Rome,Zamir White,lv,RB,75.9
+2023,M. Spiers,RIP Rome,Demarcus Robinson ,lar,WR,87.4
+2023,A. Parra,The Angry Bananas,Antonio Brown,fa,WR,0.3
+2023,A. Parra,The Angry Bananas,Bijan Robinson,atl,rb,252.3
+2023,A. Parra,The Angry Bananas,Chris Olave,nor,wr,236.3
+2023,A. Parra,The Angry Bananas,DK Metcalf ,sea,wr,231.4
+2023,A. Parra,The Angry Bananas,Diontae Johnson ,car,wr,155.7
+2023,A. Parra,The Angry Bananas,De'Von Achane ,mia,rb,201.7
+2023,A. Parra,The Angry Bananas,DeVonta Smith ,phi,wr,232.6
+2023,A. Parra,The Angry Bananas,Jahmyr Gibbs ,det,rb,244.1
+2023,A. Parra,The Angry Bananas,C.J. Stroud ,hou,qb,317.1
+2023,A. Parra,The Angry Bananas,Mike Evans,tb,wr,289.5
+2023,A. Parra,The Angry Bananas,Marquise Brown,kc,wr,134.7
+2023,A. Parra,The Angry Bananas,Aaron Rodgers ,nyj,qb,0
+2023,D. Daniel,The Jew-ru,Matthew Stafford ,lar,QB,282.75
+2023,D. Daniel,The Jew-ru,James Conner ,ari,RB,205.5
+2023,D. Daniel,The Jew-ru,Ty Chandler ,min,RB,102
+2023,D. Daniel,The Jew-ru,Calvin Ridley ,ten,WR,236.9
+2023,D. Daniel,The Jew-ru,Zay Flowers ,bal,WR,210.4
+2023,D. Daniel,The Jew-ru,Justin Jefferson ,min,wr,210.2
+2023,D. Daniel,The Jew-ru,Isaiah Likely ,bal,te,119.1
+2023,D. Daniel,The Jew-ru,Trevor Lawrence ,jax,qb,302.7
+2023,D. Daniel,The Jew-ru,Brian Robinson Jr.,wsh,rb,202.1
+2023,D. Daniel,The Jew-ru,Noah Brown ,hou,wr,106.6
+2023,D. Daniel,The Jew-ru,Antonio Gibson,ne,rb,127.4
+2023,D. Daniel,The Jew-ru,Tyjae Spears ,ten,rb,153.8
+2023,G. Nulty,Marshall Ave Goon Squad,Brock Purdy,Sf,QB,338.4
+2023,G. Nulty,Marshall Ave Goon Squad,Tony Pollard ,Ten,RB,223.6
+2023,G. Nulty,Marshall Ave Goon Squad,D'Andre Swift ,Chi,RB,201.3
+2023,G. Nulty,Marshall Ave Goon Squad,Amon-Ra St. Brown ,Det,WR,342.9
+2023,G. Nulty,Marshall Ave Goon Squad,Nico Collins ,Hou,WR,271.4
+2023,G. Nulty,Marshall Ave Goon Squad,Javonte Williams ,Den,rb,179.2
+2023,G. Nulty,Marshall Ave Goon Squad,Brandin Cooks ,Dal,wr,174.2
+2023,G. Nulty,Marshall Ave Goon Squad,Tee Higgins ,Cin,wr,142.6
+2023,G. Nulty,Marshall Ave Goon Squad,Justin Fields ,Pit,qb,256.8
+2023,G. Nulty,Marshall Ave Goon Squad,Roschon Johnson ,Chi,rb,102.1
+2023,G. Nulty,Marshall Ave Goon Squad,Cade Otton ,Tb,te,140
+2023,G. Nulty,Marshall Ave Goon Squad,Zach Charbonnet ,Sea,rb,106.1
+2023,T. Flynn,The Irish Brigade,Justin Herbert ,lac,QB,265.5
+2023,T. Flynn,The Irish Brigade,Austin Ekeler ,wsh,RB,186.4
+2023,T. Flynn,The Irish Brigade,David Montgomery ,det,RB,214.2
+2023,T. Flynn,The Irish Brigade,A.J. Brown ,phi,WR,299.6
+2023,T. Flynn,The Irish Brigade,Amari Cooper ,cle,WR,240
+2023,T. Flynn,The Irish Brigade,Evan Engram ,jax,te,287.3
+2023,T. Flynn,The Irish Brigade,Chuba Hubbard ,car,rb,183.5
+2023,T. Flynn,The Irish Brigade,Rhamondre Stevenson,ne,rb,148.7
+2023,T. Flynn,The Irish Brigade,Cole Kmet ,chi,te,218.6
+2023,T. Flynn,The Irish Brigade,D'Onta Foreman ,cle,rb,91.2
+2023,T. Flynn,The Irish Brigade,DeMario Douglas,ne,wr,107.2
+2023,T. Flynn,The Irish Brigade,Elijah Moore ,cle,wr,132.1
+2023,M. DiCerbo,Team Slapper,Josh Allen ,buf,QB,435.7
+2023,M. DiCerbo,Team Slapper,Saquon Barkley ,phi,RB,224.2
+2023,M. DiCerbo,Team Slapper,Breece Hall ,nyj,RB,302.5
+2023,M. DiCerbo,Team Slapper,Garrett Wilson ,nyj,WR,218.2
+2023,M. DiCerbo,Team Slapper,DeAndre Hopkins ,ten,WR,231.6
+2023,M. DiCerbo,Team Slapper,Jerome Ford ,cle,rb,219.2
+2023,M. DiCerbo,Team Slapper,Trey McBride ,ari,te,224
+2023,M. DiCerbo,Team Slapper,Darren Waller ,nyg,te,139.2
+2023,M. DiCerbo,Team Slapper,Jaxon Smith-Njigba ,sea,wr,149.8
+2023,M. DiCerbo,Team Slapper,Tank Bigsby ,jax,rb,22.8
+2023,M. DiCerbo,Team Slapper,Dalton Kincaid ,buf,te,186.8
+2023,M. DiCerbo,Team Slapper,Russell Wilson ,pit,qb,287.6
+2023,R. Kelly,Riverboat Rob,Kyler Murray ,Ari,QB,164.35
+2023,R. Kelly,Riverboat Rob,Derrick Henry ,Bal,RB,250.8
+2023,R. Kelly,Riverboat Rob,Isiah Pacheco,Kc,RB,217.9
+2023,R. Kelly,Riverboat Rob,Deebo Samuel,Sf,WR,251.7
+2023,R. Kelly,Riverboat Rob,Rashee Rice ,Kc,WR,214.5
+2023,R. Kelly,Riverboat Rob,Stefon Diggs ,Buf,wr,281.8
+2023,R. Kelly,Riverboat Rob,Jake Ferguson ,Dal,te,212.6
+2023,R. Kelly,Riverboat Rob,Sam Howell ,Sea,qb,297
+2023,R. Kelly,Riverboat Rob,Dameon Pierce ,Hou,rb,82.7
+2023,R. Kelly,Riverboat Rob,Kyle Pitts ,Atl,te,163.8
+2023,R. Kelly,Riverboat Rob,Courtland Sutton ,Den,wr,192.2
+2023,R. Kelly,Riverboat Rob,Clyde Edwards-Helaire ,Kc,rb,70.1
+2023,Kramer Fader,Booze Hounds,Jordan Love,Gb,QB,360.65
+2023,Kramer Fader,Booze Hounds,Josh Jacobs,Gb,RB,186.1
+2023,Kramer Fader,Booze Hounds,Travis Etienne Jr. ,Jax,RB,290.4
+2023,Kramer Fader,Booze Hounds,Michael Pittman Jr.,Indy,WR,256.2
+2023,Kramer Fader,Booze Hounds,Puka Nacua ,Lar,WR,308.5
+2023,Kramer Fader,Booze Hounds,Cooper Kupp ,Lar,wr,171.4
+2023,Kramer Fader,Booze Hounds,Sam LaPorta ,Det,te,284.3
+2023,Kramer Fader,Booze Hounds,Drake London ,Atl,wr,176.6
+2023,Kramer Fader,Booze Hounds,Dallas Goedert,Phi,te,166.8
+2023,Kramer Fader,Booze Hounds,Jordan Addison ,Min,wr,230.3
+2023,Kramer Fader,Booze Hounds,Devin Singletary ,Nyg,rb,170.4
+2023,Kramer Fader,Booze Hounds,Jayden Reed,Gb,wr,218.2
+2024,C. Baylo,Vendome Rodeo,Tua Tagovailoa ,Mia,QB,210.25
+2024,C. Baylo,Vendome Rodeo,Najee Harris ,Lac,RB,207.6
+2024,C. Baylo,Vendome Rodeo,Kareem Hunt,Kc,RB,157.4
+2024,C. Baylo,Vendome Rodeo,Ja'Marr Chase ,Cin,WR,424
+2024,C. Baylo,Vendome Rodeo,Puka Nacua ,Lar,WR,211.6
+2024,C. Baylo,Vendome Rodeo,James Conner ,Ari,RB,259.8
+2024,C. Baylo,Vendome Rodeo,Jauan Jennings,Sf,WR,211.5
+2024,C. Baylo,Vendome Rodeo,Deebo Samuel Sr. ,Wsh,WR,158.6
+2024,C. Baylo,Vendome Rodeo,Mark Andrews ,Bal,TE,216.3
+2024,C. Baylo,Vendome Rodeo,Diontae Johnson ,Bal,WR,90.1
+2024,C. Baylo,Vendome Rodeo,Romeo Doubs,Gb,WR,132.1
+2024,C. Baylo,Vendome Rodeo,Kirk Cousins ,Atl,QB,211.4
+2024,B. Newell,Beady Juice Incorporated,Lamar Jackson ,Bal,QB,474.1
+2024,B. Newell,Beady Juice Incorporated,Rhamondre Stevenson,Ne,RB,176.9
+2024,B. Newell,Beady Juice Incorporated,Javonte Williams ,Den,RB,157.9
+2024,B. Newell,Beady Juice Incorporated,Keenan Allen ,Chi,WR,186.4
+2024,B. Newell,Beady Juice Incorporated,Jakobi Meyers,Lv,WR,221
+2024,B. Newell,Beady Juice Incorporated,Travis Kelce,Kc,TE,244.9
+2024,B. Newell,Beady Juice Incorporated,DeAndre Hopkins,Bal,WR,147
+2024,B. Newell,Beady Juice Incorporated,Jaylen Waddle ,Mia,WR,151.6
+2024,B. Newell,Beady Juice Incorporated,David Montgomery ,Det,RB,222.75
+2024,B. Newell,Beady Juice Incorporated,Sam Darnold ,Sea,QB,351.15
+2024,B. Newell,Beady Juice Incorporated,Gus Edwards,Lac,Rb,64.1
+2024,B. Newell,Beady Juice Incorporated,Elijah Moore ,Cle,WR,121.9
+2024,C. Upperman,Suck My Balls,Brock Purdy,sf,QB,305.5
+2024,C. Upperman,Suck My Balls,Brian Robinson Jr.,wsh,RB,163.8
+2024,C. Upperman,Suck My Balls,D'Andre Swift ,chi,RB,218.5
+2024,C. Upperman,Suck My Balls,Tyreek Hill ,mia,WR,224.2
+2024,C. Upperman,Suck My Balls,DJ Moore ,chi,WR,240.1
+2024,C. Upperman,Suck My Balls,Nico Collins ,hou,WR,217.6
+2024,C. Upperman,Suck My Balls,Zach Ertz ,wsh,TE,210.4
+2024,C. Upperman,Suck My Balls,Michael Pittman Jr. ,ind,WR,167.8
+2024,C. Upperman,Suck My Balls,Xavier Worthy ,kc,WR,190.2
+2024,C. Upperman,Suck My Balls,Rachaad White ,tb,RB,199.6
+2024,C. Upperman,Suck My Balls,Geno Smith ,sea,QB,309.2
+2024,C. Upperman,Suck My Balls,Nick Westbrook-Ikhine ,ten,WR,139.7
+2024,S. Dickson,Dixons Doghouse,C.J. Stroud ,hou,QB,257.65
+2024,S. Dickson,Dixons Doghouse,De'Von Achane ,mia,RB,304.9
+2024,S. Dickson,Dixons Doghouse,Joe Mixon ,hou,RB,248.5
+2024,S. Dickson,Dixons Doghouse,Drake London ,atl,WR,283.8
+2024,S. Dickson,Dixons Doghouse,George Pickens ,pit,WR,166.4
+2024,S. Dickson,Dixons Doghouse,Brock Bowers,lv,TE,323.7
+2024,S. Dickson,Dixons Doghouse,Jonnu Smith ,mia,TE,271.3
+2024,S. Dickson,Dixons Doghouse,CeeDee Lamb ,dal,WR,272.4
+2024,S. Dickson,Dixons Doghouse,Rome Odunze ,chi,WR,146.9
+2024,S. Dickson,Dixons Doghouse,Tyler Lockett,sea,WR,121
+2024,S. Dickson,Dixons Doghouse,Tank Bigsby ,jax,RB,134
+2024,S. Dickson,Dixons Doghouse,Tyjae Spears ,ten,RB,113.6
+2024,M. Spiers,RIP Rome,Joe Burrow ,cin,QB,423
+2024,M. Spiers,RIP Rome,Kyren Williams ,lar,RB,276.1
+2024,M. Spiers,RIP Rome,Jonathan Taylor ,ind,RB,259.7
+2024,M. Spiers,RIP Rome,Mike Evans ,tb,WR,245.4
+2024,M. Spiers,RIP Rome,Zay Flowers ,bal,WR,217.5
+2024,M. Spiers,RIP Rome,Brian Thomas Jr. ,jax,WR,294
+2024,M. Spiers,RIP Rome,Trey McBride ,ari,TE,308.3
+2024,M. Spiers,RIP Rome,Chuba Hubbard ,car,rb,245.6
+2024,M. Spiers,RIP Rome,Zach Charbonnet ,sea,rb,190.9
+2024,M. Spiers,RIP Rome,Jared Goff ,det,qb,370.75
+2024,M. Spiers,RIP Rome,Dalton Schultz ,hou,te,144.7
+2024,M. Spiers,RIP Rome,Pat Freiermuth ,pit,te,200.8
+2024,A. Parra,The Angry Bananas,Josh Allen ,buf,QB,416.35
+2024,A. Parra,The Angry Bananas,Jahmyr Gibbs ,det,RB,371.9
+2024,A. Parra,The Angry Bananas,Tony Pollard ,ten,RB,203.7
+2024,A. Parra,The Angry Bananas,Terry McLaurin ,wsh,WR,275.8
+2024,A. Parra,The Angry Bananas,A.J. Brown ,phi,WR,225.9
+2024,A. Parra,The Angry Bananas,Ladd McConkey ,lac,wr,247.9
+2024,A. Parra,The Angry Bananas,Josh Downs ,ind,wr,187.5
+2024,A. Parra,The Angry Bananas,Nick Chubb ,cle,rb,63.3
+2024,A. Parra,The Angry Bananas,Bo Nix ,den,qb,354.95
+2024,A. Parra,The Angry Bananas,Juwan Johnson,nor,te,147.8
+2024,A. Parra,The Angry Bananas,Parker Washington ,jax,wr,98
+2024,A. Parra,The Angry Bananas,Brandon Aiyuk,sf,wr,63.4
+2024,D. Daniel,The Jew-ru,Jayden Daniels ,wsh,QB,392.5
+2024,D. Daniel,The Jew-ru,James Cook ,buf,RB,276.7
+2024,D. Daniel,The Jew-ru,Kendre Miller,nor,RB,29.1
+2024,D. Daniel,The Jew-ru,Garrett Wilson ,nyj,WR,255.9
+2024,D. Daniel,The Jew-ru,Jaxon Smith-Njigba ,sea,WR,256.35
+2024,D. Daniel,The Jew-ru,DeVonta Smith ,phi,wr,203.4
+2024,D. Daniel,The Jew-ru,Jordan Addison ,min,wr,216.5
+2024,D. Daniel,The Jew-ru,Alvin Kamara ,nor,rb,271.3
+2024,D. Daniel,The Jew-ru,Amari Cooper ,buf,wr,122.7
+2024,D. Daniel,The Jew-ru,Jerry Jeudy ,cle,wr,250.9
+2024,D. Daniel,The Jew-ru,Kimani Vidal ,lac,rb,32.7
+2024,D. Daniel,The Jew-ru,Adam Thielen ,car,wr,142.5
+2024,G. Nulty,Marshall Ave Goon Squad,Kyler Murray ,Ari,QB,339.75
+2024,G. Nulty,Marshall Ave Goon Squad,Aaron Jones,Min,RB,243.6
+2024,G. Nulty,Marshall Ave Goon Squad,Devin Singletary ,Nyg,RB,96.6
+2024,G. Nulty,Marshall Ave Goon Squad,Marvin Harrison Jr.,Ari,WR,201.5
+2024,G. Nulty,Marshall Ave Goon Squad,Davante Adams ,Nyj,WR,247.3
+2024,G. Nulty,Marshall Ave Goon Squad,David Njoku ,Cle,te,180.5
+2024,G. Nulty,Marshall Ave Goon Squad,Tucker Kraft,Gb,te,191.3
+2024,G. Nulty,Marshall Ave Goon Squad,Kenneth Walker III ,Sea,rb,182.2
+2024,G. Nulty,Marshall Ave Goon Squad,Tank Dell ,Hou,wr,141
+2024,G. Nulty,Marshall Ave Goon Squad,Alexander Mattison ,Min,rb,137.4
+2024,G. Nulty,Marshall Ave Goon Squad,Hunter Henry ,Ne,te,179.4
+2024,G. Nulty,Marshall Ave Goon Squad,Quentin Johnston ,Lac,te,179.7
+2024,T. Flynn,The Irish Brigade,Jalen Hurts ,phi,QB,344.15
+2024,T. Flynn,The Irish Brigade,Breece Hall ,nyj,RB,242.9
+2024,T. Flynn,The Irish Brigade,Tyrone Tracy Jr. ,nyg,RB,186.3
+2024,T. Flynn,The Irish Brigade,Jameson Williams ,det,WR,228.2
+2024,T. Flynn,The Irish Brigade,Amon-Ra St. Brown ,det,WR,323.25
+2024,T. Flynn,The Irish Brigade,Bucky Irving,tb,rb,247.4
+2024,T. Flynn,The Irish Brigade,George Kittle ,sf,te,279.6
+2024,T. Flynn,The Irish Brigade,Kyle Pitts ,atl,te,155.7
+2024,T. Flynn,The Irish Brigade,Jerome Ford ,cle,rb,137
+2024,T. Flynn,The Irish Brigade,Cedric Tillman ,cle,wr,80.4
+2024,T. Flynn,The Irish Brigade,Audric Estime ,den,rb,48.7
+2024,T. Flynn,The Irish Brigade,Braelon Allen ,nyj,rb,85.2
+2024,M. DiCerbo,Team Slapper,Patrick Mahomes,kc,QB,322.3
+2024,M. DiCerbo,Team Slapper,Bijan Robinson ,atl,RB,346.7
+2024,M. DiCerbo,Team Slapper,Derrick Henry ,bal,RB,349.4
+2024,M. DiCerbo,Team Slapper,Malik Nabers ,nyg,WR,280.6
+2024,M. DiCerbo,Team Slapper,Calvin Ridley ,ten,WR,202.2
+2024,M. DiCerbo,Team Slapper,Khalil Shakir ,buf,wr,187.5
+2024,M. DiCerbo,Team Slapper,Marquez Valdes-Scantling ,nor,wr,89.5
+2024,M. DiCerbo,Team Slapper,Jake Ferguson ,dal,te,133.9
+2024,M. DiCerbo,Team Slapper,Trey Benson ,ari,rb,47
+2024,M. DiCerbo,Team Slapper,Cade Otton,tb,te,171.1
+2024,M. DiCerbo,Team Slapper,Blake Corum ,lar,rb,33.5
+2024,M. DiCerbo,Team Slapper,Sincere McCormick ,tb,rb,27.2
+2024,R. Kelly,Riverboat Rob,Justin Herbert ,Lac,QB,324.1
+2024,R. Kelly,Riverboat Rob,Saquon Barkley ,Phi,RB,379.3
+2024,R. Kelly,Riverboat Rob,Chase Brown ,Cin,RB,256
+2024,R. Kelly,Riverboat Rob,DK Metcalf ,Pit,WR,200.2
+2024,R. Kelly,Riverboat Rob,Courtland Sutton ,Den,WR,243.6
+2024,R. Kelly,Riverboat Rob,Sam LaPorta ,Det,te,208.6
+2024,R. Kelly,Riverboat Rob,Jaylen Warren ,Pit,rb,124.1
+2024,R. Kelly,Riverboat Rob,Isiah Pacheco ,kc,rb,56.9
+2024,R. Kelly,Riverboat Rob,Darnell Mooney ,Atl,wr,196.2
+2024,R. Kelly,Riverboat Rob,Christian Watson,Gb,wr,108.3
+2024,R. Kelly,Riverboat Rob,Jaleel McLaughlin ,Den,rb,97.2
+2024,Kramer Fader,Booze Hounds,Baker Mayfield,Tb,QB,410.8
+2024,Kramer Fader,Booze Hounds,Josh Jacobs ,Gb,RB,296.1
+2024,Kramer Fader,Booze Hounds,Rico Dowdle ,Car,RB,201.8
+2024,Kramer Fader,Booze Hounds,Cooper Kupp ,Sea,WR,181
+2024,Kramer Fader,Booze Hounds,Tee Higgins,Cin,WR,225.1
+2024,Kramer Fader,Booze Hounds,Justin Jefferson ,Min,wr,328.7
+2024,Kramer Fader,Booze Hounds,T.J. Hockenson ,Min,te,108
+2024,Kramer Fader,Booze Hounds,Travis Etienne Jr. ,Jax,rb,130.2
+2024,Kramer Fader,Booze Hounds,Dalton Kincaid ,Buf,te,122.8
+2024,Kramer Fader,Booze Hounds,Jayden Reed ,Gb,wr,203
+2024,Kramer Fader,Booze Hounds,Jordan Love ,Gb,qb,267.75
+2024,Kramer Fader,Booze Hounds,Isaac Guerendo ,Sf,rb,94.2
