@@ -40,7 +40,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     sorted.forEach((t: any, i: number) => (displayNo[t.id] = i + 1));
     const teams = rawTeams.map((t: any) => ({ ...t, displayNo: displayNo[t.id] }));
 
-    const teams = rawTeams.map(t => ({ ...t, displayNo: displayNo[t.id] }));
 
     return res.status(200).json({ league: LEAGUE_ID, season, teams });
   } catch (e: any) {
