@@ -140,7 +140,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2013,G. Nulty,In Cam We Trust,Fred Jackson,buf,RB,258
 2013,G. Nulty,In Cam We Trust,Alfred Morris ,wsh,RB,220
 2013,G. Nulty,In Cam We Trust,Jordan Cameron,cle,te,207
-2013,G. Nulty,In Cam We Trust,49 D/ST,sf,DST,154
+2013,G. Nulty,In Cam We Trust,49ers D/ST,sf,DST,154
 2013,G. Nulty,In Cam We Trust,BenJarvus Green-Ellis,cin,rb,149
 2013,G. Nulty,In Cam We Trust,Garrett Graham,hou,TE,127
 2013,G. Nulty,In Cam We Trust,Chris Ivory,nyj,RB,126
@@ -246,7 +246,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2014,A. Parra,The Angry Bananas,Mark Ingram ,nor,rb,223
 2014,A. Parra,The Angry Bananas,Brandon LaFell ,ne,wr,212
 2014,A. Parra,The Angry Bananas,Denard Robinson ,jax,rb,128
-2014,A. Parra,The Angry Bananas,49ers D/ST  ,sf,DST,128
+2014,A. Parra,The Angry Bananas,49ers D/ST,sf,DST,128
 2014,A. Parra,The Angry Bananas,Jordan Cameron,mia,TE,87
 2014,A. Parra,The Angry Bananas,Daniel Herron,indy,rb,82
 2014,A. Parra,The Angry Bananas,Josh Gordon ,cle,wr,52
@@ -372,7 +372,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2015,S. Dickson,Big ol' Johnson,Vincent Jackson,tb,WR,103
 2015,A. Parra,The Angry Bananas,Russell Wilson ,sea,QB,379
 2015,A. Parra,The Angry Bananas,Rob Gronkowski,ne,TE,256
-2015,A. Parra,The Angry Bananas,Todd Gurley ,stl,RB,243
+2015,A. Parra,The Angry Bananas,Todd Gurley II,stl,RB,243
 2015,A. Parra,The Angry Bananas,Emmanuel Sanders ,den,WR,234
 2015,A. Parra,The Angry Bananas,David Johnson ,ari,RB,226
 2015,A. Parra,The Angry Bananas,Travis Benjamin ,sd,wr,211
@@ -524,7 +524,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2016,A. Parra,The Angry Bananas,Jordan Howard  ,chi,RB,262
 2016,A. Parra,The Angry Bananas,Michael Thomas,nor,WR,249
 2016,A. Parra,The Angry Bananas,Carson Wentz ,phi,qb,240
-2016,A. Parra,The Angry Bananas,Todd Gurley,lar,RB,232
+2016,A. Parra,The Angry Bananas,Todd Gurley II,lar,RB,232
 2016,A. Parra,The Angry Bananas,Amari Cooper ,oak,WR,228
 2016,A. Parra,The Angry Bananas,Delanie Walker,ten,TE,182
 2016,A. Parra,The Angry Bananas,Devontae Booker ,den,rb,158
@@ -618,7 +618,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2017,B. Newell,Dak And The Gang,Michael Crabtree,Bal,WR,169
 2017,B. Newell,Dak And The Gang,Sterling Shepard ,Nyg,WR,148
 2017,B. Newell,Dak And The Gang,DeSean Jackson ,Tb,WR,132
-2017,B. Newell,Dak And The Gang,Brandon LaFellI,Cin,WR,117
+2017,B. Newell,Dak And The Gang,Brandon LaFell,Cin,WR,117
 2017,B. Newell,Dak And The Gang,Vernon Davis,Wsh,TE,115
 2017,B. Newell,Dak And The Gang,Matt Forte,Nyj,RB,110
 2017,B. Newell,Dak And The Gang,Cardinals D/ST  ,Ari,DST,106
@@ -669,7 +669,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2017,A. Parra,The Angry Bananas,Josh Gordon  ,cle,wr,55
 2017,A. Parra,The Angry Bananas,Danny Woodhead ,bal,rb,52
 2017,A. Parra,The Angry Bananas,Greg Olsen,car,te,41
-2017,D. Daniel,Team Domination ,Todd Gurley II ,lar,RB,382
+2017,D. Daniel,Team Domination ,Todd Gurley II,lar,RB,382
 2017,D. Daniel,Team Domination ,Antonio Brown ,pit,WR,318
 2017,D. Daniel,Team Domination ,Alvin Kamara ,nor,RB,312
 2017,D. Daniel,Team Domination ,Travis Kelce  ,kc,TE,230
@@ -862,7 +862,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2018,T. Flynn,FINS BINS,Spencer Ware,Kc,rb,69
 2018,N. Segal,Three time champ segal,Philip Rivers ,lac,QB,320
 2018,N. Segal,Three time champ segal,Baker Mayfield  ,cle,qb,266
-2018,N. Segal,Three time champ segal,Todd Gurley II  ,lar,RB,367
+2018,N. Segal,Three time champ segal,Todd Gurley II,lar,RB,367
 2018,N. Segal,Three time champ segal,Jalen Richard  ,oak,RB,145
 2018,N. Segal,Three time champ segal,Adam Thielen  ,min,WR,309
 2018,N. Segal,Three time champ segal,JuJu Smith-Schuster  ,pit,WR,304
@@ -1042,7 +1042,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2019,M. DiCerbo,Team Slapper,Cooper Kupp  ,lar,WR,274
 2019,M. DiCerbo,Team Slapper,DeVante Parker  ,mia,wr,243
 2019,M. DiCerbo,Team Slapper,DJ Chark   Jr.,jax,wr,221
-2019,M. DiCerbo,Team Slapper,Todd Gurley   II,lar,RB,209
+2019,M. DiCerbo,Team Slapper,Todd Gurley  II,lar,RB,209
 2019,M. DiCerbo,Team Slapper,Deebo Samuel  ,sf,WR,183
 2019,M. DiCerbo,Team Slapper,Latavius Murray ,nor,rb,146
 2019,M. DiCerbo,Team Slapper,Jets D/ST ,nyj,DST,129
@@ -1181,7 +1181,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Terry McLaurin  ,Wsh,WR,232.8
 2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Robby Anderson  ,Car,wr,231.1
 2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Nelson Agholor ,Lv,wr,195.6
-2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Todd Gurley  ,Atl,rb,164.2
+2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Todd Gurley  II,Atl,rb,164.2
 2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Rob Gronkowski  ,Tb,TE,150.3
 2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Wayne Gallman  ,Nyg,RB,137.6
 2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Adrian Peterson  ,Det,rb,124.5
@@ -1353,7 +1353,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2021,A. Parra,The Angry Bananas,Saquon Barkley  ,nyg,RB,152.6
 2021,A. Parra,The Angry Bananas,Alexander Mattison ,min,rb,127.9
 2021,A. Parra,The Angry Bananas,Laviska Shenault   Jr.,jax,wr,127
-2021,A. Parra,The Angry Bananas,49ers D/ST ,sf,DST,120
+2021,A. Parra,The Angry Bananas,49ers D/ST,sf,DST,120
 2021,A. Parra,The Angry Bananas,Rams D/ST ,lar,dst,105
 2021,A. Parra,The Angry Bananas,Cam Newton  ,car,qb,93.2
 2021,A. Parra,The Angry Bananas,Kadarius Toney  ,nyg,wr,83.55
