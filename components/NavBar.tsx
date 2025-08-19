@@ -52,7 +52,7 @@ export default function NavBar() {
           <NavItem href="/" label="Scoreboard" />
           <NavItem href="/history" label="History" />
           <NavItem href="/owners" label="Owners" />
-          <NavItem href="/players" label="Players"
+          <NavItem href="/players" label="Players" />
           {/* Add more when ready: <NavItem href="/owners" label="Owners" /> */}
         </nav>
       </div>
