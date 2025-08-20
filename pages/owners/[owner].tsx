@@ -30,9 +30,7 @@ type StandingRow = {
   seed: number;
 };
 
-// define inner component that uses recharts only on client
 function OwnerPerfChartInner({ data }: { data: StandingRow[] }) {
-  // import here so SSR never evaluates recharts
   const {
     ResponsiveContainer,
     ComposedChart,
@@ -58,12 +56,10 @@ function OwnerPerfChartInner({ data }: { data: StandingRow[] }) {
           <ComposedChart data={safe} margin={{ top: 10, right: 20, bottom: 0, left: 0 }}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="year" />
-            {/* Left axis = PPG */}
             <YAxis
               yAxisId="left"
               label={{ value: "PPG", angle: -90, position: "insideLeft" }}
             />
-            {/* Right axis = Seed (1 is best) — reversed so 1 is at the top */}
             <YAxis
               yAxisId="right"
               orientation="right"
@@ -88,32 +84,26 @@ function OwnerPerfChartInner({ data }: { data: StandingRow[] }) {
             />
             <Legend />
             <Line
-  yAxisId="left"
-  type="monotone"
-  dataKey="ppg"
-  name="PPG"
-  strokeWidth={2}
-  dot={(props: any) => {
-    const { cx, cy, payload } = props;
-    const isChamp = String(payload.finish || "").toLowerCase().includes("champ");
-    return (
-      <circle
-        cx={cx}
-        cy={cy}
-        r={isChamp ? 5 : 3}
-        stroke="currentColor"
-        fill={isChamp ? "currentColor" : "white"}
-      />
-    );
-  }}
-/>
-
-            <Bar
-              yAxisId="right"
-              dataKey="seed"
-              name="Playoff Seed"
-              opacity={0.6}
+              yAxisId="left"
+              type="monotone"
+              dataKey="ppg"
+              name="PPG"
+              strokeWidth={2}
+              dot={(props: any) => {
+                const { cx, cy, payload } = props;
+                const isChamp = String(payload.finish || "").toLowerCase().includes("champ");
+                return (
+                  <circle
+                    cx={cx}
+                    cy={cy}
+                    r={isChamp ? 5 : 3}
+                    stroke="currentColor"
+                    fill={isChamp ? "currentColor" : "white"}
+                  />
+                );
+              }}
             />
+            <Bar yAxisId="right" dataKey="seed" name="Playoff Seed" opacity={0.6} />
           </ComposedChart>
         </ResponsiveContainer>
       ) : (
@@ -125,12 +115,25 @@ function OwnerPerfChartInner({ data }: { data: StandingRow[] }) {
 
 const OwnerPerfChart = dynamic(() => Promise.resolve(OwnerPerfChartInner), { ssr: false });
 
+// -------------------------- NEW: Career block type ---------------------------
+type CareerBlock = {
+  owner: string;
+  seasons?: number;
+  record?: { wins: number; losses: number; ties: number };
+  playoff_appearances?: number;
+  championships?: { count: number; years: number[] };
+  total_pf?: number;
+  games?: number;
+  pf_per_game?: number;
+};
+
 // -----------------------------------------------------------------------------
 
 export default function OwnerPage() {
   const router = useRouter();
   const owner = typeof router.query.owner === "string" ? router.query.owner : "";
 
+  const [career, setCareer] = useState<CareerBlock | null>(null); // NEW
   const [rosterSeasons, setRosterSeasons] = useState<RosterSeason[]>([]);
   const [pivot, setPivot] = useState<{
     owner: string;
@@ -151,10 +154,12 @@ export default function OwnerPage() {
     if (!owner) return;
     (async () => {
       try {
-        // roster + pivot
-        const roster = await fetch(`/api/history?owner=${encodeURIComponent(owner)}`).then((r) => r.json());
-        setRosterSeasons(Array.isArray(roster.seasons) ? roster.seasons : []);
+        // roster + career (from /api/history?owner=...)
+        const rosterResp = await fetch(`/api/history?owner=${encodeURIComponent(owner)}`).then((r) => r.json());
+        setRosterSeasons(Array.isArray(rosterResp.seasons) ? rosterResp.seasons : []);
+        setCareer(rosterResp.career ?? null); // NEW
 
+        // pivot (from /api/history?ownerPivot=...)
         const piv = await fetch(`/api/history?ownerPivot=${encodeURIComponent(owner)}`).then((r) => r.json());
         if (!piv.error) setPivot(piv);
 
@@ -177,6 +182,14 @@ export default function OwnerPage() {
     [rosterSeasons]
   );
 
+  const renderRecord = (rec?: CareerBlock["record"]) => {
+    if (!rec) return "—";
+    const { wins = 0, losses = 0, ties = 0 } = rec;
+    const games = wins + losses + ties;
+    const winPct = games > 0 ? ((wins + 0.5 * ties) / games) : null;
+    return `${wins}-${losses}-${ties}${winPct !== null ? ` (${(winPct * 100).toFixed(1)}%)` : ""}`;
+  };
+
   return (
     <main
       style={{
@@ -197,6 +210,65 @@ export default function OwnerPage() {
 
       {!loading && !err && (
         <>
+          {/* ===================== NEW: Career Overview card ===================== */}
+          <section style={{ margin: "12px 0 20px" }}>
+            <div
+              style={{
+                display: "grid",
+                gap: 12,
+                gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+                border: "1px solid #ddd",
+                borderRadius: 12,
+                padding: 12,
+              }}
+            >
+              <div style={{ padding: 8, border: "1px solid #eee", borderRadius: 8 }}>
+                <div style={{ color: "#666" }}>Seasons</div>
+                <div style={{ fontWeight: 700, fontSize: 18 }}>
+                  {career?.seasons ?? "—"}
+                </div>
+              </div>
+              <div style={{ padding: 8, border: "1px solid #eee", borderRadius: 8 }}>
+                <div style={{ color: "#666" }}>Record</div>
+                <div style={{ fontWeight: 700, fontSize: 18 }}>
+                  {renderRecord(career?.record)}
+                </div>
+              </div>
+              <div style={{ padding: 8, border: "1px solid #eee", borderRadius: 8 }}>
+                <div style={{ color: "#666" }}>Playoff Appearances</div>
+                <div style={{ fontWeight: 700, fontSize: 18 }}>
+                  {career?.playoff_appearances ?? "—"}
+                </div>
+              </div>
+              <div style={{ padding: 8, border: "1px solid #eee", borderRadius: 8 }}>
+                <div style={{ color: "#666" }}>Championships</div>
+                <div style={{ fontWeight: 700, fontSize: 18 }}>
+                  {(career?.championships?.count ?? 0)}{(career?.championships?.years?.length
+                    ? ` (${career.championships.years.join(", ")})`
+                    : "")}
+                </div>
+              </div>
+              <div style={{ padding: 8, border: "1px solid #eee", borderRadius: 8 }}>
+                <div style={{ color: "#666" }}>Total PF (pivot)</div>
+                <div style={{ fontWeight: 700, fontSize: 18 }}>
+                  {fmt2(career?.total_pf ?? null)}
+                </div>
+              </div>
+              <div style={{ padding: 8, border: "1px solid #eee", borderRadius: 8 }}>
+                <div style={{ color: "#666" }}>PF / Game</div>
+                <div style={{ fontWeight: 700, fontSize: 18 }}>
+                  {fmt2(career?.pf_per_game ?? null)}
+                </div>
+              </div>
+              <div style={{ padding: 8, border: "1px solid #eee", borderRadius: 8 }}>
+                <div style={{ color: "#666" }}>Games</div>
+                <div style={{ fontWeight: 700, fontSize: 18 }}>
+                  {career?.games ?? "—"}
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Pivot summary */}
           <section style={{ margin: "12px 0 20px" }}>
             <div
@@ -225,7 +297,7 @@ export default function OwnerPage() {
             </div>
           </section>
 
-          {/* NEW: Performance chart */}
+          {/* Performance chart */}
           <section style={{ margin: "16px 0 28px" }}>
             <h2>Performance by Year</h2>
             <OwnerPerfChart data={standings} />
@@ -237,9 +309,7 @@ export default function OwnerPage() {
             <div style={{ overflowX: "auto" }}>
               <table style={{ width: "100%", borderCollapse: "collapse" }}>
                 <thead>
-                  <tr
-                    style={{ textAlign: "left", borderBottom: "1px solid #ddd" }}
-                  >
+                  <tr style={{ textAlign: "left", borderBottom: "1px solid #ddd" }}>
                     <th style={{ padding: 8 }}>Year</th>
                     <th style={{ padding: 8 }}>Points</th>
                   </tr>

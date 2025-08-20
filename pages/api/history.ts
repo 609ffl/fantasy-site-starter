@@ -28,11 +28,24 @@ type Career = {
   last_year?: number;
 };
 
+type CareerRecordRow = {
+  owner: string;
+  seasons?: number;
+  wins?: number;
+  losses?: number;
+  ties?: number;
+  playoff_appearances?: number;
+  championship_years?: number[];
+};
+
 /** ---------- Config (paths) ---------- */
 const ROSTER_CSV =
   process.env.HISTORY_CSV || path.join(process.cwd(), "data", "history.csv");
 const CAREER_PF_CSV =
   process.env.CAREER_PF_CSV || path.join(process.cwd(), "data", "career_pf.csv");
+const CAREER_RECORDS_CSV =
+  process.env.CAREER_RECORDS_CSV ||
+  path.join(process.cwd(), "data", "career records.csv");
 
 /** ---------- Helpers ---------- */
 function readCsv(fp: string): Row[] {
@@ -49,6 +62,71 @@ const asNum = (v: any) => {
   const n = Number(s.replace(/,/g, ""));
   return Number.isFinite(n) ? n : NaN;
 };
+
+// robust parser for "103-80-2" -> {wins:103, losses:80, ties:2}
+function parseRecordTriplet(s: string | undefined | null) {
+  const raw = String(s ?? "").trim();
+  if (!raw) return { wins: undefined, losses: undefined, ties: undefined };
+  const m = raw.match(/(-?\d+)\s*[-–]\s*(-?\d+)\s*[-–]\s*(-?\d+)/);
+  if (!m) return { wins: undefined, losses: undefined, ties: undefined };
+  const [, w, l, t] = m;
+  return { wins: Number(w), losses: Number(l), ties: Number(t) };
+}
+
+function parseChampionshipYears(s: string | undefined | null) {
+  const raw = String(s ?? "").trim();
+  if (!raw) return [];
+  return raw
+    .split(",")
+    .map((x) => x.trim())
+    .filter(Boolean)
+    .map((x) => Number(x))
+    .filter((n) => Number.isFinite(n)) as number[];
+}
+
+function normalizeHeaderKey(k: string) {
+  const lower = (k || "").toLowerCase().trim();
+  // handle the CSV's typo "Careeer Record"
+  if (lower.includes("careeer record") || lower.includes("career record")) return "career_record";
+  if (lower.startsWith("playoff")) return "playoff_appearances";
+  return lower.replace(/\s+/g, "_");
+}
+
+function readCareerRecords(fp: string) {
+  if (!fs.existsSync(fp)) return new Map<string, CareerRecordRow>();
+  const txt = fs.readFileSync(fp, "utf8");
+  const parsed = Papa.parse(txt, { header: true, skipEmptyLines: true }) as { data: Row[] };
+  const rows = (parsed.data || []) as Row[];
+  const out = new Map<string, CareerRecordRow>();
+
+  for (const r of rows) {
+    // normalize headers
+    const norm: Record<string, any> = {};
+    for (const [k, v] of Object.entries(r)) norm[normalizeHeaderKey(k)] = v;
+
+    const owner = String(norm["owner"] ?? "").trim();
+    if (!owner) continue;
+
+    const seasons = asNum(norm["seasons"]);
+    const playoff_appearances = asNum(norm["playoff_appearances"]);
+    const { wins, losses, ties } = parseRecordTriplet(norm["career_record"]);
+    const championship_years = parseChampionshipYears(norm["championships"]);
+
+    out.set(owner, {
+      owner,
+      seasons: Number.isFinite(seasons) ? Number(seasons) : undefined,
+      wins,
+      losses,
+      ties,
+      playoff_appearances: Number.isFinite(playoff_appearances)
+        ? playoff_appearances
+        : undefined,
+      championship_years,
+    });
+  }
+
+  return out;
+}
 
 /** ---------- Roster CSV (tidy rows) ---------- */
 const KEYMAP_ROSTER: Record<string, string> = {
@@ -317,6 +395,7 @@ let CACHE:
         games: Record<string, number>;
         pfg: Record<string, number>;
       };
+      careerRecords?: Map<string, CareerRecordRow>;
       source: "career_pf" | "computed";
       debug?: any;
     }
@@ -330,6 +409,9 @@ function ensureCache() {
     : [];
   const { byOwner, byYear, playerIndex } = buildFromRoster(rosterRows);
 
+  // Load auxiliary datasets
+  const careerRecords = readCareerRecords(CAREER_RECORDS_CSV);
+
   if (fs.existsSync(CAREER_PF_CSV)) {
     try {
       const { career, matrix, meta } = parseCareerPivot(CAREER_PF_CSV);
@@ -341,6 +423,7 @@ function ensureCache() {
         pivot: matrix,
         source: "career_pf",
         debug: meta,
+        careerRecords,
       };
       return;
     } catch (e: any) {
@@ -351,6 +434,7 @@ function ensureCache() {
         careerSummary: [],
         source: "computed",
         debug: { error: e?.message },
+        careerRecords,
       };
       return;
     }
@@ -363,12 +447,17 @@ function ensureCache() {
     careerSummary: [],
     source: "computed",
     debug: { error: "CAREER_PF_CSV not found" },
+    careerRecords,
   };
 }
 
 /** ---------- Handler ---------- */
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+    // In dev, force refresh so CSV edits are visible without server restart
+    if (process.env.NODE_ENV !== "production") {
+      CACHE = null;
+    }
     ensureCache();
 
     const { summary, owner, ownerPivot, player, year, debug } = req.query;
@@ -390,11 +479,38 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res.status(200).json(payload);
     }
 
-    // Roster-based owner detail (players by season)
+    // Roster-based owner detail (players by season) + Career overview merge
     if (owner) {
       const key = String(owner);
       const list = CACHE!.byOwner.get(key) || [];
-      return res.status(200).json({ owner: key, seasons: list });
+
+      const rec = CACHE!.careerRecords?.get(key);
+      const pivot = CACHE!.pivot;
+      const pivotTotal = pivot ? pivot.totals[key] : undefined;
+      const pivotGames = pivot ? pivot.games[key] : undefined;
+      const pivotPfg = pivot ? pivot.pfg[key] : undefined;
+
+      const career = {
+        owner: key,
+        seasons: rec?.seasons ?? (list.length || undefined),
+        record:
+          (rec?.wins ?? rec?.losses ?? rec?.ties) != null
+            ? {
+                wins: rec?.wins ?? 0,
+                losses: rec?.losses ?? 0,
+                ties: rec?.ties ?? 0,
+              }
+            : undefined,
+        playoff_appearances: rec?.playoff_appearances,
+        championships: rec?.championship_years?.length
+          ? { count: rec.championship_years.length, years: rec.championship_years }
+          : { count: 0, years: [] as number[] },
+        total_pf: pivotTotal ?? undefined,
+        games: Number.isFinite(pivotGames) ? pivotGames : undefined,
+        pf_per_game: Number.isFinite(pivotPfg) ? pivotPfg : undefined,
+      };
+
+      return res.status(200).json({ owner: key, career, seasons: list });
     }
 
     // Pivot-based owner yearly totals (exact)
@@ -452,4 +568,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: e?.message || "Unknown error" });
   }
 }
-
