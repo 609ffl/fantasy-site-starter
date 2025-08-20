@@ -26,12 +26,13 @@ type TopTeamSeason = {
 
 function parseCsv<T = any>(filePath: string): T[] {
   const csv = fs.readFileSync(filePath, "utf8");
-  const { data } = Papa.parse<T>(csv, {
+  // No generic on Papa.parse; cast the result instead (avoids the TS error)
+  const parsed: any = Papa.parse(csv, {
     header: true,
     dynamicTyping: true,
     skipEmptyLines: true,
   });
-  return data as T[];
+  return (parsed?.data ?? []) as T[];
 }
 
 function norm(s?: string) {
@@ -49,7 +50,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const history = parseCsv<HistoryRow>(path.join(dataDir, "history.csv"));
     const careerPF = parseCsv<CareerPFRow>(path.join(dataDir, "career_pf.csv"));
 
-    // Build lookups from history
     const byYearOwner = new Map<string, HistoryRow>();
     const byYearTeam = new Map<string, HistoryRow>();
     for (const h of history) {
@@ -69,8 +69,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const pf = Number(r.total_points ?? 0);
       if (!Number.isFinite(pf)) continue;
 
-      let h: HistoryRow | undefined;
-      if (r.owner) h = byYearOwner.get(`${y}|${norm(r.owner)}`);
+      let h: HistoryRow | undefined =
+        r.owner ? byYearOwner.get(`${y}|${norm(r.owner)}`) : undefined;
       if (!h && r.team_name) h = byYearTeam.get(`${y}|${norm(r.team_name)}`);
 
       if (h) {
@@ -85,7 +85,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
     }
 
-    // Optional visibility when developing
     if (misses.length && process.env.NODE_ENV !== "production") {
       // eslint-disable-next-line no-console
       console.warn("[/api/top-team-seasons] Unmatched rows:", misses.slice(0, 5));
