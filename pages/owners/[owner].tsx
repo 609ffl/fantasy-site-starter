@@ -115,7 +115,7 @@ function OwnerPerfChartInner({ data }: { data: StandingRow[] }) {
 
 const OwnerPerfChart = dynamic(() => Promise.resolve(OwnerPerfChartInner), { ssr: false });
 
-// -------------------------- NEW: Career block type ---------------------------
+// -------------------------- Career block type --------------------------------
 type CareerBlock = {
   owner: string;
   seasons?: number;
@@ -133,7 +133,7 @@ export default function OwnerPage() {
   const router = useRouter();
   const owner = typeof router.query.owner === "string" ? router.query.owner : "";
 
-  const [career, setCareer] = useState<CareerBlock | null>(null); // NEW
+  const [career, setCareer] = useState<CareerBlock | null>(null);
   const [rosterSeasons, setRosterSeasons] = useState<RosterSeason[]>([]);
   const [pivot, setPivot] = useState<{
     owner: string;
@@ -157,7 +157,7 @@ export default function OwnerPage() {
         // roster + career (from /api/history?owner=...)
         const rosterResp = await fetch(`/api/history?owner=${encodeURIComponent(owner)}`).then((r) => r.json());
         setRosterSeasons(Array.isArray(rosterResp.seasons) ? rosterResp.seasons : []);
-        setCareer(rosterResp.career ?? null); // NEW
+        setCareer(rosterResp.career ?? null);
 
         // pivot (from /api/history?ownerPivot=...)
         const piv = await fetch(`/api/history?ownerPivot=${encodeURIComponent(owner)}`).then((r) => r.json());
@@ -176,6 +176,17 @@ export default function OwnerPage() {
 
   const fmt2 = (n: unknown) =>
     typeof n === "number" && Number.isFinite(n) ? n.toFixed(2) : "—";
+
+  // === NEW: exact Points‑For map from "Season Totals (career sheet)" ===
+  const pfByYear = useMemo(() => {
+    const m = new Map<number, number>();
+    (pivot?.yearly ?? []).forEach((r) => {
+      const y = Number(r.year);
+      const p = Number(r.points);
+      if (Number.isFinite(y) && Number.isFinite(p)) m.set(y, p);
+    });
+    return m;
+  }, [pivot?.yearly]);
 
   const totalRoster = useMemo(
     () => rosterSeasons.reduce((s, r) => s + r.total_points, 0),
@@ -210,7 +221,7 @@ export default function OwnerPage() {
 
       {!loading && !err && (
         <>
-          {/* ===================== NEW: Career Overview card ===================== */}
+          {/* ===================== Career Overview card ===================== */}
           <section style={{ margin: "12px 0 20px" }}>
             <div
               style={{
@@ -360,8 +371,9 @@ export default function OwnerPage() {
                       </Link>{" "}
                       <span style={{ color: "#666" }}>— {s.team_name}</span>
                     </div>
+                    {/* === NEW: force total to pivot value for this year === */}
                     <div style={{ fontWeight: 700 }}>
-                      {fmt2(s.total_points)}
+                      {fmt2(pfByYear.get(Number(s.year)) ?? s.total_points)}
                     </div>
                   </div>
 
