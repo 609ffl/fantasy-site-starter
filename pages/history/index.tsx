@@ -6,7 +6,7 @@ type Career = {
   owner: string;
   seasons?: number;
   total_points: number;
-  pf_per_game?: number;   // <-- use this, not avg_points
+  pf_per_game?: number;
   first_year?: number;
   last_year?: number;
 };
@@ -15,7 +15,7 @@ type OwnerSeason = {
   year: number;
   owner: string;
   team_name: string;
-  total_points: number;
+  total_points: number; // from career_pf.csv
 };
 
 export default function HistoryIndex() {
@@ -28,10 +28,18 @@ export default function HistoryIndex() {
   useEffect(() => {
     (async () => {
       try {
-        const data = await fetch("/api/history?summary=1").then((r) => r.json());
-        setCareer(Array.isArray(data.career) ? data.career : []);
-        setTopSeasons(Array.isArray(data.topSeasons) ? data.topSeasons : []);
-        setYears(Array.isArray(data.years) ? data.years : []);
+        const [summary, topSeasonsResp] = await Promise.all([
+          fetch("/api/history?summary=1").then((r) => r.json()),
+          fetch("/api/top-team-seasons").then((r) => r.json()),
+        ]);
+
+        setCareer(Array.isArray(summary.career) ? summary.career : []);
+        setYears(Array.isArray(summary.years) ? summary.years : []);
+
+        const ts = Array.isArray(topSeasonsResp.topTeamSeasons)
+          ? (topSeasonsResp.topTeamSeasons as OwnerSeason[])
+          : [];
+        setTopSeasons(ts);
       } catch (e: any) {
         setErr(e?.message || "Failed to load history");
       } finally {
@@ -69,7 +77,12 @@ export default function HistoryIndex() {
             <div style={{ overflowX: "auto" }}>
               <table style={{ width: "100%", borderCollapse: "collapse" }}>
                 <thead>
-                  <tr style={{ textAlign: "left", borderBottom: "1px solid #ddd" }}>
+                  <tr
+                    style={{
+                      textAlign: "left",
+                      borderBottom: "1px solid #ddd",
+                    }}
+                  >
                     <th style={{ padding: 8 }}>#</th>
                     <th style={{ padding: 8 }}>Owner</th>
                     <th style={{ padding: 8 }}>Seasons</th>
@@ -80,11 +93,17 @@ export default function HistoryIndex() {
                 </thead>
                 <tbody>
                   {career.map((c, i) => (
-                    <tr key={c.owner} style={{ borderBottom: "1px solid #eee" }}>
+                    <tr
+                      key={c.owner}
+                      style={{ borderBottom: "1px solid #eee" }}
+                    >
                       <td style={{ padding: 8 }}>{i + 1}</td>
                       <td style={{ padding: 8 }}>
                         <Link
-                          href={{ pathname: "/owners/[owner]", query: { owner: c.owner } }}
+                          href={{
+                            pathname: "/owners/[owner]",
+                            query: { owner: c.owner },
+                          }}
                         >
                           {c.owner}
                         </Link>
@@ -112,30 +131,45 @@ export default function HistoryIndex() {
             <div style={{ overflowX: "auto" }}>
               <table style={{ width: "100%", borderCollapse: "collapse" }}>
                 <thead>
-                  <tr style={{ textAlign: "left", borderBottom: "1px solid #ddd" }}>
+                  <tr
+                    style={{
+                      textAlign: "left",
+                      borderBottom: "1px solid #ddd",
+                    }}
+                  >
                     <th style={{ padding: 8 }}>#</th>
                     <th style={{ padding: 8 }}>Year</th>
                     <th style={{ padding: 8 }}>Owner</th>
                     <th style={{ padding: 8 }}>Team Name</th>
-                    <th style={{ padding: 8 }}>Total Points</th>
+                    <th style={{ padding: 8, textAlign: "right" }}>
+                      Total Points
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
                   {topSeasons.map((s, i) => (
-                    <tr key={`${s.owner}-${s.year}`} style={{ borderBottom: "1px solid #eee" }}>
+                    <tr
+                      key={`${s.owner}-${s.year}-${i}`}
+                      style={{ borderBottom: "1px solid #eee" }}
+                    >
                       <td style={{ padding: 8 }}>{i + 1}</td>
                       <td style={{ padding: 8 }}>
                         <Link href={`/history/${s.year}`}>{s.year}</Link>
                       </td>
                       <td style={{ padding: 8 }}>
                         <Link
-                          href={{ pathname: "/owners/[owner]", query: { owner: s.owner } }}
+                          href={{
+                            pathname: "/owners/[owner]",
+                            query: { owner: s.owner },
+                          }}
                         >
                           {s.owner}
                         </Link>
                       </td>
                       <td style={{ padding: 8 }}>{s.team_name}</td>
-                      <td style={{ padding: 8, fontWeight: 700 }}>{fmt2(s.total_points)}</td>
+                      <td style={{ padding: 8, textAlign: "right", fontWeight: 700 }}>
+                        {fmt2(s.total_points)}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -151,7 +185,11 @@ export default function HistoryIndex() {
                 <Link
                   key={y}
                   href={`/history/${y}`}
-                  style={{ padding: "6px 10px", border: "1px solid #ccc", borderRadius: 8 }}
+                  style={{
+                    padding: "6px 10px",
+                    border: "1px solid #ccc",
+                    borderRadius: 8,
+                  }}
                 >
                   {y}
                 </Link>
