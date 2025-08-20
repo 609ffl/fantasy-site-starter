@@ -120,6 +120,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     // Sort by PF desc
     rows.sort((a, b) => b.total_points - a.total_points);
+    const limited = rows.slice(0, 30);
 
     const meta: any = {
       history_rows: history.length,
@@ -136,7 +137,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       meta.sample_unmatched = misses.slice(0, 5);
     }
 
-    return res.status(200).json({ meta, topTeamSeasons: rows });
+    return res.status(200).json({ meta, topTeamSeasons: rows limited });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message || "Failed to load" });
   }
