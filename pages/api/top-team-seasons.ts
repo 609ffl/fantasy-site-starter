@@ -25,7 +25,7 @@ function norm(s?: string) {
   return String(s ?? "").toLowerCase().replace(/\s+/g, " ").replace(/[^\w\s]/g, "").trim();
 }
 
-// take first present key
+// pick first present key
 function pick(row: Record<string, any>, names: string[], def?: any) {
   for (const n of names) if (row[n] !== undefined && row[n] !== null && row[n] !== "") return row[n];
   return def;
@@ -36,11 +36,11 @@ function meltCareerPF(wideRows: Record<string, any>[]): { year: number; owner: s
   const long: { year: number; owner: string; total_points: number }[] = [];
   if (!wideRows.length) return long;
 
-  // keys example from your debug: ["", "T. Flynn","D. Daniel", ...]
   const headers = Object.keys(wideRows[0]);
 
-  // Identify the year column: prefer "year"/"Year"/"season", else the empty header ""
-  const yearKey = ["year", "Year", "season", "Season", ""].find(k => headers.includes(k)) ?? headers[0];
+  // Identify the year column: prefer "year"/"Year"/"season", else the empty header "", else first column
+  const yearKey =
+    ["year", "Year", "season", "Season", ""].find((k) => headers.includes(k)) ?? headers[0];
 
   for (const row of wideRows) {
     const year = Number(row[yearKey]);
@@ -50,7 +50,7 @@ function meltCareerPF(wideRows: Record<string, any>[]): { year: number; owner: s
       if (key === yearKey) continue;
       const val = row[key];
       const n = Number(val);
-      if (!Number.isFinite(n)) continue;          // skip blanks / non-numbers
+      if (!Number.isFinite(n)) continue; // skip blanks / non-numbers
 
       const owner = String(key).trim();
       if (!owner) continue;
@@ -69,7 +69,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (!historyExists || !careerExists) {
     return res.status(200).json({
-      meta: { history_file_found: historyExists, career_pf_file_found: careerExists },
+      meta: {
+        history_file_found: historyExists,
+        career_pf_file_found: careerExists,
+        message: "CSV not found in /data. Ensure history.csv and career_pf.csv are committed to /data.",
+      },
       topTeamSeasons: [],
     });
   }
@@ -89,7 +93,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     // Build lookups
     const byYearOwner = new Map<string, HistoryRow>();
-    const byYearTeam  = new Map<string, HistoryRow>();
+    const byYearTeam = new Map<string, HistoryRow>();
     for (const h of history) {
       if (h.owner) byYearOwner.set(`${h.year}|${norm(h.owner)}`, h);
       if (h.team_name) byYearTeam.set(`${h.year}|${norm(h.team_name)}`, h);
@@ -98,14 +102,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // Pivot career_pf wide -> long
     const careerLong = meltCareerPF(careerWide);
 
-    // Join
+    // Join (year + owner)
     const rows: TopTeamSeason[] = [];
     const misses: any[] = [];
 
     for (const r of careerLong) {
-      const key = `${r.year}|${norm(r.owner)}`;
-      const match = byYearOwner.get(key);
-
+      const match = byYearOwner.get(`${r.year}|${norm(r.owner)}`);
       if (match) {
         rows.push({
           year: r.year,
@@ -120,6 +122,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     // Sort by PF desc
     rows.sort((a, b) => b.total_points - a.total_points);
+
+    // Limit to top 30
     const limited = rows.slice(0, 30);
 
     const meta: any = {
@@ -128,6 +132,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       career_pf_rows_long: careerLong.length,
       matched: rows.length,
       unmatched: misses.length,
+      returned: limited.length,
     };
 
     if (debug) {
@@ -137,8 +142,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       meta.sample_unmatched = misses.slice(0, 5);
     }
 
-    return res.status(200).json({ meta, topTeamSeasons: rows limited });
+    return res.status(200).json({ meta, topTeamSeasons: limited });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message || "Failed to load" });
   }
 }
+
