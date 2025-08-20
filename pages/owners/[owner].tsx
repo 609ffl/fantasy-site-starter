@@ -291,9 +291,6 @@ export default function OwnerPage() {
               <div>
                 Span: <strong>{pivot?.span ?? "—"}</strong>
               </div>
-              <div style={{ color: "#666" }}>
-                Roster total (calc): <strong>{fmt2(totalRoster)}</strong>
-              </div>
             </div>
           </section>
 
