@@ -42,10 +42,10 @@ type CareerRecordRow = {
 const ROSTER_CSV =
   process.env.HISTORY_CSV || path.join(process.cwd(), "data", "history.csv");
 const CAREER_PF_CSV =
-  process.env.CAREER_PF_CSV || path.join(process.cwd(), "data", "career_pf.csv");
+  process.env.CAREER_PF_CSV || path.join(process.cwd(), "data", "career_records.csv");
 const CAREER_RECORDS_CSV =
   process.env.CAREER_RECORDS_CSV ||
-  path.join(process.cwd(), "data", "career records.csv");
+  path.join(process.cwd(), "data", "career_records.csv");
 
 /** ---------- Helpers ---------- */
 function readCsv(fp: string): Row[] {
