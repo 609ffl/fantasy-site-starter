@@ -115,33 +115,80 @@ export default function OwnerTeamPage({
         </div>
       </div>
 
-      {/* Seasons table */}
-      <div className="overflow-x-auto rounded-2xl border">
-        <table className="min-w-full text-sm">
-          <thead className="bg-gray-50">
-            <tr className="text-left">
-              <th className="px-4 py-3 font-semibold">Year</th>
-              <th className="px-4 py-3 font-semibold">Record</th>
-              <th className="px-4 py-3 font-semibold">Finish</th>
-            </tr>
-          </thead>
-          <tbody>
-            {seasons
-              .slice()
-              .sort((a, b) => a.year - b.year)
-              .map((s) => {
-                const rec = `${s.wins}-${s.losses}`;
-                return (
-                  <tr key={`${slug}-${s.year}`} className="even:bg-gray-50/60">
-                    <td className="px-4 py-3">{s.year}</td>
-                    <td className="px-4 py-3">{rec}</td>
-                    <td className="px-4 py-3">{s.finish ?? ""}</td>
-                  </tr>
-                );
-              })}
-          </tbody>
-        </table>
-      </div>
+ {/* Seasons (prettier) */}
+<div className="space-y-2">
+  <h2 className="text-xl font-bold" style={{ color: palette.dark }}>
+    Seasons
+  </h2>
+
+  {/* helpers */}
+  {/*
+    Little pill for the result (DNQ / Elim. Rd 1 / Champ)
+  */}
+  {(() => {
+    const ResultPill = ({ text }: { text?: string }) => {
+      const t = (text || "").trim();
+      let cls =
+        "border bg-gray-50 text-gray-700 border-gray-200";
+      if (/champ/i.test(t)) cls = "border bg-amber-50 text-amber-800 border-amber-200";
+      else if (/elim/i.test(t)) cls = "border bg-rose-50 text-rose-700 border-rose-200";
+      else if (/rd/i.test(t)) cls = "border bg-sky-50 text-sky-700 border-sky-200";
+      else if (/dnq/i.test(t)) cls = "border bg-gray-100 text-gray-600 border-gray-200";
+
+      return (
+        <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ${cls}`}>
+          {t || "—"}
+        </span>
+      );
+    };
+
+    const WLBar = ({ w, l }: { w: number; l: number }) => {
+      const total = Math.max(1, (w || 0) + (l || 0));
+      const pct = Math.round((w / total) * 100);
+      return (
+        <div className="h-2 w-40 rounded-full bg-gray-200 overflow-hidden">
+          <div className="h-full bg-emerald-500" style={{ width: `${pct}%` }} />
+        </div>
+      );
+    };
+
+    return (
+      <ul className="divide-y rounded-2xl border bg-white">
+        {seasons
+          .slice()
+          .sort((a, b) => a.year - b.year)
+          .map((s) => (
+            <li
+              key={`${slug}-${s.year}`}
+              className="flex items-center justify-between gap-4 p-3 hover:bg-gray-50/80"
+            >
+              {/* Left cluster: year + record + bar */}
+              <div className="flex items-center gap-5">
+                <a
+                  href={`/history/${s.year}`}
+                  className="rounded-full border px-2.5 py-1 text-xs font-semibold underline"
+                >
+                  {s.year}
+                </a>
+
+                <div className="min-w-[110px]">
+                  <div className="text-sm font-semibold" style={{ color: palette.primary }}>
+                    {s.wins}-{s.losses}
+                  </div>
+                  <WLBar w={s.wins} l={s.losses} />
+                </div>
+              </div>
+
+              {/* Right: finish as a pill */}
+              <div className="shrink-0">
+                <ResultPill text={s.finish} />
+              </div>
+            </li>
+          ))}
+      </ul>
+    );
+  })()}
+</div>
 
       {/* Top 15 Player Seasons */}
       <div className="space-y-2">
