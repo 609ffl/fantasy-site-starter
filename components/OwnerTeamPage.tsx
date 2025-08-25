@@ -17,22 +17,21 @@ export default function OwnerTeamPage({
   seasons,
   colors,
 }: Entry) {
-  // Safe palette fallback if colors are missing
   const palette = colors ?? {
-    primary: "#111827", // slate-900
-    accent: "#3b82f6",  // blue-500
-    dark: "#0f172a",    // slate-950
+    primary: "#111827",
+    accent: "#3b82f6",
+    dark: "#0f172a",
   };
 
   const ringStyle: CSSVars = {
-    ["--tw-ring-color"]: palette.accent,           // Tailwind ring color var
-    ["--tw-ring-offset-color"]: "#ffffff",         // improves contrast
+    ["--tw-ring-color"]: palette.accent,
+    ["--tw-ring-offset-color"]: "#ffffff",
   };
 
-  const textMuted = { color: "#6b7280" }; // gray-500
+  const textMuted = { color: "#6b7280" };
   const wl = `${record.wins}-${record.losses}${record.ties ? `-${record.ties}` : ""}`;
 
-  // --- Top 15 Player Seasons (fetched client-side)
+  // Top 15 Player Seasons (client fetch)
   const [topPlayers, setTopPlayers] = useState<TopPlayerSeason[]>([]);
   const [playersLoading, setPlayersLoading] = useState(true);
   const [playersErr, setPlayersErr] = useState<string | null>(null);
@@ -179,7 +178,16 @@ export default function OwnerTeamPage({
                           {p.year}
                         </Link>
                       </td>
-                      <td className="px-4 py-3">{p.player}</td>
+                      <td className="px-4 py-3">
+                        {/* Link to Players page with prefilled query */}
+                        <Link
+                          href={`/players?player=${encodeURIComponent(p.player)}`}
+                          className="underline"
+                          title={`View ${p.player} on Players page`}
+                        >
+                          {p.player}
+                        </Link>
+                      </td>
                       <td className="px-4 py-3 text-right font-semibold">
                         {fmt2(p.points)}
                       </td>
@@ -194,3 +202,4 @@ export default function OwnerTeamPage({
     </div>
   );
 }
+
