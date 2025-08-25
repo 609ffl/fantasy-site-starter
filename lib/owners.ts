@@ -13,7 +13,7 @@ export type Entry = {
   playoffs: number;
   championships: number;
   seasons: Season[];
-  // ✅ No null here — either the object or undefined
+  // NOTE: optional; when absent, the key should be omitted (not undefined/null in JSON)
   colors?: { primary: string; accent: string; dark: string };
 };
 
@@ -39,15 +39,17 @@ function detectLogo(slug: string): string | null {
 }
 
 // Get final brand (logoSrc, teamName, colors)
+// IMPORTANT: do NOT include colors key when it's missing
 function getBrand(slug: string, ownerDisplay: string) {
   const override = LOGOS[slug] || {};
   const auto = detectLogo(slug);
-  return {
+
+  const brand: { logoSrc: string; teamName: string; colors?: Entry["colors"] } = {
     logoSrc: override.src ?? auto ?? "/logos/609ffl-logo.png",
     teamName: override.teamName ?? ownerDisplay,
-    // ✅ Do NOT force null — leave undefined if missing
-    colors: override.colors,
   };
+  if (override.colors) brand.colors = override.colors; // only add when defined
+  return brand;
 }
 
 // Normalize owner name for matching across files
@@ -64,16 +66,9 @@ function splitCsvLine(line: string): string[] {
   let inQuotes = false;
   for (let i = 0; i < line.length; i++) {
     const ch = line[i];
-    if (ch === '"') {
-      inQuotes = !inQuotes;
-      continue;
-    }
-    if (ch === "," && !inQuotes) {
-      out.push(cur);
-      cur = "";
-    } else {
-      cur += ch;
-    }
+    if (ch === '"') { inQuotes = !inQuotes; continue; }
+    if (ch === "," && !inQuotes) { out.push(cur); cur = ""; }
+    else { cur += ch; }
   }
   out.push(cur);
   return out.map((s) => s.trim());
@@ -217,20 +212,22 @@ export function buildEntriesFromRows(rows: Row[]): Entry[] {
       typeof overridePlayoffs === "number" ? overridePlayoffs : totals.playoffs;
 
     const slug = ownerSlug(owner);
-    const { logoSrc, teamName, colors } = getBrand(slug, owner);
+    const brand = getBrand(slug, owner);
 
-    entries.push({
+    // Build the entry WITHOUT undefined props (omit 'colors' when absent)
+    const entry: Entry = {
       slug,
-      teamName,
+      teamName: brand.teamName,
       ownerDisplay: owner,
-      logoSrc,
+      logoSrc: brand.logoSrc,
       record: { wins: totals.wins, losses: totals.losses },
-      playoffs: playoffsFinal,                 // <-- from career_records when available
-      championships: totals.championships,     // still computed from season results
+      playoffs: playoffsFinal,
+      championships: totals.championships,
       seasons,
-      // ✅ Do NOT coerce to null; pass through (undefined when absent)
-      colors,
-    });
+    };
+    if (brand.colors) entry.colors = brand.colors; // add only when defined
+
+    entries.push(entry);
   }
 
   return entries;
