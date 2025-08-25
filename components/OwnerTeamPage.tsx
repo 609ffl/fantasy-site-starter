@@ -179,11 +179,11 @@ export default function OwnerTeamPage({
                         </Link>
                       </td>
                       <td className="px-4 py-3">
-                        {/* Link to Players page with prefilled query */}
+                        {/* Link directly to dynamic player page */}
                         <Link
-                          href={`/players?player=${encodeURIComponent(p.player)}`}
+                          href={`/players/${encodeURIComponent(p.player)}`}
                           className="underline"
-                          title={`View ${p.player} on Players page`}
+                          title={`View ${p.player} page`}
                         >
                           {p.player}
                         </Link>
@@ -202,4 +202,3 @@ export default function OwnerTeamPage({
     </div>
   );
 }
-
