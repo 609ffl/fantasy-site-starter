@@ -17,10 +17,11 @@ export default function OwnerTeamPage({
   seasons,
   colors,
 }: Entry) {
+  // Safe palette fallback if colors are missing
   const palette = colors ?? {
-    primary: "#111827",
-    accent: "#3b82f6",
-    dark: "#0f172a",
+    primary: "#111827", // slate-900
+    accent: "#3b82f6",  // blue-500
+    dark: "#0f172a",    // slate-950
   };
 
   const ringStyle: CSSVars = {
@@ -28,10 +29,10 @@ export default function OwnerTeamPage({
     ["--tw-ring-offset-color"]: "#ffffff",
   };
 
-  const textMuted = { color: "#6b7280" };
+  const textMuted = { color: "#6b7280" }; // gray-500
   const wl = `${record.wins}-${record.losses}${record.ties ? `-${record.ties}` : ""}`;
 
-  // Top 15 Player Seasons (client fetch)
+  // ---------- fetch Top 15 Player Seasons ----------
   const [topPlayers, setTopPlayers] = useState<TopPlayerSeason[]>([]);
   const [playersLoading, setPlayersLoading] = useState(true);
   const [playersErr, setPlayersErr] = useState<string | null>(null);
@@ -56,6 +57,31 @@ export default function OwnerTeamPage({
 
   const fmt2 = (n: unknown) =>
     typeof n === "number" && Number.isFinite(n) ? n.toFixed(2) : "—";
+
+  // ---------- tiny helpers for Seasons UI ----------
+  const ResultPill = ({ text }: { text?: string }) => {
+    const t = (text || "").trim();
+    let cls = "border bg-gray-50 text-gray-700 border-gray-200";
+    if (/champ/i.test(t)) cls = "border bg-amber-50 text-amber-900 border-amber-200";
+    else if (/elim/i.test(t)) cls = "border bg-rose-50 text-rose-700 border-rose-200";
+    else if (/rd/i.test(t)) cls = "border bg-sky-50 text-sky-700 border-sky-200";
+    else if (/dnq/i.test(t)) cls = "border bg-gray-100 text-gray-600 border-gray-200";
+    return (
+      <span className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${cls}`}>
+        {t || "—"}
+      </span>
+    );
+  };
+
+  const WLBar = ({ w, l }: { w: number; l: number }) => {
+    const total = Math.max(1, (w || 0) + (l || 0));
+    const pct = Math.round((w / total) * 100);
+    return (
+      <div className="h-2 w-full rounded-full bg-gray-200 overflow-hidden">
+        <div className="h-full bg-emerald-500" style={{ width: `${pct}%` }} />
+      </div>
+    );
+  };
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-8 space-y-8">
@@ -115,80 +141,42 @@ export default function OwnerTeamPage({
         </div>
       </div>
 
- {/* Seasons (prettier) */}
-<div className="space-y-2">
-  <h2 className="text-xl font-bold" style={{ color: palette.dark }}>
-    Seasons
-  </h2>
+      {/* Seasons (mobile-first, prettier) */}
+      <div className="space-y-2">
+        <h2 className="text-xl font-bold" style={{ color: palette.dark }}>
+          Seasons
+        </h2>
 
-  {/* helpers */}
-  {/*
-    Little pill for the result (DNQ / Elim. Rd 1 / Champ)
-  */}
-  {(() => {
-    const ResultPill = ({ text }: { text?: string }) => {
-      const t = (text || "").trim();
-      let cls =
-        "border bg-gray-50 text-gray-700 border-gray-200";
-      if (/champ/i.test(t)) cls = "border bg-amber-50 text-amber-800 border-amber-200";
-      else if (/elim/i.test(t)) cls = "border bg-rose-50 text-rose-700 border-rose-200";
-      else if (/rd/i.test(t)) cls = "border bg-sky-50 text-sky-700 border-sky-200";
-      else if (/dnq/i.test(t)) cls = "border bg-gray-100 text-gray-600 border-gray-200";
+        <ul className="divide-y rounded-2xl border bg-white">
+          {seasons
+            .slice()
+            .sort((a, b) => a.year - b.year)
+            .map((s) => (
+              <li key={`${slug}-${s.year}`} className="p-3 sm:p-4 hover:bg-gray-50/80">
+                {/* Row 1: year chip + result pill */}
+                <div className="flex items-center justify-between gap-3">
+                  <Link
+                    href={`/history/${s.year}`}
+                    className="rounded-full border px-3 py-1 text-xs font-semibold underline"
+                  >
+                    {s.year}
+                  </Link>
+                  <ResultPill text={s.finish} />
+                </div>
 
-      return (
-        <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ${cls}`}>
-          {t || "—"}
-        </span>
-      );
-    };
-
-    const WLBar = ({ w, l }: { w: number; l: number }) => {
-      const total = Math.max(1, (w || 0) + (l || 0));
-      const pct = Math.round((w / total) * 100);
-      return (
-        <div className="h-2 w-40 rounded-full bg-gray-200 overflow-hidden">
-          <div className="h-full bg-emerald-500" style={{ width: `${pct}%` }} />
-        </div>
-      );
-    };
-
-    return (
-      <ul className="divide-y rounded-2xl border bg-white">
-        {seasons
-          .slice()
-          .sort((a, b) => a.year - b.year)
-          .map((s) => (
-            <li
-              key={`${slug}-${s.year}`}
-              className="flex items-center justify-between gap-4 p-3 hover:bg-gray-50/80"
-            >
-              {/* Left cluster: year + record + bar */}
-              <div className="flex items-center gap-5">
-                <a
-                  href={`/history/${s.year}`}
-                  className="rounded-full border px-2.5 py-1 text-xs font-semibold underline"
-                >
-                  {s.year}
-                </a>
-
-                <div className="min-w-[110px]">
-                  <div className="text-sm font-semibold" style={{ color: palette.primary }}>
+                {/* Row 2: record + win% bar */}
+                <div className="mt-2 flex items-center gap-3 sm:gap-4">
+                  <div className="text-base font-semibold shrink-0" style={{ color: palette.primary }}>
                     {s.wins}-{s.losses}
                   </div>
-                  <WLBar w={s.wins} l={s.losses} />
+                  <div className="min-w-0 grow">
+                    <WLBar w={s.wins} l={s.losses} />
+                  </div>
                 </div>
-              </div>
-
-              {/* Right: finish as a pill */}
-              <div className="shrink-0">
-                <ResultPill text={s.finish} />
-              </div>
-            </li>
-          ))}
-      </ul>
-    );
-  })()}
-</div>
+              </li>
+            ))}
+        </ul>
+      </div>
 
       {/* Top 15 Player Seasons */}
       <div className="space-y-2">
@@ -226,7 +214,6 @@ export default function OwnerTeamPage({
                         </Link>
                       </td>
                       <td className="px-4 py-3">
-                        {/* Link directly to dynamic player page */}
                         <Link
                           href={`/players/${encodeURIComponent(p.player)}`}
                           className="underline"
