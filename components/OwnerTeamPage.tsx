@@ -1,8 +1,10 @@
 // components/OwnerTeamPage.tsx
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import type { Entry } from "../lib/owners";
 
 type CSSVars = React.CSSProperties & Record<string, string | number>;
+type TopPlayerSeason = { year: number; player: string; points: number };
 
 export default function OwnerTeamPage({
   slug,
@@ -28,8 +30,33 @@ export default function OwnerTeamPage({
   };
 
   const textMuted = { color: "#6b7280" }; // gray-500
-
   const wl = `${record.wins}-${record.losses}${record.ties ? `-${record.ties}` : ""}`;
+
+  // --- Top 15 Player Seasons (fetched client-side)
+  const [topPlayers, setTopPlayers] = useState<TopPlayerSeason[]>([]);
+  const [playersLoading, setPlayersLoading] = useState(true);
+  const [playersErr, setPlayersErr] = useState<string | null>(null);
+
+  useEffect(() => {
+    let mounted = true;
+    (async () => {
+      try {
+        const res = await fetch(`/api/owner-top-players?owner=${encodeURIComponent(slug)}`);
+        const json = await res.json();
+        if (!mounted) return;
+        setTopPlayers(Array.isArray(json.topPlayers) ? json.topPlayers : []);
+      } catch (e: any) {
+        if (!mounted) return;
+        setPlayersErr(e?.message || "Failed to load top players");
+      } finally {
+        if (mounted) setPlayersLoading(false);
+      }
+    })();
+    return () => { mounted = false; };
+  }, [slug]);
+
+  const fmt2 = (n: unknown) =>
+    typeof n === "number" && Number.isFinite(n) ? n.toFixed(2) : "—";
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-8 space-y-8">
@@ -115,6 +142,54 @@ export default function OwnerTeamPage({
               })}
           </tbody>
         </table>
+      </div>
+
+      {/* Top 15 Player Seasons */}
+      <div className="space-y-2">
+        <h2 className="text-xl font-bold" style={{ color: palette.dark }}>
+          Top 15 Player Seasons (All-Time)
+        </h2>
+        {playersLoading && <p className="text-sm" style={textMuted}>Loading…</p>}
+        {playersErr && <p className="text-sm text-red-600">{playersErr}</p>}
+
+        {!playersLoading && !playersErr && (
+          <div className="overflow-x-auto rounded-2xl border">
+            <table className="min-w-full text-sm">
+              <thead className="bg-gray-50">
+                <tr className="text-left">
+                  <th className="px-4 py-3 font-semibold">#</th>
+                  <th className="px-4 py-3 font-semibold">Year</th>
+                  <th className="px-4 py-3 font-semibold">Player</th>
+                  <th className="px-4 py-3 font-semibold text-right">Points</th>
+                </tr>
+              </thead>
+              <tbody>
+                {topPlayers.length === 0 ? (
+                  <tr>
+                    <td colSpan={4} className="px-4 py-3 text-gray-500">
+                      No roster data found.
+                    </td>
+                  </tr>
+                ) : (
+                  topPlayers.map((p, i) => (
+                    <tr key={`${p.player}-${p.year}-${i}`} className="even:bg-gray-50/60">
+                      <td className="px-4 py-3">{i + 1}</td>
+                      <td className="px-4 py-3">
+                        <Link href={`/history/${p.year}`} className="underline">
+                          {p.year}
+                        </Link>
+                      </td>
+                      <td className="px-4 py-3">{p.player}</td>
+                      <td className="px-4 py-3 text-right font-semibold">
+                        {fmt2(p.points)}
+                      </td>
+                    </tr>
+                  ))
+                )}
+              </tbody>
+            </table>
+          </div>
+        )}
       </div>
     </div>
   );
