@@ -2,6 +2,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { ownerSlug } from "../../lib/slug";
 
 type OwnerSeason = {
   year: number;
@@ -18,16 +19,18 @@ type OwnerSeason = {
 
 // Helper to render a player link safely (handles spaces, apostrophes, etc)
 function PlayerLink({ name }: { name: string }) {
-  return (
-    <Link href={`/players/${encodeURIComponent(name)}`}>{name}</Link>
-  );
+  return <Link href={`/players/${encodeURIComponent(name)}`}>{name}</Link>;
 }
 
 export default function YearPage() {
   const router = useRouter();
   const yearParam = router.query.year;
   const year =
-    typeof yearParam === "string" ? Number(yearParam) : Array.isArray(yearParam) ? Number(yearParam[0]) : NaN;
+    typeof yearParam === "string"
+      ? Number(yearParam)
+      : Array.isArray(yearParam)
+      ? Number(yearParam[0])
+      : NaN;
 
   const [rows, setRows] = useState<OwnerSeason[]>([]);
   const [loading, setLoading] = useState(true);
@@ -60,11 +63,15 @@ export default function YearPage() {
       {!loading && (
         <div style={{ display: "grid", gap: 16 }}>
           {rows.map((s, i) => (
-            <div key={`${s.owner}-${s.year}`} style={{ border: "1px solid #ddd", borderRadius: 12, padding: 12 }}>
+            <div
+              key={`${s.owner}-${s.year}`}
+              style={{ border: "1px solid #ddd", borderRadius: 12, padding: 12 }}
+            >
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6 }}>
                 <div>
                   <strong>#{i + 1}</strong>{" "}
-                  <Link href={`/owners/${encodeURIComponent(s.owner)}`}>{s.owner}</Link>{" "}
+                  {/* Owner link uses slug, not display name */}
+                  <Link href={`/owners/${ownerSlug(s.owner)}`}>{s.owner}</Link>{" "}
                   <span style={{ color: "#666" }}>— {s.team_name}</span>
                 </div>
                 <div style={{ fontWeight: 700 }}>{s.total_points.toFixed(2)}</div>
@@ -77,7 +84,7 @@ export default function YearPage() {
                   key={idx}
                   style={{ display: "flex", justifyContent: "space-between", padding: "2px 0" }}
                 >
-                  {/* LEFT: position — PlayerName (team)  with PlayerName as a Link */}
+                  {/* LEFT: position — PlayerName (team) with PlayerName as a Link */}
                   <span>
                     {p.position.toLowerCase()} — <PlayerLink name={p.player} />
                     {p.nfl_team ? ` (${p.nfl_team})` : ""}
