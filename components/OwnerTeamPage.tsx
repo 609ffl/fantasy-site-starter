@@ -1,108 +1,120 @@
-import Image from "next/image";
+// components/OwnerTeamPage.tsx
+import React from "react";
+import type { Entry } from "../lib/owners";
 
-export type Season = { year: number; wins: number; losses: number; finish?: string };
+type CSSVars = React.CSSProperties & Record<string, string | number>;
 
-type Entry = {
-  teamName: string;
-  ownerDisplay: string;
-  logoSrc: string;
-  record: { wins: number; losses: number; ties?: number };
-  playoffs: number;
-  championships: number;
-  seasons: Season[];
-  colors?: { primary: string; accent: string; dark: string };
-};
+export default function OwnerTeamPage({
+  slug,
+  teamName,
+  ownerDisplay,
+  logoSrc,
+  record,
+  playoffs,
+  championships,
+  seasons,
+  colors,
+}: Entry) {
+  // Safe palette fallback if colors are missing
+  const palette = colors ?? {
+    primary: "#111827", // slate-900
+    accent: "#3b82f6",  // blue-500
+    dark: "#0f172a",    // slate-950
+  };
 
-function StatTile({ label, value }: { label: string; value: string | number }) {
+  const ringStyle: CSSVars = {
+    ["--tw-ring-color"]: palette.accent,           // Tailwind ring color var
+    ["--tw-ring-offset-color"]: "#ffffff",         // improves contrast
+  };
+
+  const textMuted = { color: "#6b7280" }; // gray-500
+
+  const wl = `${record.wins}-${record.losses}${record.ties ? `-${record.ties}` : ""}`;
+
   return (
-    <div className="rounded-xl border bg-white p-4 shadow-sm">
-      <div className="text-xs text-slate-500">{label}</div>
-      <div className="text-2xl font-semibold">{value}</div>
-    </div>
-  );
-}
-
-export default function OwnerTeamPage(entry: Entry) {
-  const { teamName, ownerDisplay, logoSrc, record, playoffs, championships, seasons, colors } = entry;
-  const palette = colors ?? { primary: "#9e2f2f", accent: "#e5d5a5", dark: "#1f3e6b" };
-  const maxWins = Math.max(1, ...seasons.map((s) => s.wins));
-
-  return (
-    <div className="mx-auto w-full max-w-6xl px-4 py-6">
-      {/* HERO */}
-      <div className="rounded-2xl border p-6 shadow-sm bg-white">
-        <div className="flex flex-col items-center gap-6 text-center md:flex-row md:text-left">
-          <Image
-            src={logoSrc}
-            alt={teamName}
-            width={120}
-            height={120}
-            className="h-28 w-28 rounded-xl object-contain ring-2"
-            style={{ ringColor: palette.accent }}
-          />
-          <div className="flex-1">
-            <h1 className="text-3xl font-extrabold" style={{ color: palette.dark }}>
-              {teamName}
-            </h1>
-            <p className="mt-1 text-sm text-slate-600">
-              Owner: <span className="font-medium">{ownerDisplay}</span>
-            </p>
-            <div className="mt-4 grid grid-cols-3 gap-3 md:max-w-md">
-              <StatTile label="Record" value={`${record.wins}-${record.losses}${record.ties ? `-${record.ties}` : ""}`} />
-              <StatTile label="Playoff Apps" value={playoffs} />
-              <StatTile label="Titles" value={championships} />
-            </div>
+    <div className="mx-auto max-w-5xl px-6 py-8 space-y-8">
+      {/* Header */}
+      <div className="flex items-center gap-5">
+        <img
+          src={logoSrc}
+          alt={teamName}
+          width={120}
+          height={120}
+          className="h-28 w-28 rounded-xl object-contain ring-2 ring-offset-2"
+          style={ringStyle}
+        />
+        <div className="flex-1">
+          <h1 className="text-3xl font-extrabold" style={{ color: palette.dark }}>
+            {teamName}
+          </h1>
+          <p className="text-sm" style={textMuted}>
+            {ownerDisplay}
+          </p>
+        </div>
+        <div className="text-right">
+          <div className="text-xs uppercase tracking-wide" style={textMuted}>
+            Career Record
+          </div>
+          <div className="text-2xl font-extrabold" style={{ color: palette.primary }}>
+            {wl}
           </div>
         </div>
       </div>
 
-      {/* BODY */}
-      <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-5">
-        {/* Seasons */}
-        <section className="lg:col-span-3">
-          <h2 className="mb-3 text-lg font-semibold">Seasons</h2>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-            {seasons.map((s) => (
-              <div key={s.year} className="rounded-xl border bg-white p-4 shadow-sm">
-                <div className="flex items-center justify-between">
-                  <div className="text-sm font-medium">{s.year}</div>
-                  {s.finish && (
-                    <span className="rounded px-2 py-1 text-xs font-medium" style={{ background: `${palette.accent}33`, color: palette.dark }}>
-                      {s.finish}
-                    </span>
-                  )}
-                </div>
-                <div className="mt-2 text-2xl font-semibold">
-                  {s.wins}-{s.losses}
-                </div>
-              </div>
-            ))}
+      {/* Quick stats */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        <div className="rounded-2xl border p-4 shadow-sm">
+          <div className="text-xs uppercase tracking-wide" style={textMuted}>
+            Playoff Apps
           </div>
-        </section>
+          <div className="mt-1 text-2xl font-bold" style={{ color: palette.primary }}>
+            {playoffs}
+          </div>
+        </div>
+        <div className="rounded-2xl border p-4 shadow-sm">
+          <div className="text-xs uppercase tracking-wide" style={textMuted}>
+            Championships
+          </div>
+          <div className="mt-1 text-2xl font-bold" style={{ color: palette.primary }}>
+            {championships}
+          </div>
+        </div>
+        <div className="rounded-2xl border p-4 shadow-sm hidden sm:block">
+          <div className="text-xs uppercase tracking-wide" style={textMuted}>
+            Seasons Played
+          </div>
+          <div className="mt-1 text-2xl font-bold" style={{ color: palette.primary }}>
+            {seasons.length}
+          </div>
+        </div>
+      </div>
 
-        {/* Wins per season */}
-        <section className="lg:col-span-2">
-          <h2 className="mb-3 text-lg font-semibold">Wins per Season</h2>
-          <div className="rounded-xl border bg-white p-4 shadow-sm">
-            <div className="space-y-3">
-              {seasons.map((s) => {
-                const pct = Math.round((s.wins / maxWins) * 100);
+      {/* Seasons table */}
+      <div className="overflow-x-auto rounded-2xl border">
+        <table className="min-w-full text-sm">
+          <thead className="bg-gray-50">
+            <tr className="text-left">
+              <th className="px-4 py-3 font-semibold">Year</th>
+              <th className="px-4 py-3 font-semibold">Record</th>
+              <th className="px-4 py-3 font-semibold">Finish</th>
+            </tr>
+          </thead>
+          <tbody>
+            {seasons
+              .slice()
+              .sort((a, b) => a.year - b.year)
+              .map((s) => {
+                const rec = `${s.wins}-${s.losses}`;
                 return (
-                  <div key={`bar-${s.year}`}>
-                    <div className="mb-1 flex items-center justify-between text-xs text-slate-500">
-                      <span>{s.year}</span>
-                      <span>{s.wins}W</span>
-                    </div>
-                    <div className="h-3 w-full rounded bg-slate-100">
-                      <div className="h-3 rounded" style={{ width: `${pct}%`, background: palette.primary }} />
-                    </div>
-                  </div>
+                  <tr key={`${slug}-${s.year}`} className="even:bg-gray-50/60">
+                    <td className="px-4 py-3">{s.year}</td>
+                    <td className="px-4 py-3">{rec}</td>
+                    <td className="px-4 py-3">{s.finish ?? ""}</td>
+                  </tr>
                 );
               })}
-            </div>
-            <div className="mt-3 text-xs text-slate-500">Bars scale to best season ({maxWins} wins).</div>
-          </div>
-        </section>
+          </tbody>
+        </table>
       </div>
     </div>
   );
