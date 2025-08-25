@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white text-slate-900;
+}
+@layer base {
+  a {
+    @apply text-blue-600 underline underline-offset-2 decoration-2;
+  }
+  a:hover {
+    @apply text-blue-700;
+  }
+  a:focus-visible {
+    @apply outline-none ring-2 ring-blue-300 rounded-sm;
+  }
+  a:visited {
+    @apply text-purple-700;
+  }
+}
