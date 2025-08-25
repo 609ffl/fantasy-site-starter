@@ -1,7 +1,7 @@
 // pages/history/index.tsx
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ownerSlug } from "../../lib/owners";
+import { ownerSlug } from "../../lib/slug";
 
 type Career = {
   owner: string;
