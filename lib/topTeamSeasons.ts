@@ -26,12 +26,12 @@ export type TopTeamSeason = {
 // ---- utils ----
 function parseCsv<T = any>(filePath: string): T[] {
   const csv = fs.readFileSync(filePath, "utf8");
-  const { data } = Papa.parse<T>(csv, {
+  const result = Papa.parse(csv, {
     header: true,
     dynamicTyping: true,
     skipEmptyLines: true,
-  });
-  return data as T[];
+  }) as unknown as { data: T[] };
+  return result.data;
 }
 
 function norm(s?: string) {
@@ -97,7 +97,7 @@ export function loadTopTeamSeasons(): TopTeamSeason[] {
     // eslint-disable-next-line no-console
     console.warn(
       `[topTeamSeasons] Unmatched career_pf rows (${misses.length}):`,
-      misses.slice(0, 5) // print a few
+      misses.slice(0, 5)
     );
   }
 
