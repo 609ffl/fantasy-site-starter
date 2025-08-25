@@ -1,6 +1,7 @@
 // pages/players/[player].tsx
 // @ts-nocheck
 import Link from "next/link";
+import { ownerSlug } from "../../lib/slug"; // browser-safe
 import { loadPlayerHistory } from "../../lib/loadHistory";
 
 // tolerant name normalization (handles "C.J.", "Jr.", stray team fragments like "Jay Cutler Ch")
@@ -64,7 +65,7 @@ export default function PlayerPage({
               <tr key={`${y}-${r.owner}-${i}`} style={{ borderBottom: "1px solid #f1f1f1" }}>
                 <td style={{ padding: "8px 6px" }}>{i === 0 ? y : ""}</td>
                 <td style={{ padding: "8px 6px" }}>
-                  <Link href={`/owners/${encodeURIComponent(r.owner)}`}>{r.owner}</Link>
+                  <Link href={`/owners/${ownerSlug(r.owner)}`}>{r.owner}</Link>
                 </td>
                 <td style={{ padding: "8px 6px", textAlign: "right" }}>
                   {Number(r.fantasy_points ?? 0).toFixed(2)}
