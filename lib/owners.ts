@@ -13,7 +13,8 @@ export type Entry = {
   playoffs: number;
   championships: number;
   seasons: Season[];
-  colors?: { primary: string; accent: string; dark: string } | null; // allow null
+  // ✅ No null here — either the object or undefined
+  colors?: { primary: string; accent: string; dark: string };
 };
 
 // ---------- OPTIONAL: override team name / colors / custom logo path ----------
@@ -44,7 +45,8 @@ function getBrand(slug: string, ownerDisplay: string) {
   return {
     logoSrc: override.src ?? auto ?? "/logos/609ffl-logo.png",
     teamName: override.teamName ?? ownerDisplay,
-    colors: override.colors ?? null, // never undefined
+    // ✅ Do NOT force null — leave undefined if missing
+    colors: override.colors,
   };
 }
 
@@ -62,9 +64,16 @@ function splitCsvLine(line: string): string[] {
   let inQuotes = false;
   for (let i = 0; i < line.length; i++) {
     const ch = line[i];
-    if (ch === '"') { inQuotes = !inQuotes; continue; }
-    if (ch === "," && !inQuotes) { out.push(cur); cur = ""; }
-    else { cur += ch; }
+    if (ch === '"') {
+      inQuotes = !inQuotes;
+      continue;
+    }
+    if (ch === "," && !inQuotes) {
+      out.push(cur);
+      cur = "";
+    } else {
+      cur += ch;
+    }
   }
   out.push(cur);
   return out.map((s) => s.trim());
@@ -219,7 +228,8 @@ export function buildEntriesFromRows(rows: Row[]): Entry[] {
       playoffs: playoffsFinal,                 // <-- from career_records when available
       championships: totals.championships,     // still computed from season results
       seasons,
-      colors: colors ?? null,                  // never undefined
+      // ✅ Do NOT coerce to null; pass through (undefined when absent)
+      colors,
     });
   }
 
