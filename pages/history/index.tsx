@@ -1,6 +1,7 @@
 // pages/history/index.tsx
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { ownerSlug } from "../../lib/owners";
 
 type Career = {
   owner: string;
@@ -92,34 +93,27 @@ export default function HistoryIndex() {
                   </tr>
                 </thead>
                 <tbody>
-                  {career.map((c, i) => (
-                    <tr
-                      key={c.owner}
-                      style={{ borderBottom: "1px solid #eee" }}
-                    >
-                      <td style={{ padding: 8 }}>{i + 1}</td>
-                      <td style={{ padding: 8 }}>
-                        <Link
-                          href={{
-                            pathname: "/owners/[owner]",
-                            query: { owner: c.owner },
-                          }}
-                        >
-                          {c.owner}
-                        </Link>
-                      </td>
-                      <td style={{ padding: 8 }}>{c.seasons ?? "—"}</td>
-                      <td style={{ padding: 8, fontWeight: 700 }}>
-                        {fmt2(c.total_points)}
-                      </td>
-                      <td style={{ padding: 8 }}>{fmt2(c.pf_per_game)}</td>
-                      <td style={{ padding: 8 }}>
-                        {c.first_year && c.last_year
-                          ? `${c.first_year}–${c.last_year}`
-                          : "—"}
-                      </td>
-                    </tr>
-                  ))}
+                  {career.map((c, i) => {
+                    const slug = ownerSlug(c.owner);
+                    return (
+                      <tr key={c.owner} style={{ borderBottom: "1px solid #eee" }}>
+                        <td style={{ padding: 8 }}>{i + 1}</td>
+                        <td style={{ padding: 8 }}>
+                          <Link href={`/owners/${slug}`}>{c.owner}</Link>
+                        </td>
+                        <td style={{ padding: 8 }}>{c.seasons ?? "—"}</td>
+                        <td style={{ padding: 8, fontWeight: 700 }}>
+                          {fmt2(c.total_points)}
+                        </td>
+                        <td style={{ padding: 8 }}>{fmt2(c.pf_per_game)}</td>
+                        <td style={{ padding: 8 }}>
+                          {c.first_year && c.last_year
+                            ? `${c.first_year}–${c.last_year}`
+                            : "—"}
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
@@ -147,31 +141,27 @@ export default function HistoryIndex() {
                   </tr>
                 </thead>
                 <tbody>
-                  {topSeasons.map((s, i) => (
-                    <tr
-                      key={`${s.owner}-${s.year}-${i}`}
-                      style={{ borderBottom: "1px solid #eee" }}
-                    >
-                      <td style={{ padding: 8 }}>{i + 1}</td>
-                      <td style={{ padding: 8 }}>
-                        <Link href={`/history/${s.year}`}>{s.year}</Link>
-                      </td>
-                      <td style={{ padding: 8 }}>
-                        <Link
-                          href={{
-                            pathname: "/owners/[owner]",
-                            query: { owner: s.owner },
-                          }}
-                        >
-                          {s.owner}
-                        </Link>
-                      </td>
-                      <td style={{ padding: 8 }}>{s.team_name}</td>
-                      <td style={{ padding: 8, textAlign: "right", fontWeight: 700 }}>
-                        {fmt2(s.total_points)}
-                      </td>
-                    </tr>
-                  ))}
+                  {topSeasons.map((s, i) => {
+                    const slug = ownerSlug(s.owner);
+                    return (
+                      <tr
+                        key={`${s.owner}-${s.year}-${i}`}
+                        style={{ borderBottom: "1px solid #eee" }}
+                      >
+                        <td style={{ padding: 8 }}>{i + 1}</td>
+                        <td style={{ padding: 8 }}>
+                          <Link href={`/history/${s.year}`}>{s.year}</Link>
+                        </td>
+                        <td style={{ padding: 8 }}>
+                          <Link href={`/owners/${slug}`}>{s.owner}</Link>
+                        </td>
+                        <td style={{ padding: 8 }}>{s.team_name}</td>
+                        <td style={{ padding: 8, textAlign: "right", fontWeight: 700 }}>
+                          {fmt2(s.total_points)}
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
