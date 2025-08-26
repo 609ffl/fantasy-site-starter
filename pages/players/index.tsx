@@ -1,23 +1,28 @@
 // pages/players/index.tsx
-// @ts-nocheck
+import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { useMemo, useState } from "react";
-import { loadPlayerHistory } from "../../lib/loadHistory";
 import { useRouter } from "next/router";
-// ...
-const { query } = useRouter();
-useEffect(() => {
-  const q = typeof query.player === "string" ? query.player : "";
-  // setSearch(q) or however you control the filter/search input
-}, [query.player]);
+import type { GetServerSideProps } from "next";
+import { loadPlayerHistory } from "../../lib/loadHistory";
 
+type PlayersIndexProps = { players: string[] };
 
-export default function PlayersIndex({ players }: { players: string[] }) {
+export default function PlayersIndex({ players }: PlayersIndexProps) {
   const [q, setQ] = useState("");
+  const router = useRouter();
+
+  // If ?player=... is in the URL, seed the search box
+  useEffect(() => {
+    const qp = router.query?.player;
+    if (typeof qp === "string" && qp.trim()) {
+      setQ(qp);
+    }
+  }, [router.query?.player]);
+
   const filtered = useMemo(() => {
     const n = q.trim().toLowerCase();
     if (!n) return players;
-    return players.filter(p => p.toLowerCase().includes(n));
+    return players.filter((p) => p.toLowerCase().includes(n));
   }, [q, players]);
 
   return (
@@ -25,12 +30,12 @@ export default function PlayersIndex({ players }: { players: string[] }) {
       <h1>Players</h1>
       <input
         value={q}
-        onChange={e => setQ(e.target.value)}
+        onChange={(e) => setQ(e.target.value)}
         placeholder="Search players…"
         style={{ width: "100%", padding: 8, margin: "12px 0" }}
       />
       <ul style={{ columns: 2, listStyle: "none", padding: 0, margin: 0 }}>
-        {filtered.map(p => (
+        {filtered.map((p) => (
           <li key={p} style={{ margin: "6px 0" }}>
             <Link href={`/players/${encodeURIComponent(p)}`}>{p}</Link>
           </li>
@@ -40,8 +45,11 @@ export default function PlayersIndex({ players }: { players: string[] }) {
   );
 }
 
-export async function getServerSideProps() {
+export const getServerSideProps: GetServerSideProps<PlayersIndexProps> = async () => {
   const rows = loadPlayerHistory();
-  const players = Array.from(new Set(rows.map(r => r.player))).sort((a,b) => a.localeCompare(b));
+  const players = Array.from(new Set(rows.map((r) => r.player))).sort((a, b) =>
+    a.localeCompare(b)
+  );
   return { props: { players } };
-}
+};
+

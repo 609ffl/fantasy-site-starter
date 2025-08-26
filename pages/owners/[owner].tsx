@@ -12,10 +12,11 @@ type LooseEntry = Omit<Entry, "colors"> & { colors?: Entry["colors"] | null };
 
 type OwnerPageProps = {
   entry: LooseEntry;
+  // Map of year -> { team_name?, regular_season_rank? }
   seasonMetaByYear: Record<number, { team_name?: string; regular_season_rank?: number | string }>;
 };
 
-// Normalize colors: null -> undefined
+// Normalize colors: null -> undefined (so <OwnerTeamPage> sees undefined, not null)
 function normalizeEntry(e: LooseEntry): Entry {
   const { colors, ...rest } = e;
   return { ...rest, colors: colors ?? undefined } as Entry;
@@ -52,7 +53,7 @@ function matchesOwnerCSV(csvOwner: string, entry: Entry) {
 }
 
 // pick first non-empty value among possible header variants
-function pick(row: Record<string, any>, names: string[]): string | undefined {
+function pick(row: Record<string, unknown>, names: string[]): string | undefined {
   for (const n of names) {
     const v = row[n];
     if (v == null) continue;
@@ -67,6 +68,7 @@ export const getStaticProps: GetStaticProps<OwnerPageProps> = async (ctx) => {
   const raw = getOwnerEntryBySlug(slug);
   if (!raw) return { notFound: true };
 
+  // normalize for matching against CSV
   const entry = normalizeEntry(raw as LooseEntry);
 
   // ---- Load CSV from /data ----
@@ -78,15 +80,14 @@ export const getStaticProps: GetStaticProps<OwnerPageProps> = async (ctx) => {
     const parsed = Papa.parse(csv, {
       header: true,
       skipEmptyLines: true,
-      transformHeader: (h) => h.trim().toLowerCase(),
+      transformHeader: (h: string) => h.trim().toLowerCase(),
     });
 
-    (parsed.data as any[]).forEach((row) => {
+    (parsed.data as unknown as Record<string, unknown>[]).forEach((row: Record<string, unknown>) => {
       // allow common variants for each column
-      const yearStr =
-        pick(row, ["year", "season", "yr"]) ?? "";
+      const yearStr = pick(row, ["year", "season", "yr"]) ?? "";
       const ownerStr =
-        pick(row, ["owner", "owner_name", "owner display", "ownerdisplay"]) ?? "";
+        pick(row, ["owner", "owner_name", "owner name", "owner display", "ownerdisplay"]) ?? "";
 
       const yearNum = Number(yearStr);
       if (!yearNum || !ownerStr) return;
@@ -94,7 +95,7 @@ export const getStaticProps: GetStaticProps<OwnerPageProps> = async (ctx) => {
 
       // Team name variants
       const teamNameRaw = pick(row, ["team_name", "team", "team name", "teamname"]);
-      const team_name = teamNameRaw;
+      const team_name = teamNameRaw && teamNameRaw.length ? teamNameRaw : undefined;
 
       // Rank variants
       const rankRaw = pick(row, [
@@ -122,7 +123,7 @@ export const getStaticProps: GetStaticProps<OwnerPageProps> = async (ctx) => {
 
       // ---- Avoid undefined in getStaticProps result ----
       const meta: Record<string, string | number> = {};
-      if (typeof team_name !== "undefined" && team_name !== "") meta.team_name = team_name;
+      if (typeof team_name !== "undefined") meta.team_name = team_name;
       if (typeof regular_season_rank !== "undefined") meta.regular_season_rank = regular_season_rank;
 
       if (Object.keys(meta).length > 0) {
