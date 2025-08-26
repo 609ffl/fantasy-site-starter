@@ -6,6 +6,9 @@ import type { Entry } from "../lib/owners";
 type CSSVars = React.CSSProperties & Record<string, string | number>;
 type TopPlayerSeason = { year: number; player: string; points: number };
 
+// NEW: prop for CSV-enriched metadata by year
+type SeasonMetaMap = Record<number, { team_name?: string; regular_season_rank?: number | string }>;
+
 export default function OwnerTeamPage({
   slug,
   teamName,
@@ -16,7 +19,9 @@ export default function OwnerTeamPage({
   championships,
   seasons,
   colors,
-}: Entry) {
+  // NEW (optional): injected from pages/owners/[owner].tsx
+  seasonMetaByYear,
+}: Entry & { seasonMetaByYear?: SeasonMetaMap }) {
   // Safe palette fallback if colors are missing
   const palette = colors ?? {
     primary: "#111827", // slate-900
@@ -58,6 +63,13 @@ export default function OwnerTeamPage({
   const fmt2 = (n: unknown) =>
     typeof n === "number" && Number.isFinite(n) ? n.toFixed(2) : "—";
 
+  const fmtRank = (r?: number | string) => {
+    if (typeof r === "undefined" || r === null) return undefined;
+    const s = String(r).trim();
+    if (!s || s.toLowerCase() === "na") return "N/A";
+    return `Reg. Rank: ${s}`;
+  };
+
   // ---------- tiny helpers for Seasons UI ----------
   const ResultPill = ({ text }: { text?: string }) => {
     const t = (text || "").trim();
@@ -65,7 +77,7 @@ export default function OwnerTeamPage({
     if (/champ/i.test(t)) cls = "border bg-amber-50 text-amber-900 border-amber-200";
     else if (/elim/i.test(t)) cls = "border bg-rose-50 text-rose-700 border-rose-200";
     else if (/rd/i.test(t)) cls = "border bg-sky-50 text-sky-700 border-sky-200";
-    else if (/dnq/i.test(t)) cls = "border bg-gray-100 text-gray-600 border-gray-200";
+    else if (/dnq|dnp/i.test(t)) cls = "border bg-gray-100 text-gray-600 border-gray-200";
     return (
       <span className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${cls}`}>
         {t || "—"}
@@ -141,7 +153,7 @@ export default function OwnerTeamPage({
         </div>
       </div>
 
-      {/* Seasons (mobile-first, prettier) */}
+      {/* Seasons */}
       <div className="space-y-2">
         <h2 className="text-xl font-bold" style={{ color: palette.dark }}>
           Seasons
@@ -151,30 +163,55 @@ export default function OwnerTeamPage({
           {seasons
             .slice()
             .sort((a, b) => a.year - b.year)
-            .map((s) => (
-              <li key={`${slug}-${s.year}`} className="p-3 sm:p-4 hover:bg-gray-50/80">
-                {/* Row 1: year chip + result pill */}
-                <div className="flex items-center justify-between gap-3">
-                  <Link
-                    href={`/history/${s.year}`}
-                    className="rounded-full border px-3 py-1 text-xs font-semibold underline"
-                  >
-                    {s.year}
-                  </Link>
-                  <ResultPill text={s.finish} />
-                </div>
+            .map((s) => {
+              const meta = seasonMetaByYear?.[s.year];
+              const showTeamName = meta?.team_name && String(meta.team_name).trim().length > 0;
+              const rankLabel = fmtRank(meta?.regular_season_rank);
 
-                {/* Row 2: record + win% bar */}
-                <div className="mt-2 flex items-center gap-3 sm:gap-4">
-                  <div className="text-base font-semibold shrink-0" style={{ color: palette.primary }}>
-                    {s.wins}-{s.losses}
+              return (
+                <li key={`${slug}-${s.year}`} className="p-3 sm:p-4 hover:bg-gray-50/80">
+                  {/* Row 1: left = year + team name + reg. rank; right = finish pill (unchanged) */}
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0 flex flex-wrap items-center gap-2 sm:gap-3">
+                      <Link
+                        href={`/history/${s.year}`}
+                        className="rounded-full border px-3 py-1 text-xs font-semibold underline"
+                      >
+                        {s.year}
+                      </Link>
+
+                      {showTeamName && (
+                        <span className="truncate text-sm font-medium text-gray-800">
+                          {meta!.team_name}
+                        </span>
+                      )}
+
+                      {rankLabel && (
+                        <span className="inline-flex items-center rounded-full bg-gray-100 text-gray-700 text-xs px-2 py-0.5">
+                          {rankLabel}
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Right side (postseason result) stays as-is */}
+                    <ResultPill text={s.finish} />
                   </div>
-                  <div className="min-w-0 grow">
-                    <WLBar w={s.wins} l={s.losses} />
+
+                  {/* Row 2: record + win% bar (unchanged) */}
+                  <div className="mt-2 flex items-center gap-3 sm:gap-4">
+                    <div
+                      className="text-base font-semibold shrink-0"
+                      style={{ color: palette.primary }}
+                    >
+                      {s.wins}-{s.losses}
+                    </div>
+                    <div className="min-w-0 grow">
+                      <WLBar w={s.wins} l={s.losses} />
+                    </div>
                   </div>
-                </div>
-              </li>
-            ))}
+                </li>
+              );
+            })}
         </ul>
       </div>
 

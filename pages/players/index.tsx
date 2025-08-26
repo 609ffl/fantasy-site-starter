@@ -3,6 +3,14 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { loadPlayerHistory } from "../../lib/loadHistory";
+import { useRouter } from "next/router";
+// ...
+const { query } = useRouter();
+useEffect(() => {
+  const q = typeof query.player === "string" ? query.player : "";
+  // setSearch(q) or however you control the filter/search input
+}, [query.player]);
+
 
 export default function PlayersIndex({ players }: { players: string[] }) {
   const [q, setQ] = useState("");
