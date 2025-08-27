@@ -25,7 +25,9 @@ type StandingRow = {
 
 function readCSV<T = any>(p: string): T[] {
   const text = fs.readFileSync(p, "utf8");
-  const parsed = Papa.parse<T>(text, { header: true, skipEmptyLines: true });
+  const parsed = Papa.parse(text, { header: true, skipEmptyLines: true }) as unknown as {
+    data: T[];
+  };
   return parsed.data as T[];
 }
 
