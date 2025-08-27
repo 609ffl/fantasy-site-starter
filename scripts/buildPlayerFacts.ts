@@ -25,6 +25,7 @@ type StandingRow = {
 
 function readCSV<T = any>(p: string): T[] {
   const text = fs.readFileSync(p, "utf8");
+  // Cast instead of using generics on Papa.parse to avoid TS error
   const parsed = Papa.parse(text, { header: true, skipEmptyLines: true }) as unknown as {
     data: T[];
   };
@@ -44,8 +45,7 @@ function toSeed(x: any): number | null {
 function isChamp(result?: string): boolean {
   if (!result) return false;
   const s = String(result).toLowerCase().replace(/\./g, "").trim();
-  // covers "champ", "champion", "championship", etc.
-  return s.startsWith("champ");
+  return s.startsWith("champ"); // covers "Champ", "Champion", "Championship"
 }
 
 function main() {
@@ -77,7 +77,7 @@ function main() {
   // build per-player facts
   const byPlayer = new Map<string, HistRow[]>();
   for (const r of hist) {
-    const name = r.player.trim();
+    const name = (r.player || "").trim();
     byPlayer.set(name, (byPlayer.get(name) || []).concat(r));
   }
 
@@ -115,15 +115,24 @@ function main() {
 
     const champs = champContribs.length;
 
+    // owner counts (for "most owned by" vs "most successful owner")
     const ownerCounts: Record<string, number> = {};
     seasonRows.forEach((x) => {
       ownerCounts[x.owner] = (ownerCounts[x.owner] || 0) + 1;
     });
-    const mostOwnedBy = Object.entries(ownerCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || null;
+    const mostOwnedBy =
+      Object.entries(ownerCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || null;
 
     const top3 = seasonRows.filter((x) => x.pos_rank <= 3).length;
     const top10 = seasonRows.filter((x) => x.pos_rank <= 10).length;
-    const belowReplacement = seasonRows.filter((x) => x.pos_rank > Math.floor(x.pos_count * 0.5)).length;
+    const belowReplacement = seasonRows.filter(
+      (x) => x.pos_rank > Math.floor(x.pos_count * 0.5)
+    ).length;
+
+    const bestPosRank = seasonRows.reduce(
+      (m, x) => Math.min(m, x.pos_rank),
+      Number.POSITIVE_INFINITY
+    );
 
     facts.push({
       player,
@@ -132,18 +141,31 @@ function main() {
       season_years: seasons,
       owners,
       most_owned_by: mostOwnedBy,
+      owner_counts: ownerCounts, // NEW
       total_points: Number(total.toFixed(1)),
       avg_season: Number(avg.toFixed(1)),
-      best_season: { year: best.year, points: Number(best.points.toFixed(1)), owner: best.owner },
-      worst_season: { year: worst.year, points: Number(worst.points.toFixed(1)), owner: worst.owner },
+      best_season: {
+        year: best.year,
+        points: Number(best.points.toFixed(1)),
+        owner: best.owner,
+      },
+      worst_season: {
+        year: worst.year,
+        points: Number(worst.points.toFixed(1)),
+        owner: worst.owner,
+      },
 
-      // NEW: championship details
+      // NEW: best positional rank across all seasons (1 = best)
+      best_pos_rank: Number.isFinite(bestPosRank) ? bestPosRank : null,
+
       championships: champs,
-      champ_contributions: champContribs,              // [{year, owner, team_name}]
-      championship_years: champContribs.map((c) => c.year), // convenience for UI/prompts
+      champ_contributions: champContribs,
+      championship_years: champContribs.map((c) => c.year),
 
       avg_seed_when_rostered: (() => {
-        const seeds = seasonRows.map((x) => x.seed).filter((n): n is number => Number.isFinite(n as any));
+        const seeds = seasonRows
+          .map((x) => x.seed)
+          .filter((n): n is number => Number.isFinite(n as any));
         if (!seeds.length) return null;
         const mean = seeds.reduce((a, b) => a + b, 0) / seeds.length;
         return Number(mean.toFixed(2));
@@ -156,9 +178,11 @@ function main() {
 
   const outDir = path.join(root, "public/data");
   fs.mkdirSync(outDir, { recursive: true });
-  fs.writeFileSync(path.join(outDir, "player_facts.json"), JSON.stringify(facts, null, 2));
+  fs.writeFileSync(
+    path.join(outDir, "player_facts.json"),
+    JSON.stringify(facts, null, 2)
+  );
   console.log(`Wrote ${facts.length} players → /public/data/player_facts.json`);
 }
 
 main();
-

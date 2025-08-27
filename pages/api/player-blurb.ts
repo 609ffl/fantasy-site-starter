@@ -63,6 +63,7 @@ Facts:
 - Championship details: ${champLines}
 - Avg playoff seed when rostered: ${f.avg_seed_when_rostered ?? "n/a"}
 - Pos accolades: top-3 finishes ${f.top3_pos_finishes}; below-replacement years ${f.below_replacement_years}
+- Extra: owner_counts ${JSON.stringify(f.owner_counts || {})}; best_pos_rank ${f.best_pos_rank ?? "n/a"}
 
 Guidance:
 - If exactly one championship contribution, name the team, owner, and year in one concise clause.
@@ -113,11 +114,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
     } catch {}
 
-    // ---- LLM call goes here (placeholder below) ----
-    // const completion = await openai.chat.completions.create({ ... });
-    // const out = JSON.parse(completion.choices[0].message.content);
-
+    // -------------------- Fact-driven builder (placeholder for LLM) --------------------
     const champs = Array.isArray(f.champ_contributions) ? f.champ_contributions : [];
+
+    // Decide whether to say "Most owned by" or "Most successful owner"
+    const countsObj = f.owner_counts || {};
+    const maxCount =
+      Object.keys(countsObj).length ? Math.max(...Object.values(countsObj)) : 0;
+
+    let ownerClause = "";
+    if (maxCount <= 1) {
+      // No one owned him more than once → pick "most successful"
+      if (champs.length >= 1) {
+        // Prefer the most recent championship owner
+        const latest = champs.slice().sort((a: any, b: any) => b.year - a.year)[0];
+        ownerClause = `Most successful owner was ${latest.owner}`;
+      } else {
+        // Fall back to best season's owner
+        ownerClause = `Most successful owner was ${f.best_season.owner}`;
+      }
+    } else {
+      ownerClause = `Most owned by ${f.most_owned_by || "various managers"}`;
+    }
+
+    // Championship sentence
     let champLine = "";
     if (champs.length === 1) {
       const c = champs[0];
@@ -127,14 +147,29 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       champLine = ` Title contributor in ${years}.`;
     }
 
+    // Top finish fallback if no top-3s
+    let finishFallback = "";
+    if ((f.top3_pos_finishes || 0) === 0) {
+      const best = Number(f.best_pos_rank || Infinity);
+      if (Number.isFinite(best)) {
+        if (best <= 10) finishFallback = " Never cracked the top-3, but did post a top-10 positional finish.";
+        else if (best <= 30) finishFallback = " Never cracked the top-3, but reached a top-30 positional finish.";
+        else finishFallback = ` Never cracked the top-3; best positional rank was ${best}.`;
+      } else {
+        finishFallback = " Never cracked the top-3.";
+      }
+    }
+
     const out = {
       blurb:
-        `${f.player} has appeared in ${f.seasons} seasons, averaging ${f.avg_season} points with a ${f.best_season.year} peak at ${f.best_season.points}. ` +
-        `Most owned by ${f.most_owned_by || "various managers"}, he logged ${f.top3_pos_finishes} top-3 finishes and contributed to ${f.championships} championship team${f.championships === 1 ? "" : "s"}.` +
-        champLine,
+        `${f.player} has appeared in ${f.seasons} season${f.seasons === 1 ? "" : "s"}, averaging ${f.avg_season} points with a ${f.best_season.year} peak at ${f.best_season.points}. ` +
+        `${ownerClause}, he logged ${f.top3_pos_finishes} top-3 finish${f.top3_pos_finishes === 1 ? "" : "es"} and contributed to ${f.championships} championship team${f.championships === 1 ? "" : "s"}.` +
+        champLine +
+        finishFallback,
       bullets: (() => {
         const arr: string[] = [];
-        if (f.top3_pos_finishes >= 1) arr.push(`Top-3 ${f.position} in ${f.top3_pos_finishes} season(s)`);
+
+        // Specific championship bullets (most recent first, cap at 2)
         if (champs.length) {
           champs
             .slice()
@@ -142,10 +177,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             .slice(0, 2)
             .forEach((c: any) => arr.push(`${c.year} Champion: ${c.team_name} (${c.owner})`));
         }
+
+        // Peak + best positional finish bullet (if no top-3)
         arr.push(`Career high ${f.best_season.points} points (${f.best_season.year})`);
+        if ((f.top3_pos_finishes || 0) === 0 && Number.isFinite(f.best_pos_rank)) {
+          const best = Number(f.best_pos_rank);
+          if (best <= 10) arr.push(`Best positional finish: top-10`);
+          else if (best <= 30) arr.push(`Best positional finish: top-30`);
+          else arr.push(`Best positional finish: ${best}th`);
+        } else if ((f.top3_pos_finishes || 0) > 0) {
+          arr.push(`Top-3 ${f.position} in ${f.top3_pos_finishes} season(s)`);
+        }
+
         if (f.below_replacement_years >= 2) arr.push(`${f.below_replacement_years} below-replacement seasons`);
-        const isAverage = f.top3_pos_finishes === 0 && f.championships === 0 && f.below_replacement_years < 2;
-        return isAverage ? arr.slice(0, 1) : arr.slice(0, 4);
+
+        // Adaptive trim
+        const notable = champs.length || (f.top3_pos_finishes || 0) || (f.below_replacement_years || 0) >= 2;
+        return notable ? arr.slice(0, 4) : arr.slice(0, 2);
       })(),
     };
 
