@@ -22,7 +22,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2012,A. Parra,The Angry Bananas,Matt Schaub,hou,qb,257
 2012,A. Parra,The Angry Bananas,Matt Forte ,chi,RB,255
 2012,A. Parra,The Angry Bananas,Mikel Leshoure,det,rb,211
-2012,A. Parra,The Angry Bananas,Steve Smith,car,wr,208
+2012,A. Parra,The Angry Bananas,Steve Smith Sr.,car,wr,208
 2012,A. Parra,The Angry Bananas,Mike Wallace,pit,wr,201
 2012,A. Parra,The Angry Bananas,Broncos D/ST ,den,dst,186
 2012,A. Parra,The Angry Bananas,Jermaine Gresham,cin,TE,164
@@ -170,7 +170,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2013,N. Segal,The Brees Knees,Pierre Garcon ,wsh,WR,273
 2013,N. Segal,The Brees Knees,Greg Jennings,min,WR,177
 2013,N. Segal,The Brees Knees,Jimmy Graham,nor,TE,313
-2013,N. Segal,The Brees Knees,Steve Smith,bal,wr,158
+2013,N. Segal,The Brees Knees,Steve Smith Sr.,bal,wr,158
 2013,N. Segal,The Brees Knees,Pierre Thomas,nor,rb,217
 2013,N. Segal,The Brees Knees,Charles Clay ,mia,te,182
 2013,N. Segal,The Brees Knees,Jacquizz Rodgers,atl,rb,140
@@ -200,7 +200,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2013,R. Kelly,Slob On My Cobb,Frank Gore,sf,rb,231
 2013,R. Kelly,Slob On My Cobb,Danny Woodhead,sd,RB,223
 2013,R. Kelly,Slob On My Cobb,Jason Witten,dal,TE,200
-2013,R. Kelly,Slob On My Cobb,Terrelle Pryor,sea,qb,169
+2013,R. Kelly,Slob On My Cobb,Terrelle Pryor Sr.,sea,qb,169
 2013,R. Kelly,Slob On My Cobb,Jeremy Kerley,nyj,wr,108
 2013,R. Kelly,Slob On My Cobb,Brent Celek,phi,te,107
 2013,R. Kelly,Slob On My Cobb,Randall Cobb ,gb,wr,104
@@ -243,8 +243,8 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2014,A. Parra,The Angry Bananas,Lamar Miller ,mia,rb,251
 2014,A. Parra,The Angry Bananas,Mike Evans ,tb,WR,245
 2014,A. Parra,The Angry Bananas,DeSean Jackson ,wsh,wr,226
-2014,A. Parra,The Angry Bananas,Mark Ingram ,nor,rb,223
-2014,A. Parra,The Angry Bananas,Brandon LaFell ,ne,wr,212
+2014,A. Parra,The Angry Bananas,Mark Ingram II,nor,rb,223
+2014,A. Parra,The Angry Bananas,Brandon LaFell,ne,wr,212
 2014,A. Parra,The Angry Bananas,Denard Robinson ,jax,rb,128
 2014,A. Parra,The Angry Bananas,49ers D/ST,sf,DST,128
 2014,A. Parra,The Angry Bananas,Jordan Cameron,mia,TE,87
@@ -313,7 +313,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2014,N. Segal,Shmurda Team Nate,Cardinals D/ST ,ari,DST,114
 2014,M. DiCerbo,Team Slapper,Dez Bryant ,dal,wr,327
 2014,M. DiCerbo,Team Slapper,Matt Ryan ,atl,qb,316
-2014,M. DiCerbo,Team Slapper,Odell Beckham Jr. ,nyg,WR,302
+2014,M. DiCerbo,Team Slapper,Odell Beckham Jr.,nyg,WR,302
 2014,M. DiCerbo,Team Slapper,Philip Rivers ,sd,qb,297
 2014,M. DiCerbo,Team Slapper,Tony Romo,dal,QB,295
 2014,M. DiCerbo,Team Slapper,Randall Cobb,gb,wr,288
@@ -408,7 +408,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2015,G. Nulty,"Your Wright, I Suck",Travis Kelce,kc,TE,183
 2015,G. Nulty,"Your Wright, I Suck",Shane Vereen,myg,RB,152
 2015,G. Nulty,"Your Wright, I Suck",Antonio Gates,sd,te,144
-2015,G. Nulty,"Your Wright, I Suck",Melvin Gordon ,sd,RB,128
+2015,G. Nulty,"Your Wright, I Suck",Melvin Gordon III,sd,RB,128
 2015,G. Nulty,"Your Wright, I Suck",Stevie Johnson,sd,wr,109
 2015,G. Nulty,"Your Wright, I Suck",Marshawn Lynch ,sea,rb,99
 2015,G. Nulty,"Your Wright, I Suck",Kendall Wright ,ten,wr,96
@@ -441,13 +441,13 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2015,N. Segal,Two time champ segal,Jason Witten,dal,TE,157
 2015,N. Segal,Two time champ segal,James Jones,gb,wr,189
 2015,N. Segal,Two time champ segal,Ted Ginn Jr.,car,wr,187
-2015,N. Segal,Two time champ segal,Marvin Jones ,det,wr,168
+2015,N. Segal,Two time champ segal,Marvin Jones Jr.,det,wr,168
 2015,N. Segal,Two time champ segal,Dolphins D/ST ,mia,DST,69
 2015,N. Segal,Two time champ segal,Packers D/ST ,gb,dst,99
 2015,N. Segal,Two time champ segal,Steelers D/ST ,pit,dst,125
 2015,M. DiCerbo,Team Slapper,Devonta Freeman ,atl,RB,351
 2015,M. DiCerbo,Team Slapper,Carson Palmer,ari,QB,347
-2015,M. DiCerbo,Team Slapper,Odell Beckham Jr. ,nyg,wr,342
+2015,M. DiCerbo,Team Slapper,Odell Beckham Jr.,nyg,wr,342
 2015,M. DiCerbo,Team Slapper,Brandon Marshall,nyj,WR,340
 2015,M. DiCerbo,Team Slapper,Jarvis Landry ,mia,wr,271
 2015,M. DiCerbo,Team Slapper,Latavius Murray ,oak,RB,238
@@ -486,7 +486,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2016,B. Newell,The Shady Bunch,Cameron Brate,Tb,TE,163
 2016,B. Newell,The Shady Bunch,DeVante Parker,Mia,WR,154
 2016,B. Newell,The Shady Bunch,James White,Ne,RB,153
-2016,B. Newell,The Shady Bunch,Duke Johnson Jr. ,Cle,RB,139
+2016,B. Newell,The Shady Bunch,Duke Johnson Jr.,Cle,RB,139
 2016,B. Newell,The Shady Bunch,Giants D/ST ,Nyg,DST,130
 2016,B. Newell,The Shady Bunch,Michael Floyd,Ne,WR,110
 2016,B. Newell,The Shady Bunch,Bengals D/ST ,Cin,DST,79
@@ -520,7 +520,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2016,S. Dickson,Benny and the jets,Julius Thomas,mia,TE,79
 2016,S. Dickson,Benny and the jets,Dion Lewis,ne,RB,59
 2016,A. Parra,The Angry Bananas,Russell Wilson ,sea,QB,306
-2016,A. Parra,The Angry Bananas,Melvin Gordon,sd,rb,284
+2016,A. Parra,The Angry Bananas,Melvin Gordon III,sd,rb,284
 2016,A. Parra,The Angry Bananas,Jordan Howard  ,chi,RB,262
 2016,A. Parra,The Angry Bananas,Michael Thomas,nor,WR,249
 2016,A. Parra,The Angry Bananas,Carson Wentz ,phi,qb,240
@@ -550,7 +550,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2016,D. Daniel,Playing With My Fleener,Thomas Rawls,sea,rb,89
 2016,D. Daniel,Playing With My Fleener,Sammy Watkins ,buf,wr,81
 2016,T. Flynn,FINS BINS,Cam Newton ,Car,QB,290
-2016,T. Flynn,FINS BINS,Mark Ingram,Nor,rb,268
+2016,T. Flynn,FINS BINS,Mark Ingram II,Nor,rb,268
 2016,T. Flynn,FINS BINS,Michael Crabtree,Oak,WR,233
 2016,T. Flynn,FINS BINS,Colin Kaepernick,Sf,qb,224
 2016,T. Flynn,FINS BINS,Spencer Ware,Kc,RB,219
@@ -582,7 +582,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2016,M. DiCerbo,Team Slapper,Matt Ryan ,atl,QB,385
 2016,M. DiCerbo,Team Slapper,Drew Brees,nor,qb,376
 2016,M. DiCerbo,Team Slapper,Devonta Freeman ,atl,RB,316
-2016,M. DiCerbo,Team Slapper,Odell Beckham Jr. ,ny,WR,310
+2016,M. DiCerbo,Team Slapper,Odell Beckham Jr.,ny,WR,310
 2016,M. DiCerbo,Team Slapper,Doug Baldwin ,sea,WR,248
 2016,M. DiCerbo,Team Slapper,Davante Adams ,gb,wr,247
 2016,M. DiCerbo,Team Slapper,Terrelle Pryor Sr.,wsh,wr,204
@@ -610,7 +610,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2016,R. Kelly,Riverboat Rob,Dolphins D/ST  ,Mia,DST,91
 2016,R. Kelly,Riverboat Rob,Paul Perkins  ,Nyg,rb,83
 2017,B. Newell,Dak And The Gang,Dak Prescott ,Dal,QB,279
-2017,B. Newell,Dak And The Gang,Mark Ingram  ,Nor,RB,271
+2017,B. Newell,Dak And The Gang,Mark Ingram II,Nor,RB,271
 2017,B. Newell,Dak And The Gang,Julio Jones ,Atl,WR,252
 2017,B. Newell,Dak And The Gang,Derek Carr ,Oak,QB,233
 2017,B. Newell,Dak And The Gang,Lamar Miller ,Hou,RB,181
@@ -722,7 +722,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2017,N. Segal,Two time champ segal,Cole Beasley  ,dal,WR,84
 2017,N. Segal,Two time champ segal,Jimmy Graham ,gb,TE,164
 2017,N. Segal,Two time champ segal,Alfred Morris  ,dal,rb,68
-2017,N. Segal,Two time champ segal,Odell Beckham Jr.  ,nyg,wr,72
+2017,N. Segal,Two time champ segal,Odell Beckham Jr.,nyg,wr,72
 2017,N. Segal,Two time champ segal,Terrelle Pryor Sr. ,nyj,wr,48
 2017,N. Segal,Two time champ segal,Thomas Rawls ,nyj,rb,27
 2017,N. Segal,Two time champ segal,Hunter Henry ,lac,te,123
@@ -748,10 +748,10 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2017,R. Kelly,Riverboat Rob,DeAndre Hopkins  ,Hou,WR,312
 2017,R. Kelly,Riverboat Rob,Matt Ryan  ,Atl,QB,255
 2017,R. Kelly,Riverboat Rob,Tyreek Hill ,Kc,wr,254
-2017,R. Kelly,Riverboat Rob,Marvin Jones Jr.  ,Det,wr,222
+2017,R. Kelly,Riverboat Rob,Marvin Jones Jr.,Det,wr,222
 2017,R. Kelly,Riverboat Rob,Carlos Hyde  ,Cle,RB,220
 2017,R. Kelly,Riverboat Rob,Brandin Cooks  ,Lar,WR,215
-2017,R. Kelly,Riverboat Rob,Duke Johnson Jr.  ,Cle,rb,209
+2017,R. Kelly,Riverboat Rob,Duke Johnson Jr.,Cle,rb,209
 2017,R. Kelly,Riverboat Rob,Eagles D/ST  ,Phi,DST,159
 2017,R. Kelly,Riverboat Rob,Kyle Rudolph  ,Min,TE,150
 2017,R. Kelly,Riverboat Rob,Marqise Lee ,Jax,wr,141
@@ -816,14 +816,14 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2018,A. Parra,The Angry Bananas,Nick Foles  ,phi,qb,86
 2018,A. Parra,The Angry Bananas,Ian Thomas  ,car,TE,77
 2018,D. Daniel,F Yourself,Kirk Cousins  ,min,QB,314
-2018,D. Daniel,F Yourself,Melvin Gordon  ,lac,rb,273
+2018,D. Daniel,F Yourself,Melvin Gordon III,lac,rb,273
 2018,D. Daniel,F Yourself,Keenan Allen  ,lac,WR,254
 2018,D. Daniel,F Yourself,Kenyan Drake ,mia,rb,197
 2018,D. Daniel,F Yourself,Blake Bortles  ,jax,qb,188
 2018,D. Daniel,F Yourself,Chris Godwin ,tb,wr,183
 2018,D. Daniel,F Yourself,Marlon Mack  ,ind,RB,171
 2018,D. Daniel,F Yourself,Josh Gordon ,ne,WR,140
-2018,D. Daniel,F Yourself,Mark Ingram II ,nor,RB,136
+2018,D. Daniel,F Yourself,Mark Ingram II,nor,RB,136
 2018,D. Daniel,F Yourself,Ravens D/ST  ,bal,dst,131
 2018,D. Daniel,F Yourself,Jordan Reed ,wsh,TE,115
 2018,D. Daniel,F Yourself,Bills D/ST  ,buf,DST,111
@@ -868,7 +868,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2018,N. Segal,Three time champ segal,JuJu Smith-Schuster  ,pit,WR,304
 2018,N. Segal,Three time champ segal,Austin Hooper  ,atl,TE,155
 2018,N. Segal,Three time champ segal,Michael Crabtree ,bal,wr,127
-2018,N. Segal,Three time champ segal,Duke Johnson Jr.  ,cle,rb,120
+2018,N. Segal,Three time champ segal,Duke Johnson Jr.,cle,rb,120
 2018,N. Segal,Three time champ segal,Cole Beasley  ,dal,wr,144
 2018,N. Segal,Three time champ segal,Frank Gore  ,mia,rb,95
 2018,N. Segal,Three time champ segal,Benjamin Watson ,nor,te,82
@@ -877,7 +877,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2018,M. DiCerbo,Team Slapper,Patrick Mahomes ,kc,QB,453
 2018,M. DiCerbo,Team Slapper,Zach Ertz  ,phi,TE,279
 2018,M. DiCerbo,Team Slapper,Brandin Cooks  ,lar,WR,239
-2018,M. DiCerbo,Team Slapper,Odell Beckham Jr. ,nyg,WR,231
+2018,M. DiCerbo,Team Slapper,Odell Beckham Jr.,nyg,WR,231
 2018,M. DiCerbo,Team Slapper,Jameis Winston ,tb,qb,213
 2018,M. DiCerbo,Team Slapper,Adrian Peterson ,wsh,RB,185
 2018,M. DiCerbo,Team Slapper,Aaron Jones ,gb,RB,163
@@ -904,7 +904,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2018,R. Kelly,Riverboat Rob,Chiefs D/ST ,Kc,dst,91
 2018,R. Kelly,Riverboat Rob,Elijah McGuire  ,nyj,RB,80
 2018,R. Kelly,Riverboat Rob,Josh Adams  ,phi,rb,76
-2018,R. Kelly,Riverboat Rob,Jeff Wilson Jr. ,Sf,RB,40
+2018,R. Kelly,Riverboat Rob,Jeff Wilson Jr.,Sf,RB,40
 2019,B. Newell,Breesy Does It,Michael Thomas  ,Nor,WR,378
 2019,B. Newell,Breesy Does It,Philip Rivers ,Lac,QB,272
 2019,B. Newell,Breesy Does It,Leonard Fournette  ,Jax,RB,252
@@ -943,7 +943,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2019,S. Dickson,Two Horses One Team,Miles Sanders  ,phi,RB,210
 2019,S. Dickson,Two Horses One Team,Josh Jacobs ,oak,RB,188
 2019,S. Dickson,Two Horses One Team,Robby Anderson  ,nyj,WR,162
-2019,S. Dickson,Two Horses One Team,Duke Johnson   ,hou,RB,142
+2019,S. Dickson,Two Horses One Team,Duke Johnson Jr.,hou,RB,142
 2019,S. Dickson,Two Horses One Team,Tyrell Williams  ,oak,WR,139
 2019,S. Dickson,Two Horses One Team,Jason Witten,dal,TE,132
 2019,S. Dickson,Two Horses One Team,LeSean McCoy  ,kc,RB,110
@@ -954,7 +954,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2019,M. Spiers,Team Birds over Boys,Josh Allen  ,buf,QB,304
 2019,M. Spiers,Team Birds over Boys,DeAndre Hopkins ,hou,WR,267
 2019,M. Spiers,Team Birds over Boys,Nick Chubb  ,cle,RB,252
-2019,M. Spiers,Team Birds over Boys,Mark Ingram  II,bal,RB,234
+2019,M. Spiers,Team Birds over Boys,Mark Ingram II,bal,RB,234
 2019,M. Spiers,Team Birds over Boys,Tyler Boyd  ,cin,WR,220
 2019,M. Spiers,Team Birds over Boys,Mark Andrews ,bal,TE,203
 2019,M. Spiers,Team Birds over Boys,Larry Fitzgerald  ,Ari,WR,171
@@ -962,13 +962,13 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2019,M. Spiers,Team Birds over Boys,49ers D/ST,sf,DST,164
 2019,M. Spiers,Team Birds over Boys,Breshad Perriman ,tb,WR,137
 2019,M. Spiers,Team Birds over Boys,Kenny Stills ,hou,WR,114
-2019,M. Spiers,Team Birds over Boys,Eagles   D/ST,phi,DST,107
+2019,M. Spiers,Team Birds over Boys,Eagles  D/ST,phi,DST,107
 2019,M. Spiers,Team Birds over Boys,Broncos D/ST,den,DST,81
 2019,A. Parra,The Angry Bananas,Kyler Murray ,ari,QB,309
 2019,A. Parra,The Angry Bananas,Jimmy Garoppolo,sf,qb,276
 2019,A. Parra,The Angry Bananas,George Kittle ,sf,TE,219
 2019,A. Parra,The Angry Bananas,Le'Veon Bell ,nyj,RB,203
-2019,A. Parra,The Angry Bananas,Odell Beckham Jr.  ,cle,WR,200
+2019,A. Parra,The Angry Bananas,Odell Beckham Jr.,cle,WR,200
 2019,A. Parra,The Angry Bananas,Tyreek Hill  ,kc,WR,190
 2019,A. Parra,The Angry Bananas,Ronald Jones II ,tb,rb,155
 2019,A. Parra,The Angry Bananas,Chris Conley  ,jax,wr,153
@@ -1000,7 +1000,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2019,G. Nulty,Marshall Ave Goon Squad,Patriots D/ST,ne,DST,225
 2019,G. Nulty,Marshall Ave Goon Squad,Terry McLaurin ,wsh,wr,195
 2019,G. Nulty,Marshall Ave Goon Squad,Marlon Mack ,ind,rb,176
-2019,G. Nulty,Marshall Ave Goon Squad,Melvin Gordon ,lac,RB,171
+2019,G. Nulty,Marshall Ave Goon Squad,Melvin Gordon III,lac,RB,171
 2019,G. Nulty,Marshall Ave Goon Squad,Christian Kirk ,ari,WR,162
 2019,G. Nulty,Marshall Ave Goon Squad,Tarik Cohen ,chi,rb,146
 2019,G. Nulty,Marshall Ave Goon Squad,Marquise Brown ,bal,wr,146
@@ -1041,9 +1041,9 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2019,M. DiCerbo,Team Slapper,Austin Ekeler  ,lac,rb,304
 2019,M. DiCerbo,Team Slapper,Cooper Kupp  ,lar,WR,274
 2019,M. DiCerbo,Team Slapper,DeVante Parker  ,mia,wr,243
-2019,M. DiCerbo,Team Slapper,DJ Chark   Jr.,jax,wr,221
-2019,M. DiCerbo,Team Slapper,Todd Gurley  II,lar,RB,209
-2019,M. DiCerbo,Team Slapper,Deebo Samuel  ,sf,WR,183
+2019,M. DiCerbo,Team Slapper,DJ Chark,jax,wr,221
+2019,M. DiCerbo,Team Slapper,Todd Gurley II,lar,RB,209
+2019,M. DiCerbo,Team Slapper,Deebo Samuel Sr.,sf,WR,183
 2019,M. DiCerbo,Team Slapper,Latavius Murray ,nor,rb,146
 2019,M. DiCerbo,Team Slapper,Jets D/ST ,nyj,DST,129
 2019,M. DiCerbo,Team Slapper,JuJu Smith-Schuster ,pit,wr,112
@@ -1086,7 +1086,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2020,C. Upperman,Parra Can Suck My Balls,Kirk Cousins  ,Min,QB,348.85
 2020,C. Upperman,Parra Can Suck My Balls,Cam Newton  ,Ne,QB,287.55
 2020,C. Upperman,Parra Can Suck My Balls,Cooper Kupp  ,Lar,WR,214.7
-2020,C. Upperman,Parra Can Suck My Balls,Melvin Gordon  III,Den,RB,201.4
+2020,C. Upperman,Parra Can Suck My Balls,Melvin Gordon III,Den,RB,201.4
 2020,C. Upperman,Parra Can Suck My Balls,Tee Higgins ,Cin,WR,196.6
 2020,C. Upperman,Parra Can Suck My Balls,J.D. McKissic   ,Wsh,RB,191.4
 2020,C. Upperman,Parra Can Suck My Balls,Chris Carson  ,Sea,RB,187.8
@@ -1117,9 +1117,9 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2020,M. Spiers,RIP Rome,Justin Herbert  ,lac,QB,376.2
 2020,M. Spiers,RIP Rome,Lamar Jackson  ,bal,QB,365.35
 2020,M. Spiers,RIP Rome,Tyreek Hill  ,kc,WR,341.9
-2020,M. Spiers,RIP Rome,Marvin Jones  Jr.,det,WR,231.8
+2020,M. Spiers,RIP Rome,Marvin Jones Jr.,det,WR,231.8
 2020,M. Spiers,RIP Rome,Antonio Gibson  ,wsh,RB,204.2
-2020,M. Spiers,RIP Rome,Ronald Jones  ,tb,RB,193.3
+2020,M. Spiers,RIP Rome,Ronald Jones II,tb,RB,193.3
 2020,M. Spiers,RIP Rome,Miles Sanders ,phi,RB,178.4
 2020,M. Spiers,RIP Rome,Mark Andrews ,bal,TE,170.1
 2020,M. Spiers,RIP Rome,Emmanuel Sanders  ,nor,WR,165.8
@@ -1136,7 +1136,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2020,A. Parra,The Angry Bananas,Robert Tonyan ,gb,te,176.6
 2020,A. Parra,The Angry Bananas,J.K. Dobbins  ,bal,rb,173.5
 2020,A. Parra,The Angry Bananas,Giovani Bernard  ,cin,rb,158.1
-2020,A. Parra,The Angry Bananas,Jeff Wilson   Jr.,sf,rb,144.3
+2020,A. Parra,The Angry Bananas,Jeff Wilson Jr.,sf,rb,144.3
 2020,A. Parra,The Angry Bananas,Colts D/ST ,ind,DST,141
 2020,A. Parra,The Angry Bananas,George Kittle ,sf,TE,128.1
 2020,A. Parra,The Angry Bananas,Washington   D/ST ,wsh,dst,127
@@ -1181,7 +1181,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Terry McLaurin  ,Wsh,WR,232.8
 2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Robby Anderson  ,Car,wr,231.1
 2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Nelson Agholor ,Lv,wr,195.6
-2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Todd Gurley  II,Atl,rb,164.2
+2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Todd Gurley II,Atl,rb,164.2
 2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Rob Gronkowski  ,Tb,TE,150.3
 2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Wayne Gallman  ,Nyg,RB,137.6
 2020,T. Flynn,SaNdY ShOrEs ReTiReMeNt HoMe,Adrian Peterson  ,Det,rb,124.5
@@ -1216,14 +1216,14 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2020,M. DiCerbo,Team Slapper,Mike Davis ,car,rb,206.5
 2020,M. DiCerbo,Team Slapper,Austin Ekeler  ,lac,RB,165.3
 2020,M. DiCerbo,Team Slapper,Rams D/ST ,lar,dst,159
-2020,M. DiCerbo,Team Slapper,DJ Chark   Jr.,kax,wr,157.6
+2020,M. DiCerbo,Team Slapper,DJ Chark,kax,wr,157.6
 2020,M. DiCerbo,Team Slapper,Hayden Hurst  ,atl,TE,150.1
 2020,M. DiCerbo,Team Slapper,Jonnu Smith  ,ten,te,140.2
-2020,M. DiCerbo,Team Slapper,Darrell Henderson  ,lar,rb,131.3
+2020,M. DiCerbo,Team Slapper,Darrell Henderson Jr.,lar,rb,131.3
 2020,M. DiCerbo,Team Slapper,Saints D/ST,nor,DST,122
 2020,M. DiCerbo,Team Slapper,Allen Lazard  ,gb,wr,98.8
 2020,M. DiCerbo,Team Slapper,Anthony Firkser  ,ten,te,84.7
-2020,M. DiCerbo,Team Slapper,Deebo Samuel ,sf,wr,81.7
+2020,M. DiCerbo,Team Slapper,Deebo Samuel Sr.,sf,wr,81.7
 2020,M. DiCerbo,Team Slapper,Salvon Ahmed  ,mia,rb,70
 2020,R. Kelly,Riverboat Rob,Ben Roethlisberger  ,Pit,QB,305.25
 2020,R. Kelly,Riverboat Rob,DeAndre Hopkins  ,Ari,WR,295.8
@@ -1235,7 +1235,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2020,R. Kelly,Riverboat Rob,Curtis Samuel  ,Car,wr,215.1
 2020,R. Kelly,Riverboat Rob,Marquise Brown ,Bal,wr,188
 2020,R. Kelly,Riverboat Rob,Logan Thomas   ,Wsh,TE,177.9
-2020,R. Kelly,Riverboat Rob,Laviska Shenault  ,Jax,wr,157.1
+2020,R. Kelly,Riverboat Rob,Laviska Shenault Jr.,Jax,wr,157.1
 2020,R. Kelly,Riverboat Rob,Evan Engram  ,Nyg,te,142
 2020,R. Kelly,Riverboat Rob,Rex Burkhead ,Ne,rb,107.6
 2020,R. Kelly,Riverboat Rob,Frank Gore  ,Nyj,rb,100.2
@@ -1302,15 +1302,15 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2021,C. Upperman,Suck My Balls,Elijah Mitchell  ,Sf,RB,170
 2021,C. Upperman,Suck My Balls,Cowboys D/ST ,Dal,DST,163
 2021,C. Upperman,Suck My Balls,Tyler Higbee  ,Lar,TE,147
-2021,C. Upperman,Suck My Balls,Odell Beckham  Jr.,Lar,WR,132.1
-2021,C. Upperman,Suck My Balls,Eagles   D/ST ,Phi,DST,99
+2021,C. Upperman,Suck My Balls,Odell Beckham Jr.,Lar,WR,132.1
+2021,C. Upperman,Suck My Balls,Eagles  D/ST ,Phi,DST,99
 2021,C. Upperman,Suck My Balls,Austin Hooper  ,Cle,TE,92.5
 2021,C. Upperman,Suck My Balls,Ameer Abdullah  ,Car,RB,89.5
 2021,C. Upperman,Suck My Balls,Allen Robinson ,Chi,WR,87
 2021,C. Upperman,Suck My Balls,Kendall Blanton  ,Lar,TE,7.7
 2021,C. Upperman,Suck My Balls,Raheem Mostert  ,Sf,RB,2
 2021,S. Dickson,2 Many Cooks In the Kitchen,Dak Prescott   ,dal,QB,365.05
-2021,S. Dickson,2 Many Cooks In the Kitchen,Deebo Samuel  ,sf,WR,352.2
+2021,S. Dickson,2 Many Cooks In the Kitchen,Deebo Samuel Sr.,sf,WR,352.2
 2021,S. Dickson,2 Many Cooks In the Kitchen,Chris Godwin  ,tb,WR,247.4
 2021,S. Dickson,2 Many Cooks In the Kitchen,Dalvin Cook ,min,RB,211.3
 2021,S. Dickson,2 Many Cooks In the Kitchen,David Montgomery  ,chi,RB,197
@@ -1322,7 +1322,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2021,S. Dickson,2 Many Cooks In the Kitchen,Darren Waller  ,lv,TE,135.5
 2021,S. Dickson,2 Many Cooks In the Kitchen,Brandon Bolden  ,ne,RB,124.1
 2021,S. Dickson,2 Many Cooks In the Kitchen,Broncos D/ST ,den,DST,110
-2021,S. Dickson,2 Many Cooks In the Kitchen,Mark Ingram  ,nor,RB,108.6
+2021,S. Dickson,2 Many Cooks In the Kitchen,Mark Ingram II,nor,RB,108.6
 2021,S. Dickson,2 Many Cooks In the Kitchen,Latavius Murray ,bal,RB,105.6
 2021,S. Dickson,2 Many Cooks In the Kitchen,T.Y. Hilton  ,ind,WR,75.1
 2021,S. Dickson,2 Many Cooks In the Kitchen,William Fuller ,mia,WR,8.6
@@ -1352,7 +1352,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2021,A. Parra,The Angry Bananas,James Robinson  ,jax,rb,174.9
 2021,A. Parra,The Angry Bananas,Saquon Barkley  ,nyg,RB,152.6
 2021,A. Parra,The Angry Bananas,Alexander Mattison ,min,rb,127.9
-2021,A. Parra,The Angry Bananas,Laviska Shenault   Jr.,jax,wr,127
+2021,A. Parra,The Angry Bananas,Laviska Shenault Jr.,jax,wr,127
 2021,A. Parra,The Angry Bananas,49ers D/ST,sf,DST,120
 2021,A. Parra,The Angry Bananas,Rams D/ST ,lar,dst,105
 2021,A. Parra,The Angry Bananas,Cam Newton  ,car,qb,93.2
@@ -1363,15 +1363,15 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2021,D. Daniel,Team Domination ,Aaron Jones  ,gb,RB,230
 2021,D. Daniel,Team Domination ,Tee Higgins  ,cin,WR,223.1
 2021,D. Daniel,Team Domination ,Amari Cooper  ,dal,wr,204.5
-2021,D. Daniel,Team Domination ,Melvin Gordon   III ,den,rb,202.1
+2021,D. Daniel,Team Domination ,Melvin Gordon III,den,rb,202.1
 2021,D. Daniel,Team Domination ,Dawson Knox  ,buf,TE,168.1
 2021,D. Daniel,Team Domination ,Patriots D/ST ,ne,DST,148
 2021,D. Daniel,Team Domination ,Devontae Booker ,nyg,rb,144.1
 2021,D. Daniel,Team Domination ,Taysom Hill  ,nor,qb,133.5
 2021,D. Daniel,Team Domination ,Jamaal Williams ,det,rb,119.8
-2021,D. Daniel,Team Domination ,Ronald Jones  ,tb,RB,79.2
+2021,D. Daniel,Team Domination ,Ronald Jones II,tb,RB,79.2
 2021,D. Daniel,Team Domination ,Derrick Gore ,kc,rb,59.1
-2021,D. Daniel,Team Domination ,Jeff Wilson   Jr,sf,rb,52.5
+2021,D. Daniel,Team Domination ,Jeff Wilson Jr.,sf,rb,52.5
 2021,D. Daniel,Team Domination ,Ke'Shawn Vaughn ,tb,rb,39.6
 2021,D. Daniel,Team Domination ,Antonio Brown  ,tb,WR,0
 2021,G. Nulty,Marshall Ave Goon Squad,Josh Allen  ,buf,QB,447.65
@@ -1380,7 +1380,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2021,G. Nulty,Marshall Ave Goon Squad,Stefon Diggs  ,Buf,WR,287.5
 2021,G. Nulty,Marshall Ave Goon Squad,James Conner  ,ari,rb,258.7
 2021,G. Nulty,Marshall Ave Goon Squad,D'Andre Swift  ,det,RB,217.9
-2021,G. Nulty,Marshall Ave Goon Squad,Marvin Jones   Jr. ,jax,wr,181.2
+2021,G. Nulty,Marshall Ave Goon Squad,Marvin Jones Jr. ,jax,wr,181.2
 2021,G. Nulty,Marshall Ave Goon Squad,Chase Claypool   ,pit,WR,167.6
 2021,G. Nulty,Marshall Ave Goon Squad,Tony Pollard  ,dal,rb,166.6
 2021,G. Nulty,Marshall Ave Goon Squad,Courtland Sutton  ,den,wr,152.4
@@ -1410,7 +1410,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2021,M. DiCerbo,Team Slapper,Jonathan Taylor  ,ind,RB,393.1
 2021,M. DiCerbo,Team Slapper,Najee Harris  ,pit,RB,304.7
 2021,M. DiCerbo,Team Slapper,Diontae Johnson  ,pit,WR,281.4
-2021,M. DiCerbo,Team Slapper,Michael Pittman  Jr.,ind,WR,241.6
+2021,M. DiCerbo,Team Slapper,Michael Pittman Jr.,ind,WR,241.6
 2021,M. DiCerbo,Team Slapper,Marquise Brown ,bal,wr,232.3
 2021,M. DiCerbo,Team Slapper,Darnell Mooney ,chi,wr,226.7
 2021,M. DiCerbo,Team Slapper,Dalton Schultz  ,dal,te,208.8
@@ -1429,7 +1429,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2021,R. Kelly,Riverboat Rob,Derrick Henry  ,Ten,rb,204.35
 2021,R. Kelly,Riverboat Rob,A.J. Brown  ,Ten,wr,186.9
 2021,R. Kelly,Riverboat Rob,Hunter Henry  ,Ne,te,164.3
-2021,R. Kelly,Riverboat Rob,Darrell Henderson   Jr.,Lar,rb,163.4
+2021,R. Kelly,Riverboat Rob,Darrell Henderson Jr.,Lar,rb,163.4
 2021,R. Kelly,Riverboat Rob,Saints D/ST,Nor,DST,133
 2021,R. Kelly,Riverboat Rob,Ty Johnson ,Nyj,RB,117
 2021,R. Kelly,Riverboat Rob,Kareem Hunt  ,Cle,RB,110
@@ -1497,7 +1497,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2022,C. Upperman,Suck My Balls,Stefon Diggs  ,Buf,WR,328.6
 2022,C. Upperman,Suck My Balls,Mike Evans ,Tb,WR,235.4
 2022,C. Upperman,Suck My Balls,Dallas Goedert  ,Phi,TE,142.2
-2022,C. Upperman,Suck My Balls,Michael Pittman Jr.  ,Ind,WR,218.5
+2022,C. Upperman,Suck My Balls,Michael Pittman Jr.,Ind,WR,218.5
 2022,C. Upperman,Suck My Balls,AJ Dillon ,gb,RB,167.6
 2022,C. Upperman,Suck My Balls,Damien Harris  ,buf,RB,90.9
 2022,C. Upperman,Suck My Balls,Jakobi Meyers ,lv,WR,182.3
@@ -1548,7 +1548,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2022,A. Parra,The Angry Bananas,Justin Jefferson ,min,WR,380
 2022,A. Parra,The Angry Bananas,Chris Olave ,nor,WR,204.2
 2022,A. Parra,The Angry Bananas,Pat Freiermuth ,pit,TE,148.2
-2022,A. Parra,The Angry Bananas,Deebo Samuel ,sf,wr,172.4
+2022,A. Parra,The Angry Bananas,Deebo Samuel Sr.,sf,wr,172.4
 2022,A. Parra,The Angry Bananas,Mike Williams  ,lac,wr,180.5
 2022,A. Parra,The Angry Bananas,Allen Lazard  ,nyj,wr,175.8
 2022,A. Parra,The Angry Bananas,Antonio Gibson  ,wsh,rb,165.9
@@ -1586,7 +1586,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2022,G. Nulty,Marshall Ave Goon Squad,Khalil Herbert  ,Chi,rb,118.8
 2022,G. Nulty,Marshall Ave Goon Squad,Gerald Everett  ,Lac,te,139.5
 2022,G. Nulty,Marshall Ave Goon Squad,Olamide Zaccheaus  ,Atl,wr,110
-2022,G. Nulty,Marshall Ave Goon Squad,Brian Robinson   Jr.,Wsh,rb,113.7
+2022,G. Nulty,Marshall Ave Goon Squad,Brian Robinson Jr.,Wsh,rb,113.7
 2022,G. Nulty,Marshall Ave Goon Squad,Travis Homer  ,Chi,rb,43.1
 2022,G. Nulty,Marshall Ave Goon Squad,Cooper Kupp  ,Lar,wr,212.4
 2022,G. Nulty,Marshall Ave Goon Squad,Hunter Renfrow ,Lv,wr,79
@@ -1599,9 +1599,9 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2022,T. Flynn,The Irish Brigade,Amari Cooper  ,cle,WR,252
 2022,T. Flynn,The Irish Brigade,Mark Andrews   ,bal,TE,193.5
 2022,T. Flynn,The Irish Brigade,Cam Akers   ,lar,rb,144.3
-2022,T. Flynn,The Irish Brigade,DJ Chark   ,det,wr,100.2
+2022,T. Flynn,The Irish Brigade,DJ Chark,det,wr,100.2
 2022,T. Flynn,The Irish Brigade,Tyler Boyd  ,cin,wr,175.35
-2022,T. Flynn,The Irish Brigade,Jeff Wilson  ,mia,rb,160.5
+2022,T. Flynn,The Irish Brigade,Jeff Wilson Jr.,mia,rb,160.5
 2022,T. Flynn,The Irish Brigade,Chuba Hubbard  ,car,rb,88.7
 2022,T. Flynn,The Irish Brigade,Darius Slayton  ,nyg,wr,131.4
 2022,T. Flynn,The Irish Brigade,Deon Jackson  ,indy,rb,84.5
@@ -1661,7 +1661,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2023,C. Baylo,Cig Rob,Rachaad White ,Tb,RB,270.9
 2023,C. Baylo,Cig Rob,Kyren Williams ,Lar,RB,261
 2023,C. Baylo,Cig Rob,Brandon Aiyuk ,Sf,WR,259.2
-2023,C. Baylo,Cig Rob,Odell Beckham Jr. ,bal,WR,110.5
+2023,C. Baylo,Cig Rob,Odell Beckham Jr.,bal,WR,110.5
 2023,C. Baylo,Cig Rob,Travis Kelce ,Kc,TE,267.9
 2023,C. Baylo,Cig Rob,Aaron Jones ,Min,RB,137.9
 2023,C. Baylo,Cig Rob,Alexander Mattison ,Lv,RB,133.2
@@ -1780,7 +1780,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2023,R. Kelly,Riverboat Rob,Kyler Murray ,Ari,QB,164.35
 2023,R. Kelly,Riverboat Rob,Derrick Henry ,Bal,RB,250.8
 2023,R. Kelly,Riverboat Rob,Isiah Pacheco,Kc,RB,217.9
-2023,R. Kelly,Riverboat Rob,Deebo Samuel,Sf,WR,251.7
+2023,R. Kelly,Riverboat Rob,Deebo Samuel Sr.,Sf,WR,251.7
 2023,R. Kelly,Riverboat Rob,Rashee Rice ,Kc,WR,214.5
 2023,R. Kelly,Riverboat Rob,Stefon Diggs ,Buf,wr,281.8
 2023,R. Kelly,Riverboat Rob,Jake Ferguson ,Dal,te,212.6
@@ -1808,7 +1808,7 @@ year,owner,team_name,player,nfl_team,position,fantasy_points
 2024,C. Baylo,Vendome Rodeo,Puka Nacua ,Lar,WR,211.6
 2024,C. Baylo,Vendome Rodeo,James Conner ,Ari,RB,259.8
 2024,C. Baylo,Vendome Rodeo,Jauan Jennings,Sf,WR,211.5
-2024,C. Baylo,Vendome Rodeo,Deebo Samuel Sr. ,Wsh,WR,158.6
+2024,C. Baylo,Vendome Rodeo,Deebo Samuel Sr.,Wsh,WR,158.6
 2024,C. Baylo,Vendome Rodeo,Mark Andrews ,Bal,TE,216.3
 2024,C. Baylo,Vendome Rodeo,Diontae Johnson ,Bal,WR,90.1
 2024,C. Baylo,Vendome Rodeo,Romeo Doubs,Gb,WR,132.1
