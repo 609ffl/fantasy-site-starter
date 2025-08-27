@@ -17,11 +17,11 @@ export type H2HRow = {
   wins: number;
   losses: number;
   ties: number;
-  pf: number;  // points for (vs that opponent)
-  pa: number;  // points against
+  pf: number;  // total points for
+  pa: number;  // total points against
   diff: number;
-  winPct: number; // wins + 0.5*ties over games
-  lastYear: number; // most recent meeting year
+  winPct: number;
+  lastYear: number;
 };
 
 let _cache: { matchups: Matchup[] } | null = null;
@@ -32,23 +32,23 @@ export function loadAllMatchups(): Matchup[] {
   const csvPath = path.join(process.cwd(), "data", "all_matchups.csv");
   const text = fs.readFileSync(csvPath, "utf8");
 
-  // Try to gracefully handle optional header row.
-  const parsed = Papa.parse<string[]>(text, {
+  // NO GENERIC ARG HERE; cast after parse to satisfy TS even without @types/papaparse
+  const parsed = Papa.parse(text, {
     dynamicTyping: true,
     skipEmptyLines: true,
-  });
+  }) as unknown as { data: any[] };
 
-  const rows = parsed.data as any[];
+  const rows = Array.isArray(parsed.data) ? parsed.data : [];
 
-  // If the first row looks like headers, drop it
+  // Detect header row and drop it if present
   const looksLikeHeader = (r: any[]) =>
     r && r.length >= 5 &&
     typeof r[0] === "string" && /owner|team/i.test(r[0]) &&
     typeof r[3] === "string" && /owner|team/i.test(r[3]);
 
-  const data = (looksLikeHeader(rows[0]) ? rows.slice(1) : rows)
-    .filter(r => r && r.length >= 5)
-    .map(r => {
+  const data: Matchup[] = (looksLikeHeader(rows[0]) ? rows.slice(1) : rows)
+    .filter((r: any[]) => r && r.length >= 5)
+    .map((r: any[]) => {
       const [aOwner, aScore, bScore, bOwner, year] = r;
       return {
         aOwner: String(aOwner).trim(),
@@ -56,7 +56,7 @@ export function loadAllMatchups(): Matchup[] {
         bScore: Number(bScore),
         bOwner: String(bOwner).trim(),
         year: Number(year),
-      } as Matchup;
+      };
     });
 
   _cache = { matchups: data };
@@ -86,7 +86,6 @@ export function computeHeadToHeadForOwner(owner: string): { rows: H2HRow[], summ
   };
 
   for (const m of all) {
-    // owner could be in column A or D
     if (m.aOwner === owner) addGame(m.aOwner, m.bOwner, m.aScore, m.bScore, m.year);
     if (m.bOwner === owner) addGame(m.bOwner, m.aOwner, m.bScore, m.aScore, m.year);
   }
@@ -96,7 +95,7 @@ export function computeHeadToHeadForOwner(owner: string): { rows: H2HRow[], summ
     winPct: r.games ? (r.wins + 0.5 * r.ties) / r.games : 0
   }));
 
-  // Build overall summary
+  // Overall summary
   const summary = rows.reduce((acc, r) => {
     acc.games += r.games;
     acc.wins += r.wins;
@@ -113,16 +112,12 @@ export function computeHeadToHeadForOwner(owner: string): { rows: H2HRow[], summ
 
   summary.winPct = summary.games ? (summary.wins + 0.5 * summary.ties) / summary.games : 0;
 
-  // Sort by best win%, then by games desc
+  // Default sort: most wins, then games, then win%, then opponent name
   rows.sort((a, b) => {
-  // primary: most wins
-  if (b.wins !== a.wins) return b.wins - a.wins;
-  // secondary: more games
-  if (b.games !== a.games) return b.games - a.games;
-  // tertiary: higher win%
-  if (b.winPct !== a.winPct) return b.winPct - a.winPct;
-  // last tie-breaker: alphabetical by opponent
-  return a.opponent.localeCompare(b.opponent);
+    if (b.wins !== a.wins) return b.wins - a.wins;
+    if (b.games !== a.games) return b.games - a.games;
+    if (b.winPct !== a.winPct) return b.winPct - a.winPct;
+    return a.opponent.localeCompare(b.opponent);
   });
 
   return { rows, summary };
