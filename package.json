@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "build:facts": "ts-node --transpile-only scripts/buildPlayerFacts.ts",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
@@ -26,7 +27,8 @@
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
     "rimraf": "^5.0.10",
-    "tailwindcss": "^3.4.13",
-    "typescript": "5.4.5"
+    "tailwindcss": "^3.4.17",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
   }
 }
