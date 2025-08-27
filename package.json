@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build:facts": "ts-node --transpile-only scripts/buildPlayerFacts.ts",
-    "build": "next build",
+    "build": "npm run build:facts && next build",
     "start": "next start",
     "lint": "eslint .",
     "build:history": "node scripts/build-history.js",
