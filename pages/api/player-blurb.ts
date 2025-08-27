@@ -4,8 +4,23 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 
-const CACHE_DIR = path.join(process.cwd(), ".next", "cache", "player-blurbs");
-fs.mkdirSync(CACHE_DIR, { recursive: true });
+function isWritableDir(p: string) {
+  try {
+    fs.mkdirSync(p, { recursive: true });
+    const test = path.join(p, ".writetest");
+    fs.writeFileSync(test, "ok");
+    fs.unlinkSync(test);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+// Prefer /tmp on serverless; fallback to .next/cache locally
+const FALLBACK_CACHE = path.join(process.cwd(), ".next", "cache", "player-blurbs");
+const TMP_CACHE = "/tmp/player-blurbs";
+const CACHE_DIR = isWritableDir(TMP_CACHE) ? TMP_CACHE : FALLBACK_CACHE;
+isWritableDir(CACHE_DIR); // best-effort
 
 function loadFacts() {
   const p = path.join(process.cwd(), "public", "data", "player_facts.json");
@@ -13,8 +28,18 @@ function loadFacts() {
   return JSON.parse(fs.readFileSync(p, "utf8"));
 }
 
+function normalize(s: string) {
+  return String(s || "")
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/\./g, "")
+    .replace(/['_-]/g, "")
+    .replace(/\s+(jr|sr|ii|iii|iv)\b/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function promptFromFacts(f: any) {
-  // champ_contributions is an array: [{ year, owner, team_name }]
   const champs = Array.isArray(f.champ_contributions) ? f.champ_contributions : [];
   const champLines = champs.length
     ? champs.map((c: any) => `${c.year}: ${c.team_name} (${c.owner})`).join("; ")
@@ -61,26 +86,37 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!name) return res.status(400).json({ error: "Missing ?name=" });
 
     const facts = loadFacts();
-    const f = facts.find((x: any) => x.player.toLowerCase() === name.toLowerCase());
-    if (!f) return res.status(404).json({ error: "Player not found in facts" });
 
-    const champYears = (Array.isArray(f.championship_years) ? f.championship_years : []).join("-");
-    const key = `${f.player.replace(/[^\w-]/g, "_")}-${f.total_points}-${f.avg_season}-${f.championships}-${champYears}.json`;
-    const cacheFile = path.join(CACHE_DIR, key);
-    if (fs.existsSync(cacheFile)) {
-      return res.status(200).json(JSON.parse(fs.readFileSync(cacheFile, "utf8")));
+    // tolerant lookup
+    const qNorm = normalize(name);
+    let f =
+      facts.find((x: any) => normalize(x.player) === qNorm) ||
+      facts.find((x: any) => normalize(x.player).includes(qNorm) || qNorm.includes(normalize(x.player)));
+
+    // Soft fallback if not found
+    if (!f) {
+      return res.status(200).json({
+        blurb: `${name} has appeared in the league, but no detailed stats were found in the current snapshot.`,
+        bullets: [],
+      });
     }
 
-    // ---- LLM call (wire later) ----
-    // const completion = await openai.chat.completions.create({
-    //   model: "gpt-5-thinking",
-    //   messages: [{ role: "user", content: promptFromFacts(f) }],
-    //   temperature: 0.6,
-    //   max_tokens: 220,
-    // });
+    const champYears = (Array.isArray(f.championship_years) ? f.championship_years : []).join("-");
+    const cacheKey = `${f.player.replace(/[^\w-]/g, "_")}-${f.total_points}-${f.avg_season}-${f.championships}-${champYears}.json`;
+    const cacheFile = path.join(CACHE_DIR, cacheKey);
+
+    // Read cache if present (ignore errors)
+    try {
+      if (fs.existsSync(cacheFile)) {
+        const cached = JSON.parse(fs.readFileSync(cacheFile, "utf8"));
+        return res.status(200).json(cached);
+      }
+    } catch {}
+
+    // ---- LLM call goes here (placeholder below) ----
+    // const completion = await openai.chat.completions.create({ ... });
     // const out = JSON.parse(completion.choices[0].message.content);
 
-    // ---- TEMP placeholder: fact-driven text so route works immediately ----
     const champs = Array.isArray(f.champ_contributions) ? f.champ_contributions : [];
     let champLine = "";
     if (champs.length === 1) {
@@ -98,37 +134,33 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         champLine,
       bullets: (() => {
         const arr: string[] = [];
-        // Pos accolades
-        if (f.top3_pos_finishes >= 1)
-          arr.push(`Top-3 ${f.position} in ${f.top3_pos_finishes} season(s)`);
-        // Specific championship bullets (most recent first, cap at 2 for brevity)
+        if (f.top3_pos_finishes >= 1) arr.push(`Top-3 ${f.position} in ${f.top3_pos_finishes} season(s)`);
         if (champs.length) {
           champs
-            .slice() // copy
+            .slice()
             .sort((a: any, b: any) => b.year - a.year)
             .slice(0, 2)
-            .forEach((c: any) => {
-              arr.push(`${c.year} Champion: ${c.team_name} (${c.owner})`);
-            });
+            .forEach((c: any) => arr.push(`${c.year} Champion: ${c.team_name} (${c.owner})`));
         }
-        // Peak + liability info
         arr.push(`Career high ${f.best_season.points} points (${f.best_season.year})`);
-        if (f.below_replacement_years >= 2)
-          arr.push(`${f.below_replacement_years} below-replacement seasons`);
-
-        // Adaptive trim for average/forgettable players
-        const isAverage =
-          f.top3_pos_finishes === 0 &&
-          f.championships === 0 &&
-          f.below_replacement_years < 2;
-        return (isAverage ? arr.slice(0, 1) : arr.slice(0, 4));
+        if (f.below_replacement_years >= 2) arr.push(`${f.below_replacement_years} below-replacement seasons`);
+        const isAverage = f.top3_pos_finishes === 0 && f.championships === 0 && f.below_replacement_years < 2;
+        return isAverage ? arr.slice(0, 1) : arr.slice(0, 4);
       })(),
     };
 
-    fs.writeFileSync(cacheFile, JSON.stringify(out, null, 2));
+    // write cache (ignore errors on serverless)
+    try {
+      fs.writeFileSync(cacheFile, JSON.stringify(out, null, 2));
+    } catch {}
+
     return res.status(200).json(out);
   } catch (err: any) {
-    console.error(err);
-    return res.status(500).json({ error: "Failed to generate player blurb" });
+    // Final soft fail so the UI shows something
+    return res.status(200).json({
+      blurb: "We couldn’t generate a blurb right now.",
+      bullets: [],
+      _debug: err?.message || "unknown error",
+    });
   }
 }
