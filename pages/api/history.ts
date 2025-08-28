@@ -46,6 +46,12 @@ const CAREER_PF_CSV =
 const CAREER_RECORDS_CSV =
   process.env.CAREER_RECORDS_CSV ||
   path.join(process.cwd(), "data", "career_records.csv");
+const OWNER_YEAR_STANDINGS_CSV =
+  process.env.OWNER_YEAR_STANDINGS_CSV ||
+  path.join(process.cwd(), "data", "owner_year_standings.csv");
+
+
+
 
 /** ---------- Helpers ---------- */
 function readCsv(fp: string): Row[] {
@@ -91,6 +97,21 @@ function normalizeHeaderKey(k: string) {
   if (lower.startsWith("playoff")) return "playoff_appearances";
   return lower.replace(/\s+/g, "_");
 }
+
+// Liberal column pick for standings rows
+function pickStand<T = any>(row: Row, keys: string[]) {
+  for (const k of keys) {
+    if (row[k] !== undefined && row[k] !== null && row[k] !== "") return row[k] as T;
+  }
+  return undefined;
+}
+
+// Column aliases we accept from owner_year_standings.csv (or regular_season_ranks.csv)
+const STAND_COLS = {
+  owner:  ["owner","owner_name","manager","team","team_owner","team_manager","Owner"],
+  year:   ["year","season","Season","season_year"],
+  finish: ["finish","place","rank","seed","final_finish","result","Result","Finish","Place"],
+};
 
 function readCareerRecords(fp: string) {
   if (!fs.existsSync(fp)) return new Map<string, CareerRecordRow>();
@@ -396,6 +417,7 @@ let CACHE:
         pfg: Record<string, number>;
       };
       careerRecords?: Map<string, CareerRecordRow>;
+      standings?: Array<{ owner: string; year: number; finish?: number }>;
       source: "career_pf" | "computed";
       debug?: any;
     }
@@ -412,6 +434,29 @@ function ensureCache() {
   // Load auxiliary datasets
   const careerRecords = readCareerRecords(CAREER_RECORDS_CSV);
 
+// Load standings (per-owner, per-year finishing position)
+let standings: Array<{ owner: string; year: number; finish?: number }> = [];
+if (fs.existsSync(OWNER_YEAR_STANDINGS_CSV)) {
+  const raw = readCsv(OWNER_YEAR_STANDINGS_CSV);
+
+  standings = raw
+    .map((r) => {
+      // normalize keys to lower-case like your other normalizers
+      const lower: Record<string, any> = {};
+      for (const [k, v] of Object.entries(r))
+        lower[(k || "").toLowerCase().trim()] = v;
+
+      const owner = String(pickStand<string>(lower, STAND_COLS.owner) ?? "").trim();
+      const year  = Number(pickStand<string | number>(lower, STAND_COLS.year));
+      const finR  = pickStand<string | number>(lower, STAND_COLS.finish);
+      const finN  = Number(finR);
+      const finish = Number.isFinite(finN) ? finN : undefined;
+
+      return { owner, year, finish };
+    })
+    .filter((x) => x.owner && Number.isFinite(x.year));
+}
+
   if (fs.existsSync(CAREER_PF_CSV)) {
     try {
       const { career, matrix, meta } = parseCareerPivot(CAREER_PF_CSV);
@@ -424,6 +469,8 @@ function ensureCache() {
         source: "career_pf",
         debug: meta,
         careerRecords,
+        standings,
+
       };
       return;
     } catch (e: any) {
@@ -435,6 +482,7 @@ function ensureCache() {
         source: "computed",
         debug: { error: e?.message },
         careerRecords,
+        standings,
       };
       return;
     }
@@ -556,6 +604,69 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const list = CACHE!.byYear.get(y) || [];
       return res.status(200).json({ year: y, seasons: list });
     }
+
+if ("power" in req.query) {
+  const byYearKeys = Array.from(CACHE!.byYear.keys());
+  const maxYear = byYearKeys.length ? Math.max(...byYearKeys) : undefined;
+
+  const pivot = CACHE!.pivot;
+  const standings = CACHE!.standings || [];
+
+  const out = (CACHE!.careerSummary || []).map((c) => {
+    const owner = c.owner;
+    const rec = CACHE!.careerRecords?.get(owner);
+
+    const wins   = Number(rec?.wins   ?? 0);
+    const losses = Number(rec?.losses ?? 0);
+    const ties   = Number(rec?.ties   ?? 0);
+    const games  = Number.isFinite(pivot?.games?.[owner]) ? Number(pivot!.games[owner]) : wins + losses + ties;
+
+    // finishes from standings
+    const finishes = standings
+      .filter((s) => String(s.owner).trim() === owner)
+      .map((s) => s.finish)
+      .filter((n): n is number => Number.isFinite(n));
+
+    const avgFinish =
+      finishes.length > 0
+        ? finishes.reduce((a, b) => a + b, 0) / finishes.length
+        : undefined;
+
+    const playoffApps =
+      finishes.length > 0
+        ? finishes.filter((f) => f >= 1 && f <= 8).length  // adjust 8 if playoffs size differs
+        : Number(rec?.playoff_appearances ?? 0);
+
+    const championships = Array.isArray(rec?.championship_years)
+      ? rec!.championship_years.length
+      : 0;
+
+    const avgPPG = Number.isFinite(pivot?.pfg?.[owner])
+      ? Number(pivot!.pfg[owner])
+      : (Number.isFinite(c.total_points) && games > 0
+          ? Number((c.total_points / games).toFixed(2))
+          : 0);
+
+    const seasonsCount = Number(c.seasons ?? 0);
+    const lastYear = Number(c.last_year ?? 0);
+    const isActive = maxYear ? lastYear === maxYear : true;
+
+    return {
+      owner,
+      totals: { W: wins, L: losses, T: ties, games },
+      rawWinPct: games > 0 ? (wins + 0.5 * ties) / games : 0,
+      avgPPG,
+      championships,
+      playoffApps,
+      avgFinish,  // <— now populated
+      seasonsCount,
+      isActive,
+    };
+  });
+
+  return res.status(200).json({ owners: out, leagueWinPctHint: 0.5 });
+}
+
 
     return res
       .status(200)
