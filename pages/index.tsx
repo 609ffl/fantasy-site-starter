@@ -116,7 +116,7 @@ export default function Home() {
                 <div style={{ fontWeight: 700 }}>{m.awayPoints.toFixed(2)}</div>
               </div>
               <div style={{ color: "#666", fontSize: 12, marginTop: 6 }}>
-                Matchup Period: {m.periodId ?? "—"}
+                Week {m.periodId ?? "—"}
               </div>
             </div>
           ))}
