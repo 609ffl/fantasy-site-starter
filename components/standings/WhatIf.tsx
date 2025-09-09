@@ -22,32 +22,46 @@ function detectCurrentWeek(matchups: Matchup[]) {
 }
 
 export default function WhatIf({
-  teams, matchups, onApply, sims=3000
-}: { teams: Team[]; matchups: Matchup[]; onApply: (odds:any)=>void; sims?: number; }) {
-
+  teams, matchups, onApply, sims = 3000
+}: {
+  teams: Team[];
+  matchups: Matchup[];
+  // NOTE: now returns both odds and your picks so the caller can update records too
+  onApply: (payload: { odds: any[]; lockedResults: Record<string, number> }) => void;
+  sims?: number;
+}) {
   const teamName = useMemo(() => new Map(teams.map(t => [t.id, t.name])), [teams]);
 
-  // build list of future weeks that have any unplayed games
+  // Build list of future weeks that have any unplayed games
   const futureWeeks = useMemo(() => {
     const cur = detectCurrentWeek(matchups);
-    const set = new Set(matchups
-      .filter(m => m.week >= cur && isUnplayed(m))
-      .map(m => m.week));
-    return Array.from(set).sort((a,b)=>a-b);
+    const set = new Set(
+      matchups.filter(m => m.week >= cur && isUnplayed(m)).map(m => m.week)
+    );
+    return Array.from(set).sort((a, b) => a - b);
   }, [matchups]);
 
   const [week, setWeek] = useState<number | null>(futureWeeks[0] ?? null);
 
-  const games = useMemo(() =>
-    week == null ? [] : matchups.filter(m => m.week === week && isUnplayed(m)),
-  [matchups, week]);
+  const games = useMemo(
+    () => (week == null ? [] : matchups.filter(m => m.week === week && isUnplayed(m))),
+    [matchups, week]
+  );
 
   const [picks, setPicks] = useState<Record<string, number>>({});
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const setPick = (mId:string, winnerId:number) =>
+  const setPick = (mId: string, winnerId: number) =>
     setPicks(prev => ({ ...prev, [mId]: winnerId }));
+
+  const pickAll = (side: "home" | "away") => {
+    const next: Record<string, number> = {};
+    for (const g of games) next[g.id] = side === "home" ? g.homeId : g.awayId;
+    setPicks(next);
+  };
+
+  const clearPicks = () => setPicks({});
 
   const apply = async () => {
     setBusy(true); setError(null);
@@ -60,8 +74,10 @@ export default function WhatIf({
       const txt = await r.text();
       const data = JSON.parse(txt);
       if (data.error) throw new Error(data.error);
-      onApply(data.odds);
-    } catch (e:any) {
+
+      // ✅ pass odds + your exact picks up to the page
+      onApply({ odds: data.odds, lockedResults: picks });
+    } catch (e: any) {
       setError(e?.message ?? String(e));
     } finally {
       setBusy(false);
@@ -117,14 +133,39 @@ export default function WhatIf({
         ))}
       </div>
 
-      <div className="flex items-center gap-3">
+      <div className="flex flex-wrap items-center gap-3">
+        <button
+          className="px-3 py-1 rounded bg-slate-100"
+          onClick={() => pickAll("home")}
+          disabled={!games.length}
+        >
+          Pick all home
+        </button>
+        <button
+          className="px-3 py-1 rounded bg-slate-100"
+          onClick={() => pickAll("away")}
+          disabled={!games.length}
+        >
+          Pick all away
+        </button>
+        <button
+          className="px-3 py-1 rounded bg-slate-100"
+          onClick={clearPicks}
+          disabled={Object.keys(picks).length === 0}
+        >
+          Clear
+        </button>
+
+        <div className="flex-1" />
+
         <button
           className="px-3 py-1 rounded bg-indigo-600 text-white disabled:opacity-50"
-          disabled={busy || Object.keys(picks).length===0}
+          disabled={busy || Object.keys(picks).length === 0}
           onClick={apply}
         >
           {busy ? "Computing…" : "Apply What-If"}
         </button>
+
         {error && <div className="text-red-600 text-sm">Error: {error}</div>}
       </div>
     </div>
