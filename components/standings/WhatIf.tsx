@@ -1,5 +1,6 @@
+// components/standings/WhatIf.tsx
 // @ts-nocheck
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type Matchup = {
   id: string; week: number; homeId: number; awayId: number;
@@ -21,7 +22,6 @@ function detectCurrentWeek(matchups: Matchup[]) {
   return Math.max(...completedWeeks) + 1;
 }
 
-/* ---------- UI atoms ---------- */
 function BracketRow({
   home, away, picked, onPick,
 }: {
@@ -35,25 +35,15 @@ function BracketRow({
 
   return (
     <div className="rounded-2xl border p-2 sm:p-3 flex items-center justify-between gap-2 sm:gap-3">
-      <button
-        type="button"
+      <button type="button"
         className={`${base} ${picked==="away" ? on : off} flex-1 text-left`}
-        onClick={() => onPick("away")}
-        aria-pressed={picked==="away"}
-      >
+        onClick={() => onPick("away")} aria-pressed={picked==="away"}>
         <span className="block truncate">{away}</span>
       </button>
-
-      <span className="px-1 sm:px-2 shrink-0 text-[10px] sm:text-xs uppercase tracking-wide text-gray-500">
-        at
-      </span>
-
-      <button
-        type="button"
+      <span className="px-1 sm:px-2 shrink-0 text-[10px] sm:text-xs uppercase tracking-wide text-gray-500">AT</span>
+      <button type="button"
         className={`${base} ${picked==="home" ? on : off} flex-1 text-left`}
-        onClick={() => onPick("home")}
-        aria-pressed={picked==="home"}
-      >
+        onClick={() => onPick("home")} aria-pressed={picked==="home"}>
         <span className="block truncate">{home}</span>
       </button>
     </div>
@@ -61,17 +51,18 @@ function BracketRow({
 }
 
 export default function WhatIf({
-  teams, matchups, onApply, sims = 3000
+  teams, matchups, onApply, sims = 3000, lockedSoFar = {}
 }: {
   teams: Team[];
   matchups: Matchup[];
-  // NOTE: returns both odds and your picks so the caller can update records too
   onApply: (payload: { odds: any[]; lockedResults: Record<string, number> }) => void;
   sims?: number;
+  /** previously locked picks across any weeks */
+  lockedSoFar?: Record<string, number>;
 }) {
   const teamName = useMemo(() => new Map(teams.map(t => [t.id, t.name])), [teams]);
 
-  // Build list of future weeks that have any unplayed games
+  // Future weeks that have any unplayed games
   const futureWeeks = useMemo(() => {
     const cur = detectCurrentWeek(matchups);
     const set = new Set(
@@ -87,7 +78,17 @@ export default function WhatIf({
     [matchups, week]
   );
 
+  // Local picks for THIS week only; seed from lockedSoFar when week changes
   const [picks, setPicks] = useState<Record<string, number>>({});
+  useEffect(() => {
+    if (!week) return;
+    const seed: Record<string, number> = {};
+    for (const g of games) {
+      if (lockedSoFar[g.id] != null) seed[g.id] = lockedSoFar[g.id];
+    }
+    setPicks(seed);
+  }, [week, games, lockedSoFar]);
+
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -100,21 +101,25 @@ export default function WhatIf({
     setPicks(next);
   };
 
+  // Clear only current week selections
   const clearPicks = () => setPicks({});
 
   const apply = async () => {
+    // Merge this week's picks into cumulative lockedSoFar before simulating
+    const merged = { ...lockedSoFar, ...picks };
+
     setBusy(true); setError(null);
     try {
       const r = await fetch(`/api/playoff-odds?sims=${sims}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ lockedResults: picks }),
+        body: JSON.stringify({ lockedResults: merged }),
       });
       const txt = await r.text();
       const data = JSON.parse(txt);
       if (data.error) throw new Error(data.error);
 
-      onApply({ odds: data.odds, lockedResults: picks });
+      onApply({ odds: data.odds, lockedResults: merged });
     } catch (e: any) {
       setError(e?.message ?? String(e));
     } finally {
@@ -128,37 +133,25 @@ export default function WhatIf({
 
   return (
     <div className="rounded-2xl border p-3 sm:p-4 bg-white space-y-3 sm:space-y-4">
-      {/* Header controls */}
+      {/* Controls */}
       <div className="flex flex-wrap items-center gap-2 sm:gap-3">
         <div className="font-semibold text-sm sm:text-base">What-If: Pick winners</div>
         <select
           className="rounded-lg border-gray-300 text-sm"
           value={week ?? undefined}
-          onChange={e => { setWeek(Number(e.target.value)); setPicks({}); }}
+          onChange={e => { setWeek(Number(e.target.value)); }}
         >
           {futureWeeks.map(w => <option key={w} value={w}>Week {w}</option>)}
         </select>
 
         <div className="ml-auto flex gap-2">
-          <button
-            className="px-3 py-2 rounded-lg border text-sm"
-            onClick={() => pickAll("home")}
-            disabled={!games.length}
-          >
+          <button className="px-3 py-2 rounded-lg border text-sm" onClick={() => pickAll("home")} disabled={!games.length}>
             Pick all home
           </button>
-          <button
-            className="px-3 py-2 rounded-lg border text-sm"
-            onClick={() => pickAll("away")}
-            disabled={!games.length}
-          >
+          <button className="px-3 py-2 rounded-lg border text-sm" onClick={() => pickAll("away")} disabled={!games.length}>
             Pick all away
           </button>
-          <button
-            className="px-3 py-2 rounded-lg border text-sm"
-            onClick={clearPicks}
-            disabled={Object.keys(picks).length === 0}
-          >
+          <button className="px-3 py-2 rounded-lg border text-sm" onClick={clearPicks} disabled={Object.keys(picks).length === 0}>
             Clear
           </button>
         </div>
@@ -181,10 +174,9 @@ export default function WhatIf({
         ))}
       </div>
 
-      {/* Error (inline) */}
       {error && <div className="text-red-600 text-sm">Error: {error}</div>}
 
-      {/* Sticky apply (mobile friendly) */}
+      {/* Sticky apply */}
       <div className="sticky bottom-0 left-0 right-0 bg-white/90 backdrop-blur border-t mt-2 sm:mt-3 p-3">
         <button
           className="w-full py-3 rounded-xl bg-purple-600 text-white font-medium shadow-sm disabled:opacity-50"
