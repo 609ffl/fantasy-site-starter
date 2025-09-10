@@ -21,12 +21,51 @@ function detectCurrentWeek(matchups: Matchup[]) {
   return Math.max(...completedWeeks) + 1;
 }
 
+/* ---------- UI atoms ---------- */
+function BracketRow({
+  home, away, picked, onPick,
+}: {
+  home: string; away: string; picked?: "home"|"away";
+  onPick: (side: "home"|"away") => void;
+}) {
+  const base =
+    "px-3 py-2 sm:px-4 sm:py-3 rounded-xl border text-sm sm:text-base min-w-0 transition select-none";
+  const on  = "bg-purple-600 text-white border-purple-600 shadow-sm";
+  const off = "bg-white text-gray-800 border-gray-300 hover:border-gray-400";
+
+  return (
+    <div className="rounded-2xl border p-2 sm:p-3 flex items-center justify-between gap-2 sm:gap-3">
+      <button
+        type="button"
+        className={`${base} ${picked==="away" ? on : off} flex-1 text-left`}
+        onClick={() => onPick("away")}
+        aria-pressed={picked==="away"}
+      >
+        <span className="block truncate">{away}</span>
+      </button>
+
+      <span className="px-1 sm:px-2 shrink-0 text-[10px] sm:text-xs uppercase tracking-wide text-gray-500">
+        at
+      </span>
+
+      <button
+        type="button"
+        className={`${base} ${picked==="home" ? on : off} flex-1 text-left`}
+        onClick={() => onPick("home")}
+        aria-pressed={picked==="home"}
+      >
+        <span className="block truncate">{home}</span>
+      </button>
+    </div>
+  );
+}
+
 export default function WhatIf({
   teams, matchups, onApply, sims = 3000
 }: {
   teams: Team[];
   matchups: Matchup[];
-  // NOTE: now returns both odds and your picks so the caller can update records too
+  // NOTE: returns both odds and your picks so the caller can update records too
   onApply: (payload: { odds: any[]; lockedResults: Record<string, number> }) => void;
   sims?: number;
 }) {
@@ -75,7 +114,6 @@ export default function WhatIf({
       const data = JSON.parse(txt);
       if (data.error) throw new Error(data.error);
 
-      // ✅ pass odds + your exact picks up to the page
       onApply({ odds: data.odds, lockedResults: picks });
     } catch (e: any) {
       setError(e?.message ?? String(e));
@@ -85,88 +123,76 @@ export default function WhatIf({
   };
 
   if (!futureWeeks.length) {
-    return <div className="p-4 rounded bg-gray-50">No upcoming games to what-if.</div>;
+    return <div className="p-4 rounded-xl border bg-gray-50">No upcoming games to what-if.</div>;
   }
 
   return (
-    <div className="p-4 border rounded space-y-3">
-      <div className="flex items-center gap-3">
-        <div className="font-semibold">What-If: Pick winners</div>
+    <div className="rounded-2xl border p-3 sm:p-4 bg-white space-y-3 sm:space-y-4">
+      {/* Header controls */}
+      <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+        <div className="font-semibold text-sm sm:text-base">What-If: Pick winners</div>
         <select
-          className="border rounded px-2 py-1"
+          className="rounded-lg border-gray-300 text-sm"
           value={week ?? undefined}
           onChange={e => { setWeek(Number(e.target.value)); setPicks({}); }}
         >
           {futureWeeks.map(w => <option key={w} value={w}>Week {w}</option>)}
         </select>
+
+        <div className="ml-auto flex gap-2">
+          <button
+            className="px-3 py-2 rounded-lg border text-sm"
+            onClick={() => pickAll("home")}
+            disabled={!games.length}
+          >
+            Pick all home
+          </button>
+          <button
+            className="px-3 py-2 rounded-lg border text-sm"
+            onClick={() => pickAll("away")}
+            disabled={!games.length}
+          >
+            Pick all away
+          </button>
+          <button
+            className="px-3 py-2 rounded-lg border text-sm"
+            onClick={clearPicks}
+            disabled={Object.keys(picks).length === 0}
+          >
+            Clear
+          </button>
+        </div>
       </div>
 
-      <div className="space-y-2">
+      {/* Match rows */}
+      <div className="space-y-2.5 sm:space-y-3">
         {games.map((g) => (
-          <div key={g.id} className="flex items-center justify-between gap-4">
-            <div className="flex-1">
-              <span className="mr-2">{teamName.get(g.awayId)}</span>
-              <span className="mx-1">at</span>
-              <span>{teamName.get(g.homeId)}</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <label className="flex items-center gap-1 cursor-pointer">
-                <input
-                  type="radio"
-                  name={`m-${g.id}`}
-                  checked={picks[g.id] === g.awayId}
-                  onChange={() => setPick(g.id, g.awayId)}
-                />
-                {teamName.get(g.awayId)}
-              </label>
-              <label className="flex items-center gap-1 cursor-pointer">
-                <input
-                  type="radio"
-                  name={`m-${g.id}`}
-                  checked={picks[g.id] === g.homeId}
-                  onChange={() => setPick(g.id, g.homeId)}
-                />
-                {teamName.get(g.homeId)}
-              </label>
-            </div>
-          </div>
+          <BracketRow
+            key={g.id}
+            home={teamName.get(g.homeId)!}
+            away={teamName.get(g.awayId)!}
+            picked={
+              picks[g.id] === g.homeId ? "home"
+              : picks[g.id] === g.awayId ? "away"
+              : undefined
+            }
+            onPick={(side) => setPick(g.id, side === "home" ? g.homeId : g.awayId)}
+          />
         ))}
       </div>
 
-      <div className="flex flex-wrap items-center gap-3">
-        <button
-          className="px-3 py-1 rounded bg-slate-100"
-          onClick={() => pickAll("home")}
-          disabled={!games.length}
-        >
-          Pick all home
-        </button>
-        <button
-          className="px-3 py-1 rounded bg-slate-100"
-          onClick={() => pickAll("away")}
-          disabled={!games.length}
-        >
-          Pick all away
-        </button>
-        <button
-          className="px-3 py-1 rounded bg-slate-100"
-          onClick={clearPicks}
-          disabled={Object.keys(picks).length === 0}
-        >
-          Clear
-        </button>
+      {/* Error (inline) */}
+      {error && <div className="text-red-600 text-sm">Error: {error}</div>}
 
-        <div className="flex-1" />
-
+      {/* Sticky apply (mobile friendly) */}
+      <div className="sticky bottom-0 left-0 right-0 bg-white/90 backdrop-blur border-t mt-2 sm:mt-3 p-3">
         <button
-          className="px-3 py-1 rounded bg-indigo-600 text-white disabled:opacity-50"
+          className="w-full py-3 rounded-xl bg-purple-600 text-white font-medium shadow-sm disabled:opacity-50"
           disabled={busy || Object.keys(picks).length === 0}
           onClick={apply}
         >
           {busy ? "Computing…" : "Apply What-If"}
         </button>
-
-        {error && <div className="text-red-600 text-sm">Error: {error}</div>}
       </div>
     </div>
   );
