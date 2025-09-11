@@ -6,10 +6,10 @@ import { useState, useMemo } from "react";
 const links = [
   { href: "/", label: "Scoreboard" },
   { href: "/history", label: "History" },
+  { href: "/trophy", label: "Trophy Room" },
   { href: "/owners", label: "Owners" },
-  { href: "/players", label: "Players" },
-  // NEW
   { href: "/standings", label: "Standings" },
+  { href: "/players", label: "Players" },
 ];
 
 export default function NavBar() {

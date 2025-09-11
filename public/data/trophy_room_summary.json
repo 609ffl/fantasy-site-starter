@@ -1,0 +1,452 @@
+{
+  "top_single_week_scores": [
+    {
+      "owner": "A. Parra",
+      "points": 228.65,
+      "year": 2021
+    },
+    {
+      "owner": "R. Kelly",
+      "points": 227.0,
+      "year": 2015
+    },
+    {
+      "owner": "M. Dicerbo",
+      "points": 214.0,
+      "year": 2013
+    },
+    {
+      "owner": "D. Daniel",
+      "points": 208.45,
+      "year": 2021
+    },
+    {
+      "owner": "S. Dickson",
+      "points": 197.45,
+      "year": 2021
+    },
+    {
+      "owner": "N. Segal",
+      "points": 197.0,
+      "year": 2013
+    },
+    {
+      "owner": "T. Flynn",
+      "points": 197.0,
+      "year": 2018
+    },
+    {
+      "owner": "D. Daniel",
+      "points": 195.2,
+      "year": 2021
+    },
+    {
+      "owner": "D. Daniel",
+      "points": 195.0,
+      "year": 2013
+    },
+    {
+      "owner": "A. Parra",
+      "points": 194.75,
+      "year": 2020
+    },
+    {
+      "owner": "N. Segal",
+      "points": 194.0,
+      "year": 2012
+    },
+    {
+      "owner": "C. Fantazzia",
+      "points": 193.0,
+      "year": 2012
+    },
+    {
+      "owner": "Kramer Fader",
+      "points": 192.75,
+      "year": 2022
+    },
+    {
+      "owner": "M. Spiers",
+      "points": 192.5,
+      "year": 2020
+    },
+    {
+      "owner": "Hibbert Migone",
+      "points": 192.0,
+      "year": 2015
+    },
+    {
+      "owner": "M. Dicerbo",
+      "points": 191.95,
+      "year": 2021
+    },
+    {
+      "owner": "M. Dicerbo",
+      "points": 191.0,
+      "year": 2018
+    },
+    {
+      "owner": "G. Nulty",
+      "points": 190.0,
+      "year": 2013
+    },
+    {
+      "owner": "A. Parra",
+      "points": 189.4,
+      "year": 2022
+    },
+    {
+      "owner": "M. Spiers",
+      "points": 189.05,
+      "year": 2021
+    }
+  ],
+  "biggest_blowouts": [
+    {
+      "owner": "R. Kelly",
+      "score": 227.0,
+      "owner_1": "G. Nulty",
+      "score_1": 93.0,
+      "year": 2015,
+      "margin": 134.0
+    },
+    {
+      "owner": "D. Daniel",
+      "score": 208.45,
+      "owner_1": "Kramer Fader",
+      "score_1": 76.55,
+      "year": 2021,
+      "margin": 131.89999999999998
+    },
+    {
+      "owner": "R. Hibbert",
+      "score": 79.0,
+      "owner_1": "T. Flynn",
+      "score_1": 197.0,
+      "year": 2018,
+      "margin": 118.0
+    },
+    {
+      "owner": "G. Nulty",
+      "score": 124.15,
+      "owner_1": "A. Parra",
+      "score_1": 228.65,
+      "year": 2021,
+      "margin": 104.5
+    },
+    {
+      "owner": "S. Dickson",
+      "score": 77.45,
+      "owner_1": "M. Spiers",
+      "score_1": 181.9,
+      "year": 2024,
+      "margin": 104.45
+    },
+    {
+      "owner": "G. Nulty",
+      "score": 155.75,
+      "owner_1": "M. Spiers",
+      "score_1": 51.4,
+      "year": 2022,
+      "margin": 104.35
+    },
+    {
+      "owner": "N. Segal",
+      "score": 194.0,
+      "owner_1": "J. Migone",
+      "score_1": 95.0,
+      "year": 2012,
+      "margin": 99.0
+    },
+    {
+      "owner": "S. Dickson",
+      "score": 171.8,
+      "owner_1": "T. Flynn",
+      "score_1": 77.45,
+      "year": 2020,
+      "margin": 94.35000000000001
+    },
+    {
+      "owner": "A. Parra",
+      "score": 59.8,
+      "owner_1": "Kramer Fader",
+      "score_1": 152.3,
+      "year": 2023,
+      "margin": 92.50000000000001
+    },
+    {
+      "owner": "M. Spiers",
+      "score": 192.5,
+      "owner_1": "B. Newell",
+      "score_1": 101.6,
+      "year": 2020,
+      "margin": 90.9
+    },
+    {
+      "owner": "R. Kelly",
+      "score": 102.0,
+      "owner_1": "M. Dicerbo",
+      "score_1": 191.0,
+      "year": 2018,
+      "margin": 89.0
+    },
+    {
+      "owner": "C. Upperman",
+      "score": 183.1,
+      "owner_1": "G. Nulty",
+      "score_1": 94.1,
+      "year": 2022,
+      "margin": 89.0
+    },
+    {
+      "owner": "S. Dickson",
+      "score": 74.0,
+      "owner_1": "C. Upperman",
+      "score_1": 163.0,
+      "year": 2018,
+      "margin": 89.0
+    },
+    {
+      "owner": "T. Flynn",
+      "score": 127.0,
+      "owner_1": "M. Dicerbo",
+      "score_1": 214.0,
+      "year": 2013,
+      "margin": 87.0
+    },
+    {
+      "owner": "N. Segal",
+      "score": 180.0,
+      "owner_1": "R. Kelly",
+      "score_1": 93.0,
+      "year": 2016,
+      "margin": 87.0
+    }
+  ],
+  "worst_single_season_records": [
+    {
+      "year": 2017,
+      "owner": "M. DiCerbo",
+      "team_name": "Team Slapper",
+      "wins": 2,
+      "losses": 11,
+      "ties": 0,
+      "win_pct": 0.15384615384615385
+    },
+    {
+      "year": 2014,
+      "owner": "N. Segal",
+      "team_name": "Shmurda Team Nate",
+      "wins": 2,
+      "losses": 10,
+      "ties": 1,
+      "win_pct": 0.19230769230769232
+    },
+    {
+      "year": 2020,
+      "owner": "N. Segal",
+      "team_name": "Three time champ segal",
+      "wins": 3,
+      "losses": 10,
+      "ties": 0,
+      "win_pct": 0.23076923076923078
+    },
+    {
+      "year": 2020,
+      "owner": "B. Newell",
+      "team_name": "Lenny and the Jets",
+      "wins": 3,
+      "losses": 10,
+      "ties": 0,
+      "win_pct": 0.23076923076923078
+    },
+    {
+      "year": 2017,
+      "owner": "C. Rone",
+      "team_name": "Uncle Tickler",
+      "wins": 3,
+      "losses": 10,
+      "ties": 0,
+      "win_pct": 0.23076923076923078
+    },
+    {
+      "year": 2016,
+      "owner": "A. Parra",
+      "team_name": "The Angry Bananas",
+      "wins": 3,
+      "losses": 10,
+      "ties": 0,
+      "win_pct": 0.23076923076923078
+    },
+    {
+      "year": 2016,
+      "owner": "R. Hibbert",
+      "team_name": "Teach me how to Dougie",
+      "wins": 3,
+      "losses": 10,
+      "ties": 0,
+      "win_pct": 0.23076923076923078
+    },
+    {
+      "year": 2015,
+      "owner": "G. Nulty",
+      "team_name": "Your Wright, I Suck",
+      "wins": 3,
+      "losses": 10,
+      "ties": 0,
+      "win_pct": 0.23076923076923078
+    },
+    {
+      "year": 2015,
+      "owner": "S. Dickson",
+      "team_name": "Big ol' Johnson",
+      "wins": 3,
+      "losses": 10,
+      "ties": 0,
+      "win_pct": 0.23076923076923078
+    },
+    {
+      "year": 2018,
+      "owner": "C.  Rone",
+      "team_name": "Uncle Tickler",
+      "wins": 3,
+      "losses": 9,
+      "ties": 1,
+      "win_pct": 0.2692307692307692
+    },
+    {
+      "year": 2023,
+      "owner": "G. Nulty",
+      "team_name": "Marshall Ave Goon Squad",
+      "wins": 8,
+      "losses": 20,
+      "ties": 0,
+      "win_pct": 0.2857142857142857
+    },
+    {
+      "year": 2024,
+      "owner": "C. Baylo",
+      "team_name": "Vendome Rodeo",
+      "wins": 4,
+      "losses": 10,
+      "ties": 0,
+      "win_pct": 0.2857142857142857
+    },
+    {
+      "year": 2024,
+      "owner": "G. Nulty",
+      "team_name": "Marshall Ave Goon Squad",
+      "wins": 4,
+      "losses": 10,
+      "ties": 0,
+      "win_pct": 0.2857142857142857
+    },
+    {
+      "year": 2022,
+      "owner": "C. Baylo",
+      "team_name": "Cig Rob",
+      "wins": 4,
+      "losses": 10,
+      "ties": 0,
+      "win_pct": 0.2857142857142857
+    },
+    {
+      "year": 2020,
+      "owner": "T. Flynn",
+      "team_name": "SaNdY ShOrEs ReTiReMeNt HoMe",
+      "wins": 4,
+      "losses": 9,
+      "ties": 0,
+      "win_pct": 0.3076923076923077
+    }
+  ],
+  "playoff_summary": [
+    {
+      "owner": "R. Kelly",
+      "seasons": 13,
+      "playoff_apps": 8,
+      "rings": 2,
+      "playoff_rate": 0.615
+    },
+    {
+      "owner": "M. Spiers",
+      "seasons": 6,
+      "playoff_apps": 5,
+      "rings": 2,
+      "playoff_rate": 0.833
+    },
+    {
+      "owner": "D. Daniel",
+      "seasons": 14,
+      "playoff_apps": 11,
+      "rings": 1,
+      "playoff_rate": 0.786
+    },
+    {
+      "owner": "A. Parra",
+      "seasons": 14,
+      "playoff_apps": 10,
+      "rings": 1,
+      "playoff_rate": 0.714
+    },
+    {
+      "owner": "M. DiCerbo",
+      "seasons": 12,
+      "playoff_apps": 7,
+      "rings": 1,
+      "playoff_rate": 0.583
+    },
+    {
+      "owner": "T. Flynn",
+      "seasons": 14,
+      "playoff_apps": 7,
+      "rings": 1,
+      "playoff_rate": 0.5
+    },
+    {
+      "owner": "G. Nulty",
+      "seasons": 13,
+      "playoff_apps": 6,
+      "rings": 1,
+      "playoff_rate": 0.462
+    },
+    {
+      "owner": "C. Upperman",
+      "seasons": 11,
+      "playoff_apps": 7,
+      "rings": 0,
+      "playoff_rate": 0.636
+    },
+    {
+      "owner": "S. Dickson",
+      "seasons": 14,
+      "playoff_apps": 5,
+      "rings": 0,
+      "playoff_rate": 0.357
+    },
+    {
+      "owner": "B. Newell",
+      "seasons": 10,
+      "playoff_apps": 4,
+      "rings": 0,
+      "playoff_rate": 0.4
+    },
+    {
+      "owner": "Kramer Fader",
+      "seasons": 5,
+      "playoff_apps": 2,
+      "rings": 0,
+      "playoff_rate": 0.4
+    },
+    {
+      "owner": "C. Baylo",
+      "seasons": 4,
+      "playoff_apps": 1,
+      "rings": 0,
+      "playoff_rate": 0.25
+    }
+  ],
+  "meta": {
+    "notes": "2011 excluded from points-based stats; seasons exclude DNP years; playoffs include 2011."
+  }
+}
